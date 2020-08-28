@@ -1,0 +1,150 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Connectivity (4.2.0)
+  - Cosmos (22.1.0)
+  - CountryPickerView (3.1.3)
+  - Differentiator (4.0.1)
+  - FaveButton (3.2.1)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - FontBlaster (5.1.1)
+  - IBAnimatable (6.1.0)
+  - ImageSlideshow/Core (1.9.1)
+  - ImageSlideshow/SDWebImage (1.9.1):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
+  - InitialsImageView (0.7.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Log (2.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - NVActivityIndicatorView (5.0.1):
+    - NVActivityIndicatorView/Base (= 5.0.1)
+  - NVActivityIndicatorView/Base (5.0.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - SearchTextField (1.2.4)
+  - SideMenu (6.4.9)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SwiftDate (6.1.0)
+  - SwiftKeychainWrapper (3.4.0)
+  - SwiftyGif (5.3.0)
+  - SwiftyJSON (5.0.0)
+  - TTGSnackbar (1.10.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Connectivity
+  - Cosmos
+  - CountryPickerView
+  - FaveButton
+  - FlagPhoneNumber
+  - FontBlaster
+  - IBAnimatable
+  - ImageSlideshow/SDWebImage
+  - InitialsImageView
+  - IQKeyboardManagerSwift
+  - Log
+  - "NSObject+Rx"
+  - NVActivityIndicatorView
+  - RxCocoa
+  - RxDataSources
+  - RxRelay
+  - RxSwift
+  - RxSwiftExt
+  - SDWebImage
+  - SearchTextField
+  - SideMenu
+  - SkyFloatingLabelTextField
+  - SwiftDate
+  - SwiftKeychainWrapper
+  - SwiftyGif
+  - SwiftyJSON
+  - TTGSnackbar
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Connectivity
+    - Cosmos
+    - CountryPickerView
+    - Differentiator
+    - FaveButton
+    - FlagPhoneNumber
+    - FontBlaster
+    - IBAnimatable
+    - ImageSlideshow
+    - InitialsImageView
+    - IQKeyboardManagerSwift
+    - Log
+    - "NSObject+Rx"
+    - NVActivityIndicatorView
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SDWebImage
+    - SearchTextField
+    - SideMenu
+    - SkyFloatingLabelTextField
+    - SwiftDate
+    - SwiftKeychainWrapper
+    - SwiftyGif
+    - SwiftyJSON
+    - TTGSnackbar
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Connectivity: 2205aaa7d95f8f3c360be639f39ef2c8175a0b5a
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  CountryPickerView: 383c09949f7455de9892db7ce3400b10da090150
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  FontBlaster: 8897ebdbb4b6ace3ab78c92b665d88c954f19e4a
+  IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
+  ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
+  InitialsImageView: 7a416d36fc6df5434198664db28a3ffb0228426d
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TTGSnackbar: 97c033600de8a9c8f4a093f25a08543a03946bcc
+
+PODFILE CHECKSUM: ec9b3be1a76a13d50360945cbb0b2d932fd5df8d
+
+COCOAPODS: 1.9.3

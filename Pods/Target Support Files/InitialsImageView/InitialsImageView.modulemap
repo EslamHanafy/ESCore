@@ -1,0 +1,6 @@
+framework module InitialsImageView {
+  umbrella header "InitialsImageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

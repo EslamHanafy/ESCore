@@ -1,0 +1,161 @@
+/* 
+  Localizable.strings
+  ESCore
+
+  Created by Eslam Hanafy on 12/16/19.
+  Copyright © 2019 Eslam. All rights reserved.
+*/
+
+"appName" = "Moddakir";
+"currency" = "SAR";
+"ok" = "Ok";
+"unknownError" = "Sorry, there is something went wrong, please try again later";
+"noInternet" = "Sorry, there is no internet connection";
+"internetConnected" = "The internet has been connected again successfully";
+"unauthorized" = "Couldn't authenticate with current credential";
+"itemsNotFound" = "Sorry, no results found";
+"forbidden" = "Your session has expired, or you logged in from another device, please login again to your account";
+"tryAgain" = "Try again";
+"cancel" = "Cancel";
+"yes" = "Yes";
+"no" = "No";
+"edit" = "Edit";
+"delete" = "Delete";
+"editsSucceed" = "Your edits have been saved successfully";
+"noChanges" = "There are no changes";
+"loading" = "Loading...";
+"authFaild" = "Unable to authenticate with the current credentials (Email And Password).";
+"emptyData" = "There is no data to be sent!";
+"cancelRequest" = "Are you sure you want to cancel this request?";
+"emptyEmail" = "Enter your email";
+"emptyPassword" = "Enter your password";
+"emailNotValid" = "Enter a valid email";
+"testNotification" = "Notification test";
+"testNotificationBody" = "This is how you will receive notifications from us";
+"chooseCountryCode" = "Select the country code";
+"chooesYourCountry" = "Choose your country";
+"imageNotValid" = "Sorry, the selected image wasn't valid, please try again with a different image";
+"uploading" = "Uploading...";
+"later" = "Later";
+"oldVersion" = "Old Version!";
+"oldVersionMessage" = "Sorry, you are using an old version of the app, you must update to continue using the app, Thanks for using Moddakir app";
+"update" = "Update";
+"loggingout" = "Logging Out!";
+"loggingoutMessage" = "Are you sure you want to logout from your account?";
+"openSettings" = "Open Settings";
+
+//MARK: - Calling
+"connecting" = "Connecting..";
+"ended" = "Ended";
+"receivingCallFrom" = "Receiving a call from";
+"waitingForResponse" = "Contacting the teacher";
+"canceled" = "Canceled";
+"denied" = "Denied";
+"hangup" = "Hangup";
+"noAnswer" = "No Answer";
+"notFound" = "Not Found";
+"missedCallMessage" = "You have missed a call from %@";
+"closeMic" = "Mute Sounds";
+"openMic" = "Play Sounds";
+"closeSpeaker" = "Close Speaker";
+"openSpeaker" = "Open Speaker";
+"sorryForNotAnswer" = "We apologize for not answering the teacher";
+"sinchAccountChanged" = "Sorry, we couldn't complete this call, please try again  within a few seconds";
+"callInterruptedMessage" = "Sorry, the call from the other person was interrupted, trying to reconnect again";
+"callInterrupted" = "Call Interrupted !!";
+"recordingPermission" = "Recording Permission!";
+"recordingPermissionMessage" = "We need access to your microphone to be able to make calls through the app";
+"teacherNotAvailable" = "Teacher is not available";
+"none" = "None";
+"callExpired" = "Call Expired";
+"couldNotConnectToCall" = "Could not connect to the call";
+"connectingToCall" = "Call connecting in progress..";
+"ConnectionStatus_good" = "Good Connection..";
+"ConnectionStatus_weak" = "Weak Conncection..";
+"ConnectionStatus_bad" = "Bad Connection..";
+
+//MARK: - Image Picker
+"selectImageTile" = "Choose the image source";
+"fromGallery" = "From The Gallery";
+"fromCamera" = "Capture New Image";
+"deleteImage" = "Delete Image";
+"deleteImageMessage" = "Are you sure you want to delete this image?";
+
+//MARK: - Teacher Status
+"online" = "Online";
+"busy" = "Busy";
+"offline" = "Offline";
+
+//MARK: - Language Picker
+"languages" = "Languages";
+
+//MARK: - Data Picker
+"close" = "Close";
+"holyQuran" = "Holy Quran";
+
+//MARK: - Dates
+"saturday" = "Saturday";
+"sunday" = "Sunday";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"hours" = "hours";
+"hour" = "hour";
+"minutes" = "minutes";
+"years" = "years";
+"year" = "year";
+"months" = "months";
+"month" = "month";
+"days" = "days";
+"day" = "day";
+"seconds" = "seconds";
+"second" = "second";
+
+//MARK: - Report View
+"selectReason" = "You have to select the reasons for this report";
+"reportSuccess" = "Your report added successfully, our team will review it as soon as possible";
+"reportStudent" = "Report A Student";
+"reportTeacher" = "Report A Teacher";
+"otherReasons" = "Other Reasones";
+"emptyComment" = "Type the reason for this report";
+
+//MARK: - Call Session
+"Listening" = "Listening";
+"Recitation" = "Recitation";
+"Initiation" = "Initiation";
+"emptySurah" = "Please, select the surah firstly";
+"surahName" = "Surah Name";
+"ayah" = "ayah";
+"selectSessionType" = "Select session type";
+"selectSurahName" = "Select surah name";
+"selectAyah" = "Select ayah number";
+"emptyValidRecords" = "Please, enter what happened in the last session";
+"recordNumber" = "Record Number";
+"sessionRecordNotValid" = "Please enter all the required data to continue";
+"ayahAfterStartAyah" = "You can't select end ayah that comes before the start ayah";
+"surahAfterStartSurah" = "You can't select end surah that comes before the start surah";
+"confirmAddSessionMessage" = "Do you want to add another record or do you want to finish and submit?";
+"submit" = "Submit";
+"addNewRecord" = "Add New Record";
+"noBalance" = "Sorry, you don't have enough balance to continue this call";
+"minBalanceAlert" = "Your current balance is less than 10%, please buy a new package to avoid stopping the service";
+"sessionType" = "Session Type";
+"openCamera" = "Open Camera";
+"closeCamera" = "Close Camera";
+"callWillEnd" = "Call Ending";
+"callWillEndMessage" = "The call will be ended automatically at %@, are you want to continue the call after this time?";
+
+//MARK: - Teacher Review
+"emptyTeacherRate" = "Please, rate the teacher";
+"currentBalance" = "Balance:";
+
+//MARK: - Notifications
+"oldNotifications" = "Old Notifications";
+"newNotifications" = "New Notifications";
+
+//MARK: - Contact Us
+"emptyMessage" = "Please type your message";
+"typeMessage" = "Type Message";
+"messageSent" = "Your message has been sent successfully, thanks for using Moddakir";

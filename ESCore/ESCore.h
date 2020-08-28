@@ -6,7 +6,7 @@
 //  Copyright © 2019 Eslam. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for ESCore.
 FOUNDATION_EXPORT double ESCoreVersionNumber;

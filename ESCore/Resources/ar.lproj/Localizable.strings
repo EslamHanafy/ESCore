@@ -1,0 +1,161 @@
+/*
+  Localizable.strings
+  ESCore
+
+  Created by Eslam Hanafy on 12/16/19.
+  Copyright © 2019 Eslam. All rights reserved.
+*/
+
+"appName" = "مدّٙكر";
+"currency" = "ر.س";
+"ok" = "حسنا";
+"unknownError" = "عذرًا ، حدث خطأ ما ، يرجى إعادة المحاولة لاحقًا";
+"noInternet" = "عذرا لايوجد اتصال بالانترنت";
+"internetConnected" = "تم توصيل الإنترنت بنجاح مرة أخرى";
+"unauthorized" = "لا يمكن المصادقة باستخدام بيانات الاعتماد الحالية";
+"itemsNotFound" = "عذرا ، لم يتم العثور على نتائج";
+"forbidden" = "انتهت جلستك ، أو قمت بتسجيل الدخول من جهاز آخر ، يرجى تسجيل الدخول مرة أخرى إلى حسابك";
+"tryAgain" = "حاول مجددا";
+"cancel" = "إلغاء";
+"yes" = "نعم";
+"no" = "لا";
+"edit" = "تعديل";
+"delete" = "حذف";
+"editsSucceed" = "تم حفظ تعديلاتك بنجاح";
+"noChanges" = "لا توجد تعديلات";
+"loading" = "جار التحميل...";
+"authFaild" = "غير قادر على المصادقة باستخدام بيانات الاعتماد الحالية (البريد الإلكتروني وكلمة المرور).";
+"emptyData" = "لا توجد بيانات ليتم إرسالها!";
+"cancelRequest" = "هل أنت متأكد أنك تريد إلغاء هذا الطلب؟";
+"emptyEmail" = "أدخل بريدك الالكتروني";
+"emptyPassword" = "ادخل رقمك السري";
+"emailNotValid" = "أدخل عنوان بريد إلكتروني صالح";
+"testNotification" = "اشعار تجريبي";
+"testNotificationBody" = "هذه هي الطريقة التي سوف تتلقى  بها اشعارات منا";
+"chooseCountryCode" = "اختر كود البلد";
+"chooesYourCountry" = "اختر بلدك";
+"imageNotValid" = "عذرًا ، الصورة المحددة غير صالحة ، يرجى إعادة المحاولة باستخدام صورة مختلفة";
+"uploading" = "جار الرفع...";
+"later" = "في وقت لاحق";
+"oldVersion" = "إصدار قديم!";
+"oldVersionMessage" = "عذرًا ، أنت تستخدم إصدارًا قديمًا من التطبيق ، يجب عليك التحديث لمتابعة استخدام التطبيق ، شكرًا لاستخدام تطبيق مُدكر";
+"update" = "تحديث";
+"loggingout" = "تسجيل الخروج!";
+"loggingoutMessage" = "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟";
+"openSettings" = "أفتح الإعدادات";
+
+//MARK: - Calling
+"connecting" = "جار الاتصال";
+"ended" = "انتهت المكالمة";
+"receivingCallFrom" = "تلقي مكالمة من";
+"waitingForResponse" = "جار الإتصال بالمعلم/ة";
+"canceled" = "ألغيت";
+"denied" = "تم الرفض";
+"hangup" = "تم الانهاء";
+"noAnswer" = "لايوجد رد";
+"notFound" = "لم يتم العثور على الشخص";
+"missedCallMessage" = "لقد فاتتك مكالمة من %@";
+"closeMic" = "كتم الأصوات";
+"openMic" = "تشغيل الأصوات";
+"closeSpeaker" = "اغلاق مكبر الصوت";
+"openSpeaker" = "تشغيل مكبر الصوت";
+"sorryForNotAnswer" = "نحن نعتذر علي عدم رد المعلم";
+"sinchAccountChanged" = "عذرًا ، لم نتمكن من إتمام هذه المكالمة ، يرجى المحاولة مرة أخرى في غضون بضع ثوان";
+"callInterruptedMessage" = "عذرًا ، تمت مقاطعة المكالمة من الشخص الآخر ، جار محاولة اعادة الاتصال مرة أخرى";
+"callInterrupted" = "تمت مقاطعة المكالمة !!";
+"recordingPermission" = "إذن التسجيل!";
+"recordingPermissionMessage" = "نحتاج إلى الوصول إلى الميكروفون الخاص بك لتتمكن من إجراء مكالمات من خلال التطبيق";
+"teacherNotAvailable" = "المعلم غير متوفر";
+"none" = "لا شيء";
+"callExpired" = "انتهت صلاحية المكالمة";
+"couldNotConnectToCall" = "تعذر الاتصال بالمكالمة";
+"connectingToCall" = "جار الاتصال بالمكالمة..";
+"ConnectionStatus_good" = "اتصال جيد ..";
+"ConnectionStatus_weak" = "اتصال ضعيف ..";
+"ConnectionStatus_bad" = "اتصال ردئ..";
+
+//MARK: - Image Picker
+"selectImageTile" = "اختيار مصدر الصورة";
+"fromGallery" = "من المعرض";
+"fromCamera" = "التقاط صورة جديدة";
+"deleteImage" = "حذف الصورة";
+"deleteImageMessage" = "هل أنت متأكد أنك تريد حذف هذه الصورة؟";
+
+//MARK: - Teacher Status
+"online" = "متصل";
+"busy" = "مشغول";
+"offline" = "غير متصل";
+
+//MARK: - Language Picker
+"languages" = "اللغات";
+
+//MARK: - Data Picker
+"close" = "اغلاق";
+"holyQuran" = "القرآن الكريم";
+
+//MARK: - Dates
+"saturday" = "السبت";
+"sunday" = "الأحد";
+"monday" = "الإثنين";
+"tuesday" = "الثلاثاء";
+"wednesday" = "الأربعاء";
+"thursday" = "الخميس";
+"friday" = "الجمعة";
+"hours" = "ساعات";
+"hour" = "ساعة";
+"minutes" = "دقيقة";
+"years" = "عام";
+"year" = "عام";
+"months" = "أشهر";
+"month" = "شهر";
+"days" = "يوم";
+"day" = "يوم";
+"seconds" = "ثانية";
+"second" = "ثانية";
+
+//MARK: - Report View
+"selectReason" = "يجب عليك تحديد أسباب هذا التقرير";
+"reportSuccess" = "تمت إضافة تقريرك بنجاح ، وسيقوم فريقنا بمراجعته في أقرب وقت ممكن";
+"reportStudent" = "إبلاغ عن طالب";
+"reportTeacher" = "إبلاغ عن معلم";
+"otherReasons" = "أسباب اخرى";
+"emptyComment" = "اكتب سبب هذا التقرير";
+
+//MARK: - Call Session
+"Listening" = "تسميع";
+"Recitation" = "تلاوة";
+"Initiation" = "تلقين";
+"emptySurah" = "من فضلك ، اختر السورة أولا";
+"surahName" = "اسم السورة";
+"ayah" = "الآية";
+"selectSessionType" = "اختر نوع الجلسة";
+"selectSurahName" = "اختر اسم السورة";
+"selectAyah" = "اختر رقم الآية";
+"emptyValidRecords" = "من فضلك ، أدخل ما حدث في الجلسة الأخيرة";
+"recordNumber" = "سجل رقم";
+"sessionRecordNotValid" = "يرجى إدخال جميع البيانات المطلوبة للمتابعة";
+"ayahAfterStartAyah" = "لا يمكنك اختيار نهاية الآية التي تأتي قبل بداية الآية";
+"surahAfterStartSurah" = "لا يمكنك اختيار سورة النهاية التي تأتي قبل سورة البداية";
+"confirmAddSessionMessage" = "هل تريد إضافة سجل آخر أم تريد الانتهاء و الارسال؟";
+"submit" = "إرسال";
+"addNewRecord" = "إضافة سجل جديد";
+"noBalance" = "عذرًا ، ليس لديك رصيد كافٍ لمتابعة هذه المكالمة";
+"minBalanceAlert" = "رصيدك الحالي أقل من 10٪ ، يرجى شراء حزمة جديدة لتجنب إيقاف الخدمة";
+"sessionType" = "نوع الجلسة";
+"openCamera" = "افتح الكاميرا";
+"closeCamera" = "أغلق الكاميرا";
+"callWillEnd" = "إنهاء المكالمة";
+"callWillEndMessage" = "سيتم إنهاء المكالمة تلقائيًا الساعة %@ هل ترغب في متابعة المكالمة بعد هذا الوقت؟";
+
+//MARK: - Teacher Review
+"emptyTeacherRate" = "يرجى تقييم المعلم";
+"currentBalance" = "الرصيد:";
+
+//MARK: - Notifications
+"oldNotifications" = "الإشعارات القديمة";
+"newNotifications" = "الإشعارات الجديدة";
+
+//MARK: - Contact Us
+"emptyMessage" = "يرجى كتابة رسالتك";
+"typeMessage" = "اكتب الرسالة";
+"messageSent" = "تم إرسال رسالتك بنجاح ، شكرا لاستخدام مُدكر";
