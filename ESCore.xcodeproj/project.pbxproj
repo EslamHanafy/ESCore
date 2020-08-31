@@ -493,7 +493,7 @@
 		0CE4D23524F9927D005F9E63 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		0CE4D23824F99E8A005F9E63 /* ESRealm+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESRealm+RxSwift.swift"; sourceTree = "<group>"; };
 		0CE4D23924F99E8B005F9E63 /* ESRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRealm.swift; sourceTree = "<group>"; };
-		0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = ESCore.podspec; sourceTree = SOURCE_ROOT; };
+		0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESCore.podspec; sourceTree = SOURCE_ROOT; };
 		7B2333D2822787402DFD1E6C /* Pods_ESCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C7401522D286BD89B936CD /* Pods-ESCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore.release.xcconfig"; path = "Target Support Files/Pods-ESCore/Pods-ESCore.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A741639C60B827F1B4CE6 /* Pods-ESCore-ESCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore-ESCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1811,6 +1811,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eslam.ESCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1838,6 +1839,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eslam.ESCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
