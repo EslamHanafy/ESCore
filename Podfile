@@ -26,12 +26,6 @@ target 'ESCore' do
     pod 'RxSwiftExt'
     pod 'SwiftyGif'
     pod "FlagPhoneNumber"
-    pod 'Cosmos'
-    pod 'SideMenu'
-    pod 'CountryPickerView'
-    pod 'SearchTextField'
-    pod 'FaveButton'
-    pod 'SwiftKeychainWrapper'
     pod 'NSObject+Rx'
     pod "InitialsImageView"
     

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Eslam. All rights reserved.
 //
 
+#if canImport(CountryPickerView)
 import Foundation
 import CountryPickerView
 
@@ -71,3 +72,5 @@ extension CountryPicker: CountryPickerViewDelegate, CountryPickerViewDataSource 
         return false
     }
 }
+
+#endif

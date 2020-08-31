@@ -6,6 +6,7 @@
 //  Copyright © 2020 Eslam. All rights reserved.
 //
 
+#if canImport(CountryPickerView)
 import Foundation
 import CountryPickerView
 
@@ -39,3 +40,5 @@ extension DPCountry: Equatable {
         return lhs.code == rhs.code
     }
 }
+
+#endif

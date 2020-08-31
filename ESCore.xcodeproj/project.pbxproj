@@ -87,7 +87,6 @@
 		0CE4D0D624F7FB2A005F9E63 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0CC24F7FB24005F9E63 /* PhoneTextField.swift */; };
 		0CE4D0D724F7FB2A005F9E63 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0CD24F7FB25005F9E63 /* PopupView.swift */; };
 		0CE4D0D824F7FB2A005F9E63 /* ButtonBarPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0CE24F7FB26005F9E63 /* ButtonBarPagerViewController.swift */; };
-		0CE4D0D924F7FB2A005F9E63 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0CF24F7FB27005F9E63 /* GenderView.swift */; };
 		0CE4D0DA24F7FB2A005F9E63 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0D024F7FB28005F9E63 /* Slider.swift */; };
 		0CE4D0DB24F7FB2A005F9E63 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0D124F7FB29005F9E63 /* ButtonView.swift */; };
 		0CE4D0DC24F7FB2A005F9E63 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0D224F7FB2A005F9E63 /* ProgressView.swift */; };
@@ -106,9 +105,6 @@
 		0CE4D10624F7FCBA005F9E63 /* SecureTextToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D10324F7FCB8005F9E63 /* SecureTextToggleButton.swift */; };
 		0CE4D10724F7FCBA005F9E63 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D10424F7FCB9005F9E63 /* StringExtension.swift */; };
 		0CE4D10824F7FCBA005F9E63 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D10524F7FCBA005F9E63 /* PasswordTextField.swift */; };
-		0CE4D10B24F7FD1D005F9E63 /* ReasonCollectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D10A24F7FD1D005F9E63 /* ReasonCollectionViews.swift */; };
-		0CE4D10F24F7FD2E005F9E63 /* ReasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D10D24F7FD2D005F9E63 /* ReasonCollectionViewCell.swift */; };
-		0CE4D11024F7FD2E005F9E63 /* ReasonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D10E24F7FD2E005F9E63 /* ReasonCollectionViewCell.xib */; };
 		0CE4D11424F7FD5C005F9E63 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D11224F7FD5B005F9E63 /* WebViewController.swift */; };
 		0CE4D11524F7FD5C005F9E63 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D11324F7FD5C005F9E63 /* WebViewController.xib */; };
 		0CE4D11A24F7FE5B005F9E63 /* Quran-Metadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D11724F7FE52005F9E63 /* Quran-Metadata.json */; };
@@ -243,6 +239,7 @@
 		0CE4D23624F9927D005F9E63 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D23524F9927D005F9E63 /* WKWebViewExtensions.swift */; };
 		0CE4D23A24F99E8B005F9E63 /* ESRealm+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D23824F99E8A005F9E63 /* ESRealm+RxSwift.swift */; };
 		0CE4D23B24F99E8B005F9E63 /* ESRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D23924F99E8B005F9E63 /* ESRealm.swift */; };
+		0CE4D24724FCF9A6005F9E63 /* ESCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */; };
 		9B18C693C6FC770211A60A9A /* Pods_ESCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2333D2822787402DFD1E6C /* Pods_ESCore.framework */; };
 		D5C584D30029BBD29CE54E70 /* Pods_ESCore_ESCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BB619CEF5AE88DD9470F11 /* Pods_ESCore_ESCoreTests.framework */; };
 /* End PBXBuildFile section */
@@ -341,7 +338,6 @@
 		0CE4D0CC24F7FB24005F9E63 /* PhoneTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		0CE4D0CD24F7FB25005F9E63 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		0CE4D0CE24F7FB26005F9E63 /* ButtonBarPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerViewController.swift; sourceTree = "<group>"; };
-		0CE4D0CF24F7FB27005F9E63 /* GenderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
 		0CE4D0D024F7FB28005F9E63 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		0CE4D0D124F7FB29005F9E63 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		0CE4D0D224F7FB2A005F9E63 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -362,9 +358,6 @@
 		0CE4D10324F7FCB8005F9E63 /* SecureTextToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextToggleButton.swift; sourceTree = "<group>"; };
 		0CE4D10424F7FCB9005F9E63 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0CE4D10524F7FCBA005F9E63 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
-		0CE4D10A24F7FD1D005F9E63 /* ReasonCollectionViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonCollectionViews.swift; sourceTree = "<group>"; };
-		0CE4D10D24F7FD2D005F9E63 /* ReasonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReasonCollectionViewCell.swift; sourceTree = "<group>"; };
-		0CE4D10E24F7FD2E005F9E63 /* ReasonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReasonCollectionViewCell.xib; sourceTree = "<group>"; };
 		0CE4D11224F7FD5B005F9E63 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0CE4D11324F7FD5C005F9E63 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		0CE4D11724F7FE52005F9E63 /* Quran-Metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Quran-Metadata.json"; sourceTree = "<group>"; };
@@ -396,7 +389,7 @@
 		0CE4D14F24F8009C005F9E63 /* MediaPlayerTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerTrack.swift; sourceTree = "<group>"; };
 		0CE4D15524F80283005F9E63 /* Surah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Surah.swift; sourceTree = "<group>"; };
 		0CE4D15924F97A0B005F9E63 /* ESCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESCore.swift; sourceTree = "<group>"; };
-		0CE4D15B24F987F8005F9E63 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		0CE4D15B24F987F8005F9E63 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0CE4D15F24F98FD9005F9E63 /* NSColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
 		0CE4D16024F98FDA005F9E63 /* NSViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensions.swift; sourceTree = "<group>"; };
 		0CE4D16124F98FDB005F9E63 /* NSImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
@@ -500,6 +493,7 @@
 		0CE4D23524F9927D005F9E63 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		0CE4D23824F99E8A005F9E63 /* ESRealm+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESRealm+RxSwift.swift"; sourceTree = "<group>"; };
 		0CE4D23924F99E8B005F9E63 /* ESRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRealm.swift; sourceTree = "<group>"; };
+		0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = ESCore.podspec; sourceTree = SOURCE_ROOT; };
 		7B2333D2822787402DFD1E6C /* Pods_ESCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C7401522D286BD89B936CD /* Pods-ESCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore.release.xcconfig"; path = "Target Support Files/Pods-ESCore/Pods-ESCore.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A741639C60B827F1B4CE6 /* Pods-ESCore-ESCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore-ESCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -552,23 +546,17 @@
 		0C8CFE4523B8A62E001DA888 /* ESCore */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D23724F99E60005F9E63 /* Realm */,
 				0CE4D11624F7FE30005F9E63 /* Resources */,
-				0CE4D03924F7F460005F9E63 /* Common */,
-				0CE4D13624F8003B005F9E63 /* Audio Manager */,
-				0CE4D12524F7FFC6005F9E63 /* User Guide */,
-				0CE4D0B424F7FA7C005F9E63 /* Views */,
-				0CE4D0AB24F7F90A005F9E63 /* APIs */,
-				0CE4D0A824F7F63A005F9E63 /* File Uploaders */,
+				0CE4D24324FCF279005F9E63 /* Core */,
+				0CE4D24424FCF2D8005F9E63 /* XLPagerTabStrip */,
+				0CE4D23724F99E60005F9E63 /* Realm */,
+				0CE4D13624F8003B005F9E63 /* Audio */,
+				0CE4D12524F7FFC6005F9E63 /* UserGuide */,
 				0CE4D08924F7F54E005F9E63 /* Pickers */,
-				0CE4D08024F7F510005F9E63 /* Validators */,
-				0CE4D03224F7F428005F9E63 /* Rx */,
-				0CE4D02824F7F390005F9E63 /* Connectivity */,
-				0CE4D15D24F98FBB005F9E63 /* SwifterSwift */,
 				0C8CFE4623B8A62E001DA888 /* ESCore.h */,
 				0C8CFE4723B8A62E001DA888 /* Info.plist */,
 				0CE4D15B24F987F8005F9E63 /* Podfile */,
-				0CE4D15924F97A0B005F9E63 /* ESCore.swift */,
+				0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */,
 			);
 			path = ESCore;
 			sourceTree = "<group>";
@@ -666,6 +654,7 @@
 		0CE4D08924F7F54E005F9E63 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4D24524FCF6F3005F9E63 /* Resources */,
 				0CE4D0A324F7F5E4005F9E63 /* Quran Picker */,
 				0CE4D09424F7F5BD005F9E63 /* Picker Controller */,
 				0CE4D08F24F7F5A3005F9E63 /* Language Picker */,
@@ -739,7 +728,6 @@
 			isa = PBXGroup;
 			children = (
 				0CE4D11124F7FD52005F9E63 /* Web View */,
-				0CE4D10924F7FD10005F9E63 /* Reason Collection Views */,
 				0CE4D0F524F7FC8E005F9E63 /* Password TextField */,
 				0CE4D0EB24F7FBF1005F9E63 /* Loader View */,
 				0CE4D0E624F7FBD6005F9E63 /* Image Viewer */,
@@ -785,11 +773,9 @@
 			isa = PBXGroup;
 			children = (
 				0CE4D0CA24F7FB22005F9E63 /* BackView.swift */,
-				0CE4D0CE24F7FB26005F9E63 /* ButtonBarPagerViewController.swift */,
 				0CE4D0D124F7FB29005F9E63 /* ButtonView.swift */,
 				0CE4D0C924F7FB21005F9E63 /* CustomView.swift */,
 				0CE4D0CB24F7FB23005F9E63 /* FloatingLabelTextField.swift */,
-				0CE4D0CF24F7FB27005F9E63 /* GenderView.swift */,
 				0CE4D0CC24F7FB24005F9E63 /* PhoneTextField.swift */,
 				0CE4D0CD24F7FB25005F9E63 /* PopupView.swift */,
 				0CE4D0D224F7FB2A005F9E63 /* ProgressView.swift */,
@@ -849,24 +835,6 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
-		0CE4D10924F7FD10005F9E63 /* Reason Collection Views */ = {
-			isa = PBXGroup;
-			children = (
-				0CE4D10C24F7FD25005F9E63 /* Item Cell */,
-				0CE4D10A24F7FD1D005F9E63 /* ReasonCollectionViews.swift */,
-			);
-			path = "Reason Collection Views";
-			sourceTree = "<group>";
-		};
-		0CE4D10C24F7FD25005F9E63 /* Item Cell */ = {
-			isa = PBXGroup;
-			children = (
-				0CE4D10D24F7FD2D005F9E63 /* ReasonCollectionViewCell.swift */,
-				0CE4D10E24F7FD2E005F9E63 /* ReasonCollectionViewCell.xib */,
-			);
-			path = "Item Cell";
-			sourceTree = "<group>";
-		};
 		0CE4D11124F7FD52005F9E63 /* Web View */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,15 +848,13 @@
 			isa = PBXGroup;
 			children = (
 				0CE4D12124F7FE8D005F9E63 /* Localizable.strings */,
-				0CE4D11824F7FE58005F9E63 /* Countries.bundle */,
 				0CE4D11924F7FE5B005F9E63 /* cryImage.gif */,
-				0CE4D11724F7FE52005F9E63 /* Quran-Metadata.json */,
 				0CE4D12324F7FF75005F9E63 /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		0CE4D12524F7FFC6005F9E63 /* User Guide */ = {
+		0CE4D12524F7FFC6005F9E63 /* UserGuide */ = {
 			isa = PBXGroup;
 			children = (
 				0CE4D12C24F7FFF3005F9E63 /* MaterialShowcase.swift */,
@@ -900,16 +866,16 @@
 				0CE4D12A24F7FFF1005F9E63 /* UserGuide.swift */,
 				0CE4D12724F7FFEE005F9E63 /* Utility.swift */,
 			);
-			path = "User Guide";
+			path = UserGuide;
 			sourceTree = "<group>";
 		};
-		0CE4D13624F8003B005F9E63 /* Audio Manager */ = {
+		0CE4D13624F8003B005F9E63 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				0CE4D13824F80058005F9E63 /* Public */,
 				0CE4D13724F8004F005F9E63 /* Private */,
 			);
-			path = "Audio Manager";
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		0CE4D13724F8004F005F9E63 /* Private */ = {
@@ -1192,6 +1158,39 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		0CE4D24324FCF279005F9E63 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D15924F97A0B005F9E63 /* ESCore.swift */,
+				0CE4D03924F7F460005F9E63 /* Common */,
+				0CE4D15D24F98FBB005F9E63 /* SwifterSwift */,
+				0CE4D0AB24F7F90A005F9E63 /* APIs */,
+				0CE4D0A824F7F63A005F9E63 /* File Uploaders */,
+				0CE4D03224F7F428005F9E63 /* Rx */,
+				0CE4D02824F7F390005F9E63 /* Connectivity */,
+				0CE4D08024F7F510005F9E63 /* Validators */,
+				0CE4D0B424F7FA7C005F9E63 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0CE4D24424FCF2D8005F9E63 /* XLPagerTabStrip */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D0CE24F7FB26005F9E63 /* ButtonBarPagerViewController.swift */,
+			);
+			path = XLPagerTabStrip;
+			sourceTree = "<group>";
+		};
+		0CE4D24524FCF6F3005F9E63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D11824F7FE58005F9E63 /* Countries.bundle */,
+				0CE4D11724F7FE52005F9E63 /* Quran-Metadata.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5D13E724C192E1639AEECF0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1318,7 +1317,7 @@
 				0CE4D15C24F987F8005F9E63 /* Podfile in Resources */,
 				0CE4D0FE24F7FCA7005F9E63 /* visibility_on.png in Resources */,
 				0CE4D0F024F7FC17005F9E63 /* LoaderView.xib in Resources */,
-				0CE4D11024F7FD2E005F9E63 /* ReasonCollectionViewCell.xib in Resources */,
+				0CE4D24724FCF9A6005F9E63 /* ESCore.podspec in Resources */,
 				0CE4D0BD24F7FACC005F9E63 /* ChipCollectionViewCell.xib in Resources */,
 				0CE4D11C24F7FE5B005F9E63 /* cryImage.gif in Resources */,
 				0CE4D0FF24F7FCA7005F9E63 /* visibility_off@3x.png in Resources */,
@@ -1417,7 +1416,6 @@
 				0CE4D15024F8009C005F9E63 /* AVAsset+Metadata.swift in Sources */,
 				0CE4D21724F99264005F9E63 /* UIStackViewExtensions.swift in Sources */,
 				0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */,
-				0CE4D0D924F7FB2A005F9E63 /* GenderView.swift in Sources */,
 				0CE4D0EA24F7FBE4005F9E63 /* ImageViewer.swift in Sources */,
 				0CE4D0A724F7F5F4005F9E63 /* AyahPicker.swift in Sources */,
 				0CE4D05E24F7F4C7005F9E63 /* Sequence+Helpers.swift in Sources */,
@@ -1575,7 +1573,6 @@
 				0CE4D0BC24F7FACC005F9E63 /* ChipCollectionViewCell.swift in Sources */,
 				0CE4D21F24F99264005F9E63 /* UINavigationItemExtensions.swift in Sources */,
 				0CE4D07724F7F4C7005F9E63 /* UITableViewCell+Helpers.swift in Sources */,
-				0CE4D10B24F7FD1D005F9E63 /* ReasonCollectionViews.swift in Sources */,
 				0CE4D15A24F97A0B005F9E63 /* ESCore.swift in Sources */,
 				0CE4D1E324F99204005F9E63 /* CollectionExtensions.swift in Sources */,
 				0CE4D1A224F99125005F9E63 /* MKMapViewExtensions.swift in Sources */,
@@ -1614,7 +1611,6 @@
 				0CE4D1B724F99164005F9E63 /* SCNGeometryExtensions.swift in Sources */,
 				0CE4D03124F7F3C6005F9E63 /* DisConnectedView.swift in Sources */,
 				0CE4D21B24F99264005F9E63 /* UILayoutPriorityExtensions.swift in Sources */,
-				0CE4D10F24F7FD2E005F9E63 /* ReasonCollectionViewCell.swift in Sources */,
 				0CE4D17E24F9902F005F9E63 /* CLVisitExtensions.swift in Sources */,
 				0CE4D21624F99264005F9E63 /* UISegmentedControlExtensions.swift in Sources */,
 				0CE4D19024F990A8005F9E63 /* URLRequestExtensions.swift in Sources */,
@@ -1727,7 +1723,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1785,7 +1781,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
