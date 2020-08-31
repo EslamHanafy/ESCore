@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ESCore"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "ESCore is a collection of the most important and common helpers needed in every iOS project."
 
   # This description is used to generate tags and improve search results.
@@ -55,7 +55,7 @@ Pod::Spec.new do |spec|
   
   spec.platform     = :ios, "10.0"
   spec.requires_arc = true
-  
+  spec.swift_versions = ['4.2', '5', '5.1', '5.2']
 
   spec.source       = { :git => "https://github.com/EslamHanafy/ESCore.git", :tag => "#{spec.version}" }
   
