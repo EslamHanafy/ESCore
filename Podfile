@@ -18,7 +18,6 @@ target 'ESCore' do
     pod 'SwiftyJSON'
     pod 'Connectivity'
     pod 'SkyFloatingLabelTextField'
-    pod 'Log'
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxRelay'

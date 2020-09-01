@@ -40,7 +40,6 @@
 		0CE4D07224F7F4C7005F9E63 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D04F24F7F4A6005F9E63 /* Array+Helpers.swift */; };
 		0CE4D07324F7F4C7005F9E63 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05024F7F4A8005F9E63 /* Optional+Helpers.swift */; };
 		0CE4D07424F7F4C7005F9E63 /* UIAlert+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05124F7F4AA005F9E63 /* UIAlert+Helpers.swift */; };
-		0CE4D07524F7F4C7005F9E63 /* Operator++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05224F7F4AD005F9E63 /* Operator++.swift */; };
 		0CE4D07624F7F4C7005F9E63 /* UIApplication+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05324F7F4B0005F9E63 /* UIApplication+Helpers.swift */; };
 		0CE4D07724F7F4C7005F9E63 /* UITableViewCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05424F7F4B3005F9E63 /* UITableViewCell+Helpers.swift */; };
 		0CE4D07824F7F4C7005F9E63 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05524F7F4B6005F9E63 /* SnackBar.swift */; };
@@ -240,6 +239,15 @@
 		0CE4D23A24F99E8B005F9E63 /* ESRealm+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D23824F99E8A005F9E63 /* ESRealm+RxSwift.swift */; };
 		0CE4D23B24F99E8B005F9E63 /* ESRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D23924F99E8B005F9E63 /* ESRealm.swift */; };
 		0CE4D24724FCF9A6005F9E63 /* ESCore.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */; };
+		0CE4D28424FEA017005F9E63 /* ESLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28224FEA016005F9E63 /* ESLogger.swift */; };
+		0CE4D28524FEA017005F9E63 /* ESLoggerFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28324FEA016005F9E63 /* ESLoggerFileHandler.swift */; };
+		0CE4D28C24FEA040005F9E63 /* Benchmarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28724FEA03F005F9E63 /* Benchmarker.swift */; };
+		0CE4D28D24FEA040005F9E63 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28824FEA03F005F9E63 /* Logger.swift */; };
+		0CE4D28E24FEA040005F9E63 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28924FEA040005F9E63 /* Formatter.swift */; };
+		0CE4D28F24FEA040005F9E63 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28A24FEA040005F9E63 /* Theme.swift */; };
+		0CE4D29024FEA040005F9E63 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D28B24FEA040005F9E63 /* Utilities.swift */; };
+		0CE4D29424FEA05B005F9E63 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D29224FEA05B005F9E63 /* Themes.swift */; };
+		0CE4D29524FEA05B005F9E63 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D29324FEA05B005F9E63 /* Formatters.swift */; };
 		9B18C693C6FC770211A60A9A /* Pods_ESCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2333D2822787402DFD1E6C /* Pods_ESCore.framework */; };
 		D5C584D30029BBD29CE54E70 /* Pods_ESCore_ESCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BB619CEF5AE88DD9470F11 /* Pods_ESCore_ESCoreTests.framework */; };
 /* End PBXBuildFile section */
@@ -291,7 +299,6 @@
 		0CE4D04F24F7F4A6005F9E63 /* Array+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05024F7F4A8005F9E63 /* Optional+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05124F7F4AA005F9E63 /* UIAlert+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlert+Helpers.swift"; sourceTree = "<group>"; };
-		0CE4D05224F7F4AD005F9E63 /* Operator++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operator++.swift"; sourceTree = "<group>"; };
 		0CE4D05324F7F4B0005F9E63 /* UIApplication+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05424F7F4B3005F9E63 /* UITableViewCell+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05524F7F4B6005F9E63 /* SnackBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
@@ -494,6 +501,15 @@
 		0CE4D23824F99E8A005F9E63 /* ESRealm+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ESRealm+RxSwift.swift"; sourceTree = "<group>"; };
 		0CE4D23924F99E8B005F9E63 /* ESRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESRealm.swift; sourceTree = "<group>"; };
 		0CE4D24624FCF9A6005F9E63 /* ESCore.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ESCore.podspec; sourceTree = SOURCE_ROOT; };
+		0CE4D28224FEA016005F9E63 /* ESLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESLogger.swift; sourceTree = "<group>"; };
+		0CE4D28324FEA016005F9E63 /* ESLoggerFileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESLoggerFileHandler.swift; sourceTree = "<group>"; };
+		0CE4D28724FEA03F005F9E63 /* Benchmarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benchmarker.swift; sourceTree = "<group>"; };
+		0CE4D28824FEA03F005F9E63 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		0CE4D28924FEA040005F9E63 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		0CE4D28A24FEA040005F9E63 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0CE4D28B24FEA040005F9E63 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0CE4D29224FEA05B005F9E63 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		0CE4D29324FEA05B005F9E63 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		7B2333D2822787402DFD1E6C /* Pods_ESCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C7401522D286BD89B936CD /* Pods-ESCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore.release.xcconfig"; path = "Target Support Files/Pods-ESCore/Pods-ESCore.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A741639C60B827F1B4CE6 /* Pods-ESCore-ESCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore-ESCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -619,7 +635,6 @@
 				0CE4D04324F7F48B005F9E63 /* L102Language.swift */,
 				0CE4D03D24F7F47D005F9E63 /* Navigation+Helpers.swift */,
 				0CE4D04E24F7F4A4005F9E63 /* Objc_AssociatedObject+Helpers.swift */,
-				0CE4D05224F7F4AD005F9E63 /* Operator++.swift */,
 				0CE4D05024F7F4A8005F9E63 /* Optional+Helpers.swift */,
 				0CE4D03C24F7F47B005F9E63 /* Randoms.swift */,
 				0CE4D03B24F7F479005F9E63 /* Sequence+Helpers.swift */,
@@ -1161,6 +1176,7 @@
 		0CE4D24324FCF279005F9E63 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4D28124FE9FE4005F9E63 /* ESLogger */,
 				0CE4D15924F97A0B005F9E63 /* ESCore.swift */,
 				0CE4D03924F7F460005F9E63 /* Common */,
 				0CE4D15D24F98FBB005F9E63 /* SwifterSwift */,
@@ -1189,6 +1205,38 @@
 				0CE4D11724F7FE52005F9E63 /* Quran-Metadata.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0CE4D28124FE9FE4005F9E63 /* ESLogger */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D28624FEA01F005F9E63 /* Log */,
+				0CE4D28224FEA016005F9E63 /* ESLogger.swift */,
+				0CE4D28324FEA016005F9E63 /* ESLoggerFileHandler.swift */,
+			);
+			path = ESLogger;
+			sourceTree = "<group>";
+		};
+		0CE4D28624FEA01F005F9E63 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D29124FEA050005F9E63 /* Extensions */,
+				0CE4D28724FEA03F005F9E63 /* Benchmarker.swift */,
+				0CE4D28924FEA040005F9E63 /* Formatter.swift */,
+				0CE4D28824FEA03F005F9E63 /* Logger.swift */,
+				0CE4D28A24FEA040005F9E63 /* Theme.swift */,
+				0CE4D28B24FEA040005F9E63 /* Utilities.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		0CE4D29124FEA050005F9E63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4D29324FEA05B005F9E63 /* Formatters.swift */,
+				0CE4D29224FEA05B005F9E63 /* Themes.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5D13E724C192E1639AEECF0E /* Frameworks */ = {
@@ -1411,6 +1459,7 @@
 				0CE4D22524F99264005F9E63 /* UIGestureRecognizerExtensions.swift in Sources */,
 				0CE4D21A24F99264005F9E63 /* UIViewControllerExtensions.swift in Sources */,
 				0CE4D07A24F7F4C7005F9E63 /* URL+Helpers.swift in Sources */,
+				0CE4D28524FEA017005F9E63 /* ESLoggerFileHandler.swift in Sources */,
 				0CE4D07C24F7F4C7005F9E63 /* UIImageView+Helpers.swift in Sources */,
 				0CE4D06524F7F4C7005F9E63 /* UIDevice+Helpers.swift in Sources */,
 				0CE4D15024F8009C005F9E63 /* AVAsset+Metadata.swift in Sources */,
@@ -1421,6 +1470,7 @@
 				0CE4D05E24F7F4C7005F9E63 /* Sequence+Helpers.swift in Sources */,
 				0CE4D22D24F99264005F9E63 /* UITableViewExtensions.swift in Sources */,
 				0CE4D07224F7F4C7005F9E63 /* Array+Helpers.swift in Sources */,
+				0CE4D28D24FEA040005F9E63 /* Logger.swift in Sources */,
 				0CE4D21324F99264005F9E63 /* UIBezierPathExtensions.swift in Sources */,
 				0CE4D1E724F99204005F9E63 /* ArrayExtensions.swift in Sources */,
 				0CE4D0B924F7FAC1005F9E63 /* ChipView.swift in Sources */,
@@ -1435,7 +1485,9 @@
 				0CE4D22124F99264005F9E63 /* UIDatePickerExtensions.swift in Sources */,
 				0CE4D12F24F7FFF4005F9E63 /* Utility.swift in Sources */,
 				0CE4D07124F7F4C7005F9E63 /* Objc_AssociatedObject+Helpers.swift in Sources */,
+				0CE4D28E24FEA040005F9E63 /* Formatter.swift in Sources */,
 				0CE4D08824F7F52B005F9E63 /* Ruleable.swift in Sources */,
+				0CE4D28424FEA017005F9E63 /* ESLogger.swift in Sources */,
 				0CE4D13424F7FFF4005F9E63 /* MaterialShowcase.swift in Sources */,
 				0CE4D13D24F80065005F9E63 /* MediaLibraryHelper.swift in Sources */,
 				0CE4D17D24F9902F005F9E63 /* CLLocationArrayExtensions.swift in Sources */,
@@ -1463,7 +1515,6 @@
 				0CE4D17624F9901C005F9E63 /* CGFloatExtensions.swift in Sources */,
 				0CE4D23024F99264005F9E63 /* UITextViewExtensions.swift in Sources */,
 				0CE4D21824F99264005F9E63 /* UIScrollViewExtensions.swift in Sources */,
-				0CE4D07524F7F4C7005F9E63 /* Operator++.swift in Sources */,
 				0CE4D17524F9901C005F9E63 /* CGVectorExtensions.swift in Sources */,
 				0CE4D0DF24F7FB44005F9E63 /* DatePickerView.swift in Sources */,
 				0CE4D1B324F99164005F9E63 /* SCNSphereExtensions.swift in Sources */,
@@ -1500,6 +1551,7 @@
 				0CE4D1AF24F99164005F9E63 /* SCNMaterialExtensions.swift in Sources */,
 				0CE4D15324F8009C005F9E63 /* AudioURLTrack+Metadata.swift in Sources */,
 				0CE4D03624F7F43B005F9E63 /* Observable+Helpers.swift in Sources */,
+				0CE4D29024FEA040005F9E63 /* Utilities.swift in Sources */,
 				0CE4D12E24F7FFF4005F9E63 /* MaterialTapTargetPrompt.swift in Sources */,
 				0CE4D09224F7F5B2005F9E63 /* DPLanguage.swift in Sources */,
 				0CE4D09C24F7F5CF005F9E63 /* DataPickerViewController.swift in Sources */,
@@ -1518,6 +1570,7 @@
 				0CE4D0C324F7FADF005F9E63 /* ChipItemStatus.swift in Sources */,
 				0CE4D0C724F7FADF005F9E63 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				0CE4D19724F990A8005F9E63 /* DateExtensions.swift in Sources */,
+				0CE4D29424FEA05B005F9E63 /* Themes.swift in Sources */,
 				0CE4D07B24F7F4C7005F9E63 /* UIImage+Helpers.swift in Sources */,
 				0CE4D1DD24F99204005F9E63 /* SignedIntegerExtensions.swift in Sources */,
 				0CE4D22F24F99264005F9E63 /* UITabBarExtensions.swift in Sources */,
@@ -1580,6 +1633,7 @@
 				0CE4D0DA24F7FB2A005F9E63 /* Slider.swift in Sources */,
 				0CE4D1EA24F99204005F9E63 /* DictionaryExtensions.swift in Sources */,
 				0CE4D1E624F99204005F9E63 /* CharacterExtensions.swift in Sources */,
+				0CE4D29524FEA05B005F9E63 /* Formatters.swift in Sources */,
 				0CE4D07D24F7F4C7005F9E63 /* UILabel+Helpers.swift in Sources */,
 				0CE4D09D24F7F5CF005F9E63 /* DataPickerTableViewCell.swift in Sources */,
 				0CE4D21E24F99264005F9E63 /* UIStoryboardExtensions.swift in Sources */,
@@ -1604,7 +1658,9 @@
 				0CE4D0B124F7F930005F9E63 /* NetworkError.swift in Sources */,
 				0CE4D0DC24F7FB2A005F9E63 /* ProgressView.swift in Sources */,
 				0CE4D23A24F99E8B005F9E63 /* ESRealm+RxSwift.swift in Sources */,
+				0CE4D28C24FEA040005F9E63 /* Benchmarker.swift in Sources */,
 				0CE4D19224F990A8005F9E63 /* URLExtensions.swift in Sources */,
+				0CE4D28F24FEA040005F9E63 /* Theme.swift in Sources */,
 				0CE4D19924F990A8005F9E63 /* NotificationCenterExtensions.swift in Sources */,
 				0CE4D14024F80075005F9E63 /* MPMediaItem+AudioPlayerManager.swift in Sources */,
 				0CE4D1B824F99164005F9E63 /* SCNShapeExtensions.swift in Sources */,
@@ -1811,7 +1867,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eslam.ESCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1839,7 +1895,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eslam.ESCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

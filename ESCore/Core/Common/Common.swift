@@ -8,10 +8,9 @@
 
 import UIKit
 import SystemConfiguration
-import Log
 
 
-public let Log = Logger(formatter: .detailed, theme: nil)
+public let Log = ESLogger.shared
 
 public var screenWidth:CGFloat { get { return UIScreen.main.bounds.size.width } }
 public var screenHeight:CGFloat { get { return UIScreen.main.bounds.size.height } }
@@ -93,38 +92,3 @@ public func displayForceAlert() {
 //    }))
     currentController?.present(alert, animated: true, completion: nil)
 }
-
-public struct PrintLogger: TextOutputStream {
-
-    public func write(_ string: String) {
-        let fm = FileManager.default
-        let log = fm.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("log.txt")
-        if let handle = try? FileHandle(forWritingTo: log) {
-            handle.seekToEndOfFile()
-            handle.write(string.data(using: .utf8)!)
-            handle.closeFile()
-        } else {
-            try? string.data(using: .utf8)?.write(to: log)
-        }
-    }
-    
-    public func log(_ items: String, separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-//        let date = Date()
-//        let formatter = Log.formatter
-//        let result = formatter.format(
-//            level: .debug,
-//            items: [items],
-//            separator: separator,
-//            terminator: terminator,
-//            file: file,
-//            line: line,
-//            column: column,
-//            function: function,
-//            date: date
-//        )
-//
-//        print(result, to: &logger)
-    }
-}
-
-public var logger = PrintLogger()

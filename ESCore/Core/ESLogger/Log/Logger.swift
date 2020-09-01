@@ -22,6 +22,8 @@
 // SOFTWARE.
 //
 
+import Foundation
+
 private let benchmarker = Benchmarker()
 
 public enum Level: Int {
@@ -94,8 +96,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    open func trace(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-        log(.trace, items, separator, terminator, file, line, column, function)
+    @discardableResult
+    func trace(_ items: [Any], separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) -> String {
+        return log(.trace, items, separator, terminator, file, line, column, function)
     }
 
     /**
@@ -109,8 +112,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    open func debug(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-        log(.debug, items, separator, terminator, file, line, column, function)
+    @discardableResult
+    func debug(_ items: [Any], separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) -> String {
+        return log(.debug, items, separator, terminator, file, line, column, function)
     }
 
     /**
@@ -124,8 +128,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    open func info(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-        log(.info, items, separator, terminator, file, line, column, function)
+    @discardableResult
+    func info(_ items: [Any], separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) -> String {
+        return log(.info, items, separator, terminator, file, line, column, function)
     }
 
     /**
@@ -139,8 +144,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    open func warning(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-        log(.warning, items, separator, terminator, file, line, column, function)
+    @discardableResult
+    func warning(_ items: [Any], separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) -> String {
+        return log(.warning, items, separator, terminator, file, line, column, function)
     }
 
     /**
@@ -154,8 +160,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    open func error(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
-        log(.error, items, separator, terminator, file, line, column, function)
+    @discardableResult
+    func error(_ items: [Any], separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) -> String {
+        return log(.error, items, separator, terminator, file, line, column, function)
     }
 
     /**
@@ -170,8 +177,9 @@ open class Logger {
      - parameter column:     The column at which the log happens.
      - parameter function:   The function in which the log happens.
      */
-    private func log(_ level: Level, _ items: [Any], _ separator: String, _ terminator: String, _ file: String, _ line: Int, _ column: Int, _ function: String) {
-        guard enabled && level >= minLevel else { return }
+    @discardableResult
+    private func log(_ level: Level, _ items: [Any], _ separator: String, _ terminator: String, _ file: String, _ line: Int, _ column: Int, _ function: String) -> String {
+        guard enabled && level >= minLevel else { return "" }
 
         let date = Date()
 
@@ -190,6 +198,8 @@ open class Logger {
         queue.async {
             Swift.print(result, separator: "", terminator: "")
         }
+        
+        return result
     }
 
     /**

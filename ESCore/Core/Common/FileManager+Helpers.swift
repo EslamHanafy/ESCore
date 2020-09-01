@@ -11,15 +11,29 @@ import Foundation
 public extension FileManager {
     static var documentDirectory: URL {
         return FileManager.default.urls(for: .documentDirectory,
-                                in: .userDomainMask)[0]
+                                        in: .userDomainMask)[0]
+    }
+    
+    
+    static func createFile(withName name: String, atFolder folder: String, atDirectory directory: SearchPathDirectory = .documentDirectory, useUniqueName: Bool = false) -> URL? {
+        guard let url = createFolder(withName: folder, at: directory)?.appendingPathComponent(name) else { return nil }
+        
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: url.path) {
+            return url
+        } else {
+            fileManager.createFile(atPath: url.path, contents: nil, attributes: nil)
+            return url
+        }
     }
     
     @discardableResult
-    static func createFolder(withName name: String) -> URL? {
+    static func createFolder(withName name: String, at directory: SearchPathDirectory = .documentDirectory) -> URL? {
         let fileManager = FileManager.default
         
         // Construct a URL with desired folder name
-        let folderURL = documentDirectory.appendingPathComponent(name)
+        let folderURL = FileManager.default.urls(for: directory,
+                                                 in: .userDomainMask)[0].appendingPathComponent(name)
         // If folder URL does not exist, create it
         if !fileManager.fileExists(atPath: folderURL.path) {
             do {

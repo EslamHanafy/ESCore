@@ -8,22 +8,10 @@
 
 Pod::Spec.new do |spec|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   spec.name         = "ESCore"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "ESCore is a collection of the most important and common helpers needed in every iOS project."
 
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
   # spec.description  = <<-DESC
     #               DESC
 
@@ -42,17 +30,8 @@ Pod::Spec.new do |spec|
 
 
   spec.author             = { "EslamHanafy" => "eslamhanafy1998@gmail.com" }
-  # Or just: spec.author    = "EslamHanafy"
-  # spec.authors            = { "EslamHanafy" => "eslamhanafy1998@gmail.com" }
   spec.social_media_url   = "https://twitter.com/ProgramerEslam"
 
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
-
-  
   spec.platform     = :ios, "10.0"
   spec.requires_arc = true
   spec.swift_versions = ['4.2', '5', '5.1', '5.2']
@@ -76,7 +55,6 @@ Pod::Spec.new do |spec|
     core.dependency 'SwiftyJSON'
     core.dependency 'Connectivity'
     core.dependency 'SkyFloatingLabelTextField'
-    core.dependency 'Log'
     core.dependency 'RxSwift'
     core.dependency 'RxCocoa'
     core.dependency 'RxRelay'

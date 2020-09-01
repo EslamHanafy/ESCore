@@ -22,12 +22,9 @@
 // SOFTWARE.
 //
 
-extension String {
-    /// The last path component of the receiver.
-    var lastPathComponent: String {
-        return NSString(string: self).lastPathComponent
-    }
+import Foundation
 
+extension String {
     /// A new string made by deleting the extension from the receiver.
     var stringByDeletingPathExtension: String {
         return NSString(string: self).deletingPathExtension
