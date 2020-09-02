@@ -55,11 +55,11 @@ public enum NetworkError: String, Error, LocalizedError {
     }
     
     func pushToLoginScreen() {
-        AF.cancelAllRequests()
-        delay(0.5) {
-            pushToView(withId: "Login") {
-                "forbidden".selfLocalized.displayLocalized()
-            }
-        }
+//        AF.cancelAllRequests()
+//        delay(0.5) {
+//            pushToView(withId: "Login") {
+//                "forbidden".selfLocalized.displayLocalized()
+//            }
+//        }
     }
 }

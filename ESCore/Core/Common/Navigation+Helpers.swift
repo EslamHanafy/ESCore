@@ -8,41 +8,95 @@
 
 import UIKit
 
-// Returns the most recently presented UIViewController (visible)
+/// Get the most recently presented UIViewController (visible)
 public var currentController: UIViewController? {
-    // we must get the root UIViewController and iterate through presented views
-    if let rootController = UIApplication.shared.keyWindow?.rootViewController {
-        
-        var currentController: UIViewController! = rootController
-        
-        // Each ViewController keeps track of the view it has presented, so we
-        // can move from the head to the tail, which will always be the current view
-        while( currentController.presentedViewController != nil ) {
-            
-            currentController = currentController.presentedViewController
-        }
-        return currentController
+    return getCurrentViewController()
+}
+
+/// Get the most recently presented UIViewController (visible)
+/// - Parameter base: The base view controller to start searching for the child controllers, default is the `root view controller`
+/// - Returns: Returns the most recently presented UIViewController (visible) if exists
+public func getCurrentViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+
+    if let nav = base as? UINavigationController {
+        return getCurrentViewController(base: nav.visibleViewController)
+
+    } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+        return getCurrentViewController(base: selected)
+
+    } else if let presented = base?.presentedViewController {
+        return getCurrentViewController(base: presented)
     }
+    return base
+}
+
+//MARK: - Navigator
+open class ESNavigator {
     
-    return nil
+    /// Present the given screen
+    /// - Parameters:
+    ///   - screen: `Screen` object that contains the screen details
+    ///   - controller: The controller that should be responsible for presenting this screen
+    ///   - animated: Determine whether should animate the transition or not
+    ///   - completion: A completion closure that fires after finishing the transition
+    public static func goTo(_ screen: Screen, fromController controller: UIViewController? = currentController, animated: Bool = true, _ completion: (()->Void)? = nil) {
+        guard let control = controller else { return }
+        control.present(screen.storyboard.instantiateViewController(withIdentifier: screen.id) , animated: animated, completion: completion)
+    }
+
+    /// go to view controller and make it the root view
+    ///
+    /// - Parameter withId: the detination view controller id
+    
+    /// Change the root controller to the given screen
+    /// - Parameters:
+    ///   - screen: `Screen` object that contains the screen details
+    ///   - animated: Determine whether should animate the transition or not
+    ///   - completion: A completion closure that fires after finishing the transition
+    public func pushTo(_ screen: Screen, animated: Bool = true, _ completion: (()->Void)? = nil){
+        guard let window = UIApplication.shared.keyWindow else {
+            return Log.error("Couldn't get the current window")
+        }
+        
+        window.rootViewController?.dismiss(animated: false, completion: nil)
+        window.rootViewController = screen.storyboard.instantiateViewController(withIdentifier: screen.id)
+        if animated {
+            UIView.transition(with: window, duration: 0.5, options: [.transitionCrossDissolve], animations: nil) {
+                _ in
+                completion?()
+            }
+        } else {
+            completion?()
+        }
+    }
 }
 
-public func goToView(atStoryboard story: String = "Main", withId id:String, fromController controller:UIViewController? = nil) {
-    guard let control = controller ?? currentController else { return }
-    let board = UIStoryboard(name: story, bundle: nil)
-    control.present(board.instantiateViewController(withIdentifier: id) , animated: true, completion: nil)
-}
-
-/// go to view controller and make it the root view
-///
-/// - Parameter withId: the detination view controller id
-public func pushToView(withId id:String, _ onComplete: (()->())? = nil){
-    let window: UIWindow = UIApplication.shared.keyWindow ?? UIApplication.shared.delegate!.window!!
-    window.rootViewController?.dismiss(animated: false, completion: nil)
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    window.rootViewController = storyboard.instantiateViewController(withIdentifier: id)
-    UIView.transition(with: window, duration: 0.5, options: [.transitionCrossDissolve], animations: nil) {
-        _ in
-        onComplete?()
+//MARK: - Screen
+public extension ESNavigator {
+    struct Screen {
+        /// The screen id
+        public var id: String
+        
+        /// The storyboard name that contains the screen, default is `Main`
+        public var storyboardName: String = "Main"
+        
+        /// The bundle that contains the storyboard, default is `main bundle`
+        public var bundle: Bundle? = nil
+        
+        var storyboard: UIStoryboard {
+            return UIStoryboard(name: storyboardName, bundle: bundle)
+        }
+        
+        
+        /// Initialize a new `Screen` object
+        /// - Parameters:
+        ///   - id: The screen id
+        ///   - storyboardName: The storyboard name that contains the screen, default is `Main`
+        ///   - bundle: The bundle that contains the storyboard, default is `main bundle`
+        public init (_ id: String, storyboardName: String = "Main", bundle: Bundle? = nil) {
+            self.id = id
+            self.storyboardName = storyboardName
+            self.bundle = bundle
+        }
     }
 }
