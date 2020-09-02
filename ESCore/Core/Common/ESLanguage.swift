@@ -10,25 +10,24 @@ import UIKit
 
 // constants
 let APPLE_LANGUAGE_KEY = "AppleLanguages"
-/// L102Language
+
+
+/// A helpers class to manage the app languages
 open class ESLanguage {
     
-    public static var closeAlerTitle: String = "ESLanguage_CloseAlerTitle".selfLocalized
-    public static var closeAlertBody: String = "ESLanguage_ColseAlertBody".selfLocalized
-    public static var closeAlertCloseButtonTitle: String = "ESLanguage_CloseAlertCloseButtonTitle".selfLocalized
-    public static var closeAlertLaterButtonTitle: String = "ESLanguage_CloseAlertLaterButtonTitle".selfLocalized
-    
-    public static var changeLanguageTitle: String = "ESLanguage_ChangeLanguageTitle".selfLocalized
-    public static var changeLanguageBody: String = "ESLanguage_ChangeLanguageBody".selfLocalized
-    public static var changeLanguageConfirmButtonTitle: String = "ESLanguage_ChangeLanguageConfirmButtonTitle".selfLocalized
-    public static var changeLanguageDeclineButtonTitle: String = "ESLanguage_ChangeLanguageDeclineButtonTitle".selfLocalized
+    /// The settings object that controls all displayed texts in all alerts in this class
+    public static var settings: Settings = Settings()
     
     
-    /// get current Apple language
+    
+    /// get current app language
+    /// - Returns: The current app language `ar` for Arabic and `en` for english
     public class func currentAppleLanguage() -> String{
         return isRTL ? "ar" : "en"
     }
     
+    /// Get current app language in full format
+    /// - Returns: the current app language in full format
     public class func currentAppleLanguageFull() -> String{
         let userdef = UserDefaults.standard
         let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
@@ -36,37 +35,71 @@ open class ESLanguage {
         return current
     }
     
-    /// set @lang to be the first in Applelanguages list
+    
+    /// Change the app language to the given key
+    /// - Parameter lang: The language key, like `ar` for Arabic, and `en` for English
     public class func setAppleLAnguageTo(lang: String) {
         let userdef = UserDefaults.standard
         userdef.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userdef.synchronize()
     }
     
+    
+    /// Display an alert to the user to toggle the app language
+    /// - Parameter controller: The current view controller
     public class func changeAppLanguage(from controller: UIViewController? = currentController) {
-        let alert = UIAlertController(title: changeLanguageTitle,
-                                      message: changeLanguageBody,
+        let alert = UIAlertController(title: settings.changeLanguageTitle,
+                                      message: settings.changeLanguageBody,
                                       preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: changeLanguageConfirmButtonTitle,
+        alert.addAction(UIAlertAction(title: settings.changeLanguageConfirmButtonTitle,
                                       style: .destructive, handler: { (_) in
                                         
-                                        ESLanguage.setAppleLAnguageTo(lang: isRTL ? "en" : "ar")
+                                        setAppleLAnguageTo(lang: isRTL ? "en" : "ar")
                                         displayCloseAlert(for: controller)
         }))
         
-        alert.addAction(UIAlertAction(title: changeLanguageDeclineButtonTitle, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: settings.changeLanguageDeclineButtonTitle, style: .cancel, handler: nil))
         controller?.present(alert, animated: true, completion: nil)
     }
     
     private class func displayCloseAlert(for controller: UIViewController?) {
-        let alert = UIAlertController(title: closeAlerTitle, message: closeAlertBody, preferredStyle: .alert)
+        let alert = UIAlertController(title: settings.closeAlerTitle, message: settings.closeAlertBody, preferredStyle: .alert)
         
-        alert.addAction(.init(title: closeAlertCloseButtonTitle, style: .destructive, handler: { (_) in
+        alert.addAction(.init(title: settings.closeAlertCloseButtonTitle, style: .destructive, handler: { (_) in
             exit(0)
         }))
         
-        alert.addAction(.init(title: closeAlertLaterButtonTitle, style: .cancel, handler: nil))
+        alert.addAction(.init(title: settings.closeAlertLaterButtonTitle, style: .cancel, handler: nil))
         controller?.present(alert, animated: true, completion: nil)
+    }
+}
+
+//MARK: - Settings
+public extension ESLanguage {
+    struct Settings {
+        /// The close alert's title, the close alert will be displayed after changing the language using `changeAppLanguage(from:)` method
+        public var closeAlerTitle: String = "ESLanguage_CloseAlerTitle".selfLocalized
+        
+        /// The close alert's body, the close alert will be displayed after changing the language using `changeAppLanguage(from:)` method
+        public var closeAlertBody: String = "ESLanguage_ColseAlertBody".selfLocalized
+        
+        /// The close alert close button's title, the close alert will be displayed after changing the language using `changeAppLanguage(from:)` method
+        public var closeAlertCloseButtonTitle: String = "ESLanguage_CloseAlertCloseButtonTitle".selfLocalized
+        
+        /// The close alert later button's title, the close alert will be displayed after changing the language using `changeAppLanguage(from:)` method
+        public var closeAlertLaterButtonTitle: String = "ESLanguage_CloseAlertLaterButtonTitle".selfLocalized
+        
+        /// The change language alert's title, the change language alert will be displayed using the `changeAppLanguage(from:)` method
+        public var changeLanguageTitle: String = "ESLanguage_ChangeLanguageTitle".selfLocalized
+        
+        /// The change language alert's body, the change language alert will be displayed using the `changeAppLanguage(from:)` method
+        public var changeLanguageBody: String = "ESLanguage_ChangeLanguageBody".selfLocalized
+        
+        /// The change language alert confirm button's title, the change language alert will be displayed using the `changeAppLanguage(from:)` method
+        public var changeLanguageConfirmButtonTitle: String = "ESLanguage_ChangeLanguageConfirmButtonTitle".selfLocalized
+        
+        /// The change language alert decline button's title, the change language alert will be displayed using the `changeAppLanguage(from:)` method
+        public var changeLanguageDeclineButtonTitle: String = "ESLanguage_ChangeLanguageDeclineButtonTitle".selfLocalized
     }
 }
