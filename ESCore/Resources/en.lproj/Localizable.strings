@@ -6,8 +6,6 @@
   Copyright © 2019 Eslam. All rights reserved.
 */
 
-"appName" = "Moddakir";
-"currency" = "SAR";
 "ok" = "Ok";
 "unknownError" = "Sorry, there is something went wrong, please try again later";
 "noInternet" = "Sorry, there is no internet connection";
@@ -44,35 +42,6 @@
 "loggingoutMessage" = "Are you sure you want to logout from your account?";
 "openSettings" = "Open Settings";
 
-//MARK: - Calling
-"connecting" = "Connecting..";
-"ended" = "Ended";
-"receivingCallFrom" = "Receiving a call from";
-"waitingForResponse" = "Contacting the teacher";
-"canceled" = "Canceled";
-"denied" = "Denied";
-"hangup" = "Hangup";
-"noAnswer" = "No Answer";
-"notFound" = "Not Found";
-"missedCallMessage" = "You have missed a call from %@";
-"closeMic" = "Mute Sounds";
-"openMic" = "Play Sounds";
-"closeSpeaker" = "Close Speaker";
-"openSpeaker" = "Open Speaker";
-"sorryForNotAnswer" = "We apologize for not answering the teacher";
-"sinchAccountChanged" = "Sorry, we couldn't complete this call, please try again  within a few seconds";
-"callInterruptedMessage" = "Sorry, the call from the other person was interrupted, trying to reconnect again";
-"callInterrupted" = "Call Interrupted !!";
-"recordingPermission" = "Recording Permission!";
-"recordingPermissionMessage" = "We need access to your microphone to be able to make calls through the app";
-"teacherNotAvailable" = "Teacher is not available";
-"none" = "None";
-"callExpired" = "Call Expired";
-"couldNotConnectToCall" = "Could not connect to the call";
-"connectingToCall" = "Call connecting in progress..";
-"ConnectionStatus_good" = "Good Connection..";
-"ConnectionStatus_weak" = "Weak Conncection..";
-"ConnectionStatus_bad" = "Bad Connection..";
 
 //MARK: - Image Picker
 "selectImageTile" = "Choose the image source";
@@ -113,49 +82,17 @@
 "seconds" = "seconds";
 "second" = "second";
 
-//MARK: - Report View
-"selectReason" = "You have to select the reasons for this report";
-"reportSuccess" = "Your report added successfully, our team will review it as soon as possible";
-"reportStudent" = "Report A Student";
-"reportTeacher" = "Report A Teacher";
-"otherReasons" = "Other Reasones";
-"emptyComment" = "Type the reason for this report";
-
-//MARK: - Call Session
-"Listening" = "Listening";
-"Recitation" = "Recitation";
-"Initiation" = "Initiation";
-"emptySurah" = "Please, select the surah firstly";
-"surahName" = "Surah Name";
-"ayah" = "ayah";
-"selectSessionType" = "Select session type";
-"selectSurahName" = "Select surah name";
-"selectAyah" = "Select ayah number";
-"emptyValidRecords" = "Please, enter what happened in the last session";
-"recordNumber" = "Record Number";
-"sessionRecordNotValid" = "Please enter all the required data to continue";
-"ayahAfterStartAyah" = "You can't select end ayah that comes before the start ayah";
-"surahAfterStartSurah" = "You can't select end surah that comes before the start surah";
-"confirmAddSessionMessage" = "Do you want to add another record or do you want to finish and submit?";
-"submit" = "Submit";
-"addNewRecord" = "Add New Record";
-"noBalance" = "Sorry, you don't have enough balance to continue this call";
-"minBalanceAlert" = "Your current balance is less than 10%, please buy a new package to avoid stopping the service";
-"sessionType" = "Session Type";
-"openCamera" = "Open Camera";
-"closeCamera" = "Close Camera";
-"callWillEnd" = "Call Ending";
-"callWillEndMessage" = "The call will be ended automatically at %@, are you want to continue the call after this time?";
-
-//MARK: - Teacher Review
-"emptyTeacherRate" = "Please, rate the teacher";
-"currentBalance" = "Balance:";
-
 //MARK: - Notifications
 "oldNotifications" = "Old Notifications";
 "newNotifications" = "New Notifications";
 
-//MARK: - Contact Us
-"emptyMessage" = "Please type your message";
-"typeMessage" = "Type Message";
-"messageSent" = "Your message has been sent successfully, thanks for using Moddakir";
+//MARK: - ESLanguage
+"ESLanguage_CloseAlerTitle" = "تغير اللغة";
+"ESLanguage_ColseAlertBody" = "سيتم تغيير اللغة عند إعادة فتح التطبيق مرة أخرى، لتنفيذ التغيير يرجى غلق التطبيق نهائيا ثم إعادة فتحه مجددا.";
+"ESLanguage_CloseAlertCloseButtonTitle" = "إغلاق";
+"ESLanguage_CloseAlertLaterButtonTitle" = "في وقت لاحق";
+
+"ESLanguage_ChangeLanguageTitle" = "Change language";
+"ESLanguage_ChangeLanguageBody" = "Are you sure you want to change the app language to Arabic?";
+"ESLanguage_ChangeLanguageConfirmButtonTitle" = "Yes";
+"ESLanguage_ChangeLanguageDeclineButtonTitle" = "No";

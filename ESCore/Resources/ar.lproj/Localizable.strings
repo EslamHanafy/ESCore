@@ -6,8 +6,6 @@
   Copyright © 2019 Eslam. All rights reserved.
 */
 
-"appName" = "مدّٙكر";
-"currency" = "ر.س";
 "ok" = "حسنا";
 "unknownError" = "عذرًا ، حدث خطأ ما ، يرجى إعادة المحاولة لاحقًا";
 "noInternet" = "عذرا لايوجد اتصال بالانترنت";
@@ -43,36 +41,6 @@
 "loggingout" = "تسجيل الخروج!";
 "loggingoutMessage" = "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟";
 "openSettings" = "أفتح الإعدادات";
-
-//MARK: - Calling
-"connecting" = "جار الاتصال";
-"ended" = "انتهت المكالمة";
-"receivingCallFrom" = "تلقي مكالمة من";
-"waitingForResponse" = "جار الإتصال بالمعلم/ة";
-"canceled" = "ألغيت";
-"denied" = "تم الرفض";
-"hangup" = "تم الانهاء";
-"noAnswer" = "لايوجد رد";
-"notFound" = "لم يتم العثور على الشخص";
-"missedCallMessage" = "لقد فاتتك مكالمة من %@";
-"closeMic" = "كتم الأصوات";
-"openMic" = "تشغيل الأصوات";
-"closeSpeaker" = "اغلاق مكبر الصوت";
-"openSpeaker" = "تشغيل مكبر الصوت";
-"sorryForNotAnswer" = "نحن نعتذر علي عدم رد المعلم";
-"sinchAccountChanged" = "عذرًا ، لم نتمكن من إتمام هذه المكالمة ، يرجى المحاولة مرة أخرى في غضون بضع ثوان";
-"callInterruptedMessage" = "عذرًا ، تمت مقاطعة المكالمة من الشخص الآخر ، جار محاولة اعادة الاتصال مرة أخرى";
-"callInterrupted" = "تمت مقاطعة المكالمة !!";
-"recordingPermission" = "إذن التسجيل!";
-"recordingPermissionMessage" = "نحتاج إلى الوصول إلى الميكروفون الخاص بك لتتمكن من إجراء مكالمات من خلال التطبيق";
-"teacherNotAvailable" = "المعلم غير متوفر";
-"none" = "لا شيء";
-"callExpired" = "انتهت صلاحية المكالمة";
-"couldNotConnectToCall" = "تعذر الاتصال بالمكالمة";
-"connectingToCall" = "جار الاتصال بالمكالمة..";
-"ConnectionStatus_good" = "اتصال جيد ..";
-"ConnectionStatus_weak" = "اتصال ضعيف ..";
-"ConnectionStatus_bad" = "اتصال ردئ..";
 
 //MARK: - Image Picker
 "selectImageTile" = "اختيار مصدر الصورة";
@@ -113,49 +81,17 @@
 "seconds" = "ثانية";
 "second" = "ثانية";
 
-//MARK: - Report View
-"selectReason" = "يجب عليك تحديد أسباب هذا التقرير";
-"reportSuccess" = "تمت إضافة تقريرك بنجاح ، وسيقوم فريقنا بمراجعته في أقرب وقت ممكن";
-"reportStudent" = "إبلاغ عن طالب";
-"reportTeacher" = "إبلاغ عن معلم";
-"otherReasons" = "أسباب اخرى";
-"emptyComment" = "اكتب سبب هذا التقرير";
-
-//MARK: - Call Session
-"Listening" = "تسميع";
-"Recitation" = "تلاوة";
-"Initiation" = "تلقين";
-"emptySurah" = "من فضلك ، اختر السورة أولا";
-"surahName" = "اسم السورة";
-"ayah" = "الآية";
-"selectSessionType" = "اختر نوع الجلسة";
-"selectSurahName" = "اختر اسم السورة";
-"selectAyah" = "اختر رقم الآية";
-"emptyValidRecords" = "من فضلك ، أدخل ما حدث في الجلسة الأخيرة";
-"recordNumber" = "سجل رقم";
-"sessionRecordNotValid" = "يرجى إدخال جميع البيانات المطلوبة للمتابعة";
-"ayahAfterStartAyah" = "لا يمكنك اختيار نهاية الآية التي تأتي قبل بداية الآية";
-"surahAfterStartSurah" = "لا يمكنك اختيار سورة النهاية التي تأتي قبل سورة البداية";
-"confirmAddSessionMessage" = "هل تريد إضافة سجل آخر أم تريد الانتهاء و الارسال؟";
-"submit" = "إرسال";
-"addNewRecord" = "إضافة سجل جديد";
-"noBalance" = "عذرًا ، ليس لديك رصيد كافٍ لمتابعة هذه المكالمة";
-"minBalanceAlert" = "رصيدك الحالي أقل من 10٪ ، يرجى شراء حزمة جديدة لتجنب إيقاف الخدمة";
-"sessionType" = "نوع الجلسة";
-"openCamera" = "افتح الكاميرا";
-"closeCamera" = "أغلق الكاميرا";
-"callWillEnd" = "إنهاء المكالمة";
-"callWillEndMessage" = "سيتم إنهاء المكالمة تلقائيًا الساعة %@ هل ترغب في متابعة المكالمة بعد هذا الوقت؟";
-
-//MARK: - Teacher Review
-"emptyTeacherRate" = "يرجى تقييم المعلم";
-"currentBalance" = "الرصيد:";
-
 //MARK: - Notifications
 "oldNotifications" = "الإشعارات القديمة";
 "newNotifications" = "الإشعارات الجديدة";
 
-//MARK: - Contact Us
-"emptyMessage" = "يرجى كتابة رسالتك";
-"typeMessage" = "اكتب الرسالة";
-"messageSent" = "تم إرسال رسالتك بنجاح ، شكرا لاستخدام مُدكر";
+//MARK: - ESLanguage
+"ESLanguage_CloseAlerTitle" = "Change language";
+"ESLanguage_ColseAlertBody" = "The language will be changed when you reopen the app again. To execute the change, please close the application permanently and reopen it.";
+"ESLanguage_CloseAlertCloseButtonTitle" = "Close";
+"ESLanguage_CloseAlertLaterButtonTitle" = "Later";
+
+"ESLanguage_ChangeLanguageTitle" = "تغيير اللغة";
+"ESLanguage_ChangeLanguageBody" = "هل أنت متأكد أنك تريد تغيير لغة التطبيق إلى العربية؟";
+"ESLanguage_ChangeLanguageConfirmButtonTitle" = "نعم";
+"ESLanguage_ChangeLanguageDeclineButtonTitle" = "لا";

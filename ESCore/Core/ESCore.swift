@@ -8,23 +8,31 @@
 
 import Foundation
 
+typealias Fonts = ESCore.Fonts
+
+public final class ESCore {
+    
+}
+
 
 //MARK: - Fonts
-public struct Fonts {
-    public static var main: UIFont = .systemFont(ofSize: 17)
-    public static var bold: UIFont = .systemFont(ofSize: 17, weight: .bold)
-    public static var light: UIFont = .systemFont(ofSize: 17, weight: .light)
-    
-    public static func main(ofSize size: CGFloat) -> UIFont {
-        return main.withSize(size)
-    }
-    
-    public static func bold(ofSize size: CGFloat) -> UIFont {
-        return bold.withSize(size)
-    }
-    
-    public static func light(ofSize size: CGFloat) -> UIFont {
-        return light.withSize(size)
+extension ESCore {
+    public struct Fonts {
+        public static var main: UIFont = .systemFont(ofSize: 17)
+        public static var bold: UIFont = .systemFont(ofSize: 17, weight: .bold)
+        public static var light: UIFont = .systemFont(ofSize: 17, weight: .light)
+        
+        public static func main(ofSize size: CGFloat) -> UIFont {
+            return main.withSize(size)
+        }
+        
+        public static func bold(ofSize size: CGFloat) -> UIFont {
+            return bold.withSize(size)
+        }
+        
+        public static func light(ofSize size: CGFloat) -> UIFont {
+            return light.withSize(size)
+        }
     }
 }
 
