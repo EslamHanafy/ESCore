@@ -24,8 +24,8 @@ open class ESLogger: Logger {
     
     
     
-    open func trace(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-        let result = super.trace(items, separator: separator, terminator: terminator)
+    open func trace(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
+        let result = super.trace(items, separator: separator, terminator: terminator, file: file, line: line, column: column, function: function)
         
         if writeToLocalFile && minWriteLevel <= .trace {
             fileHandler.write(result, withLevel: .trace)
@@ -33,8 +33,8 @@ open class ESLogger: Logger {
     }
     
     
-    open func debug(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-        let result = super.debug(items, separator: separator, terminator: terminator)
+    open func debug(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
+        let result = super.debug(items, separator: separator, terminator: terminator, file: file, line: line, column: column, function: function)
         
         if writeToLocalFile && minWriteLevel <= .debug {
             fileHandler.write(result, withLevel: .debug)
@@ -42,8 +42,8 @@ open class ESLogger: Logger {
     }
     
     
-    open func info(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-        let result = super.info(items, separator: separator, terminator: terminator)
+    open func info(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
+        let result = super.info(items, separator: separator, terminator: terminator, file: file, line: line, column: column, function: function)
         
         if writeToLocalFile && minWriteLevel <= .info {
             fileHandler.write(result, withLevel: .info)
@@ -51,8 +51,8 @@ open class ESLogger: Logger {
     }
     
     
-    open func warning(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-        let result = super.warning(items, separator: separator, terminator: terminator)
+    open func warning(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
+        let result = super.warning(items, separator: separator, terminator: terminator, file: file, line: line, column: column, function: function)
         
         if writeToLocalFile && minWriteLevel <= .warning {
             fileHandler.write(result, withLevel: .warning)
@@ -60,8 +60,8 @@ open class ESLogger: Logger {
     }
     
     
-    open func error(_ items: Any..., separator: String = " ", terminator: String = "\n") {
-        let result = super.error(items, separator: separator, terminator: terminator)
+    open func error(_ items: Any..., separator: String = " ", terminator: String = "\n", file: String = #file, line: Int = #line, column: Int = #column, function: String = #function) {
+        let result = super.error(items, separator: separator, terminator: terminator, file: file, line: line, column: column, function: function)
         
         if writeToLocalFile && minWriteLevel <= .error {
             fileHandler.write(result, withLevel: .error)
@@ -69,7 +69,7 @@ open class ESLogger: Logger {
     }
     
     
-    func getLocalLogs(forLevel level: Level, andDate date: Date) -> String? {
+    open func getLocalLogs(forLevel level: Level, andDate date: Date) -> String? {
         return fileHandler.getLocalLogs(forLevel: level, andDate: date)
     }
 }
