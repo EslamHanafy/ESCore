@@ -10,10 +10,10 @@ import Foundation
 
 open class DPDataSource {
     open var screenTitle: String
-    open var items: [String: [DataPickerItemType]]
-    open var preferredSection: DataPickerPreferredSection?
+    open var items: [String: [ESDataPickerItemType]]
+    open var preferredSection: ESDataPickerPreferredSection?
     
-    public init (screenTitle: String, items: [String: [DataPickerItemType]], preferredSection: DataPickerPreferredSection? = nil) {
+    public init (screenTitle: String, items: [String: [ESDataPickerItemType]], preferredSection: ESDataPickerPreferredSection? = nil) {
         self.screenTitle = screenTitle
         self.items = items
         self.preferredSection = preferredSection

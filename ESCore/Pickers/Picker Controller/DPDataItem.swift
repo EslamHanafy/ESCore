@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class DPDataItem: DataPickerItemType {
+open class DPDataItem: ESDataPickerItemType {
     open var title: String
     open var image: UIImage?
     

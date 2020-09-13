@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTest
 ${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Connectivity/Connectivity.framework
+${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
 ${BUILT_PRODUCTS_DIR}/FlagPhoneNumber/FlagPhoneNumber.framework
 ${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework

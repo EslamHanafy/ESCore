@@ -57,18 +57,18 @@
 		0CE4D08724F7F52B005F9E63 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08324F7F529005F9E63 /* PasswordRule.swift */; };
 		0CE4D08824F7F52B005F9E63 /* Ruleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08424F7F52A005F9E63 /* Ruleable.swift */; };
 		0CE4D08D24F7F586005F9E63 /* DPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08B24F7F585005F9E63 /* DPCountry.swift */; };
-		0CE4D08E24F7F586005F9E63 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08C24F7F586005F9E63 /* CountryPicker.swift */; };
+		0CE4D08E24F7F586005F9E63 /* ESCountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */; };
 		0CE4D09224F7F5B2005F9E63 /* DPLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */; };
-		0CE4D09324F7F5B2005F9E63 /* LanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09124F7F5B2005F9E63 /* LanguagePicker.swift */; };
-		0CE4D09C24F7F5CF005F9E63 /* DataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09524F7F5C9005F9E63 /* DataPickerViewController.swift */; };
-		0CE4D09D24F7F5CF005F9E63 /* DataPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09624F7F5CA005F9E63 /* DataPickerTableViewCell.swift */; };
+		0CE4D09324F7F5B2005F9E63 /* ESLanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09124F7F5B2005F9E63 /* ESLanguagePicker.swift */; };
+		0CE4D09C24F7F5CF005F9E63 /* ESDataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09524F7F5C9005F9E63 /* ESDataPickerViewController.swift */; };
+		0CE4D09D24F7F5CF005F9E63 /* ESDataPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09624F7F5CA005F9E63 /* ESDataPickerTableViewCell.swift */; };
 		0CE4D09E24F7F5CF005F9E63 /* DPDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09724F7F5CB005F9E63 /* DPDataItem.swift */; };
 		0CE4D09F24F7F5CF005F9E63 /* DPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09824F7F5CC005F9E63 /* DPDataSource.swift */; };
-		0CE4D0A024F7F5CF005F9E63 /* DataPickerPreferredSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09924F7F5CD005F9E63 /* DataPickerPreferredSection.swift */; };
-		0CE4D0A124F7F5CF005F9E63 /* DataPickerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09A24F7F5CE005F9E63 /* DataPickerStyle.swift */; };
-		0CE4D0A224F7F5CF005F9E63 /* DataPickerItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09B24F7F5CE005F9E63 /* DataPickerItemType.swift */; };
-		0CE4D0A624F7F5F4005F9E63 /* SurahPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0A424F7F5F3005F9E63 /* SurahPicker.swift */; };
-		0CE4D0A724F7F5F4005F9E63 /* AyahPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0A524F7F5F3005F9E63 /* AyahPicker.swift */; };
+		0CE4D0A024F7F5CF005F9E63 /* ESDataPickerPreferredSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09924F7F5CD005F9E63 /* ESDataPickerPreferredSection.swift */; };
+		0CE4D0A124F7F5CF005F9E63 /* ESDataPickerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09A24F7F5CE005F9E63 /* ESDataPickerStyle.swift */; };
+		0CE4D0A224F7F5CF005F9E63 /* ESDataPickerItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09B24F7F5CE005F9E63 /* ESDataPickerItemType.swift */; };
+		0CE4D0A624F7F5F4005F9E63 /* ESSurahPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0A424F7F5F3005F9E63 /* ESSurahPicker.swift */; };
+		0CE4D0A724F7F5F4005F9E63 /* ESAyahPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0A524F7F5F3005F9E63 /* ESAyahPicker.swift */; };
 		0CE4D0AA24F7F650005F9E63 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0A924F7F64F005F9E63 /* ImageUploader.swift */; };
 		0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AC24F7F928005F9E63 /* Alamofire+Helpers.swift */; };
 		0CE4D0B124F7F930005F9E63 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AD24F7F92B005F9E63 /* NetworkError.swift */; };
@@ -132,7 +132,7 @@
 		0CE4D15224F8009C005F9E63 /* AudioURLTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D14D24F80099005F9E63 /* AudioURLTrack.swift */; };
 		0CE4D15324F8009C005F9E63 /* AudioURLTrack+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D14E24F8009A005F9E63 /* AudioURLTrack+Metadata.swift */; };
 		0CE4D15424F8009C005F9E63 /* MediaPlayerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D14F24F8009C005F9E63 /* MediaPlayerTrack.swift */; };
-		0CE4D15624F80283005F9E63 /* Surah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D15524F80283005F9E63 /* Surah.swift */; };
+		0CE4D15624F80283005F9E63 /* ESSurah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D15524F80283005F9E63 /* ESSurah.swift */; };
 		0CE4D15A24F97A0B005F9E63 /* ESCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D15924F97A0B005F9E63 /* ESCore.swift */; };
 		0CE4D15C24F987F8005F9E63 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D15B24F987F8005F9E63 /* Podfile */; };
 		0CE4D16224F98FDB005F9E63 /* NSColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D15F24F98FD9005F9E63 /* NSColorExtensions.swift */; };
@@ -316,18 +316,18 @@
 		0CE4D08324F7F529005F9E63 /* PasswordRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
 		0CE4D08424F7F52A005F9E63 /* Ruleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruleable.swift; sourceTree = "<group>"; };
 		0CE4D08B24F7F585005F9E63 /* DPCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPCountry.swift; sourceTree = "<group>"; };
-		0CE4D08C24F7F586005F9E63 /* CountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
+		0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESCountryPicker.swift; sourceTree = "<group>"; };
 		0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLanguage.swift; sourceTree = "<group>"; };
-		0CE4D09124F7F5B2005F9E63 /* LanguagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePicker.swift; sourceTree = "<group>"; };
-		0CE4D09524F7F5C9005F9E63 /* DataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerViewController.swift; sourceTree = "<group>"; };
-		0CE4D09624F7F5CA005F9E63 /* DataPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerTableViewCell.swift; sourceTree = "<group>"; };
+		0CE4D09124F7F5B2005F9E63 /* ESLanguagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESLanguagePicker.swift; sourceTree = "<group>"; };
+		0CE4D09524F7F5C9005F9E63 /* ESDataPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDataPickerViewController.swift; sourceTree = "<group>"; };
+		0CE4D09624F7F5CA005F9E63 /* ESDataPickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDataPickerTableViewCell.swift; sourceTree = "<group>"; };
 		0CE4D09724F7F5CB005F9E63 /* DPDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDataItem.swift; sourceTree = "<group>"; };
 		0CE4D09824F7F5CC005F9E63 /* DPDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDataSource.swift; sourceTree = "<group>"; };
-		0CE4D09924F7F5CD005F9E63 /* DataPickerPreferredSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerPreferredSection.swift; sourceTree = "<group>"; };
-		0CE4D09A24F7F5CE005F9E63 /* DataPickerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerStyle.swift; sourceTree = "<group>"; };
-		0CE4D09B24F7F5CE005F9E63 /* DataPickerItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPickerItemType.swift; sourceTree = "<group>"; };
-		0CE4D0A424F7F5F3005F9E63 /* SurahPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurahPicker.swift; sourceTree = "<group>"; };
-		0CE4D0A524F7F5F3005F9E63 /* AyahPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AyahPicker.swift; sourceTree = "<group>"; };
+		0CE4D09924F7F5CD005F9E63 /* ESDataPickerPreferredSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDataPickerPreferredSection.swift; sourceTree = "<group>"; };
+		0CE4D09A24F7F5CE005F9E63 /* ESDataPickerStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDataPickerStyle.swift; sourceTree = "<group>"; };
+		0CE4D09B24F7F5CE005F9E63 /* ESDataPickerItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDataPickerItemType.swift; sourceTree = "<group>"; };
+		0CE4D0A424F7F5F3005F9E63 /* ESSurahPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESSurahPicker.swift; sourceTree = "<group>"; };
+		0CE4D0A524F7F5F3005F9E63 /* ESAyahPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESAyahPicker.swift; sourceTree = "<group>"; };
 		0CE4D0A924F7F64F005F9E63 /* ImageUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		0CE4D0AC24F7F928005F9E63 /* Alamofire+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D0AD24F7F92B005F9E63 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -394,7 +394,7 @@
 		0CE4D14D24F80099005F9E63 /* AudioURLTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioURLTrack.swift; sourceTree = "<group>"; };
 		0CE4D14E24F8009A005F9E63 /* AudioURLTrack+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioURLTrack+Metadata.swift"; sourceTree = "<group>"; };
 		0CE4D14F24F8009C005F9E63 /* MediaPlayerTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerTrack.swift; sourceTree = "<group>"; };
-		0CE4D15524F80283005F9E63 /* Surah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Surah.swift; sourceTree = "<group>"; };
+		0CE4D15524F80283005F9E63 /* ESSurah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESSurah.swift; sourceTree = "<group>"; };
 		0CE4D15924F97A0B005F9E63 /* ESCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESCore.swift; sourceTree = "<group>"; };
 		0CE4D15B24F987F8005F9E63 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0CE4D15F24F98FD9005F9E63 /* NSColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSColorExtensions.swift; sourceTree = "<group>"; };
@@ -688,7 +688,7 @@
 		0CE4D08A24F7F56D005F9E63 /* Country Picker */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D08C24F7F586005F9E63 /* CountryPicker.swift */,
+				0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */,
 				0CE4D08B24F7F585005F9E63 /* DPCountry.swift */,
 			);
 			path = "Country Picker";
@@ -698,7 +698,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */,
-				0CE4D09124F7F5B2005F9E63 /* LanguagePicker.swift */,
+				0CE4D09124F7F5B2005F9E63 /* ESLanguagePicker.swift */,
 			);
 			path = "Language Picker";
 			sourceTree = "<group>";
@@ -706,11 +706,11 @@
 		0CE4D09424F7F5BD005F9E63 /* Picker Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D09B24F7F5CE005F9E63 /* DataPickerItemType.swift */,
-				0CE4D09924F7F5CD005F9E63 /* DataPickerPreferredSection.swift */,
-				0CE4D09A24F7F5CE005F9E63 /* DataPickerStyle.swift */,
-				0CE4D09624F7F5CA005F9E63 /* DataPickerTableViewCell.swift */,
-				0CE4D09524F7F5C9005F9E63 /* DataPickerViewController.swift */,
+				0CE4D09B24F7F5CE005F9E63 /* ESDataPickerItemType.swift */,
+				0CE4D09924F7F5CD005F9E63 /* ESDataPickerPreferredSection.swift */,
+				0CE4D09A24F7F5CE005F9E63 /* ESDataPickerStyle.swift */,
+				0CE4D09624F7F5CA005F9E63 /* ESDataPickerTableViewCell.swift */,
+				0CE4D09524F7F5C9005F9E63 /* ESDataPickerViewController.swift */,
 				0CE4D09724F7F5CB005F9E63 /* DPDataItem.swift */,
 				0CE4D09824F7F5CC005F9E63 /* DPDataSource.swift */,
 			);
@@ -720,9 +720,9 @@
 		0CE4D0A324F7F5E4005F9E63 /* Quran Picker */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D15524F80283005F9E63 /* Surah.swift */,
-				0CE4D0A524F7F5F3005F9E63 /* AyahPicker.swift */,
-				0CE4D0A424F7F5F3005F9E63 /* SurahPicker.swift */,
+				0CE4D15524F80283005F9E63 /* ESSurah.swift */,
+				0CE4D0A524F7F5F3005F9E63 /* ESAyahPicker.swift */,
+				0CE4D0A424F7F5F3005F9E63 /* ESSurahPicker.swift */,
 			);
 			path = "Quran Picker";
 			sourceTree = "<group>";
@@ -1489,7 +1489,7 @@
 				0CE4D15024F8009C005F9E63 /* AVAsset+Metadata.swift in Sources */,
 				0CE4D21724F99264005F9E63 /* UIStackViewExtensions.swift in Sources */,
 				0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */,
-				0CE4D0A724F7F5F4005F9E63 /* AyahPicker.swift in Sources */,
+				0CE4D0A724F7F5F4005F9E63 /* ESAyahPicker.swift in Sources */,
 				0CE4D05E24F7F4C7005F9E63 /* Sequence+Helpers.swift in Sources */,
 				0CE4D22D24F99264005F9E63 /* UITableViewExtensions.swift in Sources */,
 				0CE4D07224F7F4C7005F9E63 /* Array+Helpers.swift in Sources */,
@@ -1523,7 +1523,7 @@
 				0CE4D1BD24F9918D005F9E63 /* EdgeInsetsExtensions.swift in Sources */,
 				0CE4D06124F7F4C7005F9E63 /* Bundle+Helpers.swift in Sources */,
 				0CE4D16324F98FDB005F9E63 /* NSViewExtensions.swift in Sources */,
-				0CE4D15624F80283005F9E63 /* Surah.swift in Sources */,
+				0CE4D15624F80283005F9E63 /* ESSurah.swift in Sources */,
 				0CE4D23624F9927D005F9E63 /* WKWebViewExtensions.swift in Sources */,
 				0CE4D14824F8008E005F9E63 /* AudioPlayerManager+MPMediaItem.swift in Sources */,
 				0CE4D19E24F99105005F9E63 /* HKActivitySummaryExtensions.swift in Sources */,
@@ -1577,7 +1577,7 @@
 				0CE4D29024FEA040005F9E63 /* Utilities.swift in Sources */,
 				0CE4D12E24F7FFF4005F9E63 /* MaterialTapTargetPrompt.swift in Sources */,
 				0CE4D09224F7F5B2005F9E63 /* DPLanguage.swift in Sources */,
-				0CE4D09C24F7F5CF005F9E63 /* DataPickerViewController.swift in Sources */,
+				0CE4D09C24F7F5CF005F9E63 /* ESDataPickerViewController.swift in Sources */,
 				0CE4D23224F99264005F9E63 /* UIRefreshControlExtensions.swift in Sources */,
 				0CE4D07924F7F4C7005F9E63 /* UITextField+Helpers.swift in Sources */,
 				0CE4D21924F99264005F9E63 /* UINavigationControllerExtensions.swift in Sources */,
@@ -1606,9 +1606,9 @@
 				0CE4D07824F7F4C7005F9E63 /* SnackBar.swift in Sources */,
 				0CE4D0D624F7FB2A005F9E63 /* PhoneTextField.swift in Sources */,
 				0CE4D1B424F99164005F9E63 /* SCNBoxExtensions.swift in Sources */,
-				0CE4D0A624F7F5F4005F9E63 /* SurahPicker.swift in Sources */,
+				0CE4D0A624F7F5F4005F9E63 /* ESSurahPicker.swift in Sources */,
 				0CE4D06C24F7F4C7005F9E63 /* DispatchQueue+Helpers.swift in Sources */,
-				0CE4D0A024F7F5CF005F9E63 /* DataPickerPreferredSection.swift in Sources */,
+				0CE4D0A024F7F5CF005F9E63 /* ESDataPickerPreferredSection.swift in Sources */,
 				0CE4D14924F8008E005F9E63 /* AudioPlayerManager.swift in Sources */,
 				0CE4D06724F7F4C7005F9E63 /* UIView+Helpers.swift in Sources */,
 				0CE4D1B124F99164005F9E63 /* SCNPlaneExtensions.swift in Sources */,
@@ -1623,12 +1623,12 @@
 				0CE4D06224F7F4C7005F9E63 /* DeviceRaisedToEarListener.swift in Sources */,
 				0CE4D06F24F7F4C7005F9E63 /* Bool+Helpers.swift in Sources */,
 				0CE4D19B24F990A8005F9E63 /* NSRegularExpressionExtensions.swift in Sources */,
-				0CE4D08E24F7F586005F9E63 /* CountryPicker.swift in Sources */,
+				0CE4D08E24F7F586005F9E63 /* ESCountryPicker.swift in Sources */,
 				0CE4D0C524F7FADF005F9E63 /* ChipItemType.swift in Sources */,
 				0CE4D06D24F7F4C7005F9E63 /* Common.swift in Sources */,
 				0CE4D14724F8008E005F9E63 /* AudioPlayerManager+RemoteControl.swift in Sources */,
 				0CE4D03724F7F43B005F9E63 /* UIAlertController+Rx.swift in Sources */,
-				0CE4D09324F7F5B2005F9E63 /* LanguagePicker.swift in Sources */,
+				0CE4D09324F7F5B2005F9E63 /* ESLanguagePicker.swift in Sources */,
 				0CE4D22424F99264005F9E63 /* UIImageViewExtensions.swift in Sources */,
 				0CE4D0B224F7F930005F9E63 /* Mapable.swift in Sources */,
 				0CE4D06B24F7F4C7005F9E63 /* ESImageDownloader.swift in Sources */,
@@ -1639,7 +1639,7 @@
 				0CE4D1EB24F99204005F9E63 /* BoolExtensions.swift in Sources */,
 				0CE4D17824F9901C005F9E63 /* CGSizeExtensions.swift in Sources */,
 				0CE4D1DF24F99204005F9E63 /* KeyedDecodingContainerExtensions.swift in Sources */,
-				0CE4D0A124F7F5CF005F9E63 /* DataPickerStyle.swift in Sources */,
+				0CE4D0A124F7F5CF005F9E63 /* ESDataPickerStyle.swift in Sources */,
 				0CE4D22B24F99264005F9E63 /* UISliderExtensions.swift in Sources */,
 				0CE4D21424F99264005F9E63 /* UISwitchExtensions.swift in Sources */,
 				0CE4D22624F99264005F9E63 /* UICollectionViewExtensions.swift in Sources */,
@@ -1659,7 +1659,7 @@
 				0CE4D1E624F99204005F9E63 /* CharacterExtensions.swift in Sources */,
 				0CE4D29524FEA05B005F9E63 /* Formatters.swift in Sources */,
 				0CE4D07D24F7F4C7005F9E63 /* UILabel+Helpers.swift in Sources */,
-				0CE4D09D24F7F5CF005F9E63 /* DataPickerTableViewCell.swift in Sources */,
+				0CE4D09D24F7F5CF005F9E63 /* ESDataPickerTableViewCell.swift in Sources */,
 				0CE4D21E24F99264005F9E63 /* UIStoryboardExtensions.swift in Sources */,
 				0CE4D1A324F99125005F9E63 /* MKPolylineExtensions.swift in Sources */,
 				0CE4D09E24F7F5CF005F9E63 /* DPDataItem.swift in Sources */,
@@ -1670,7 +1670,7 @@
 				0CE4D07324F7F4C7005F9E63 /* Optional+Helpers.swift in Sources */,
 				0CE4D1B524F99164005F9E63 /* SCNCylinderExtensions.swift in Sources */,
 				0CE4D0B324F7F930005F9E63 /* Requestable.swift in Sources */,
-				0CE4D0A224F7F5CF005F9E63 /* DataPickerItemType.swift in Sources */,
+				0CE4D0A224F7F5CF005F9E63 /* ESDataPickerItemType.swift in Sources */,
 				0CE4D22924F99264005F9E63 /* UIBarButtonItemExtensions.swift in Sources */,
 				0CE4D15124F8009C005F9E63 /* AudioTrack.swift in Sources */,
 				0CE4D1E424F99204005F9E63 /* DoubleExtensions.swift in Sources */,

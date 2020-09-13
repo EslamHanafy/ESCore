@@ -27,7 +27,7 @@ open class DPLanguage: ChipItemType {
 }
 
 //MARK: - Picker Item Type
-extension DPLanguage: DataPickerItemType {
+extension DPLanguage: ESDataPickerItemType {
     public var title: String {
         return name
     }

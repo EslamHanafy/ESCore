@@ -27,7 +27,7 @@ target 'ESCore' do
     pod "FlagPhoneNumber"
     pod 'NSObject+Rx'
     pod 'Agrume'
-    
+    pod 'CountryPickerView'
 
   target 'ESCoreTests' do
     # Pods for testing
