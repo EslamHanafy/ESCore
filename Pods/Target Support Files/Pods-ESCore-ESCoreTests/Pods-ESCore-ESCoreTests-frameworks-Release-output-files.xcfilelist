@@ -1,3 +1,4 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Agrume.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Connectivity.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework

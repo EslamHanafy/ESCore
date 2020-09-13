@@ -1,4 +1,6 @@
 PODS:
+  - Agrume (5.6.9):
+    - SwiftyGif
   - Alamofire (5.2.2)
   - Connectivity (4.2.0)
   - Differentiator (4.0.1)
@@ -46,6 +48,7 @@ PODS:
   - TTGSnackbar (1.10.3)
 
 DEPENDENCIES:
+  - Agrume
   - Alamofire
   - Connectivity
   - FlagPhoneNumber
@@ -70,6 +73,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Agrume
     - Alamofire
     - Connectivity
     - Differentiator
@@ -94,6 +98,7 @@ SPEC REPOS:
     - TTGSnackbar
 
 SPEC CHECKSUMS:
+  Agrume: 4c6fc502f4a4aa8b3dd69c8c2e22bcb282be1032
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Connectivity: 2205aaa7d95f8f3c360be639f39ef2c8175a0b5a
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -117,6 +122,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TTGSnackbar: 97c033600de8a9c8f4a093f25a08543a03946bcc
 
-PODFILE CHECKSUM: b5df685f8bb267a70d3352fe36fbbc36ce0ce7c8
+PODFILE CHECKSUM: 1f3f9ec4d42785ac9351093644658b77d7762f9f
 
 COCOAPODS: 1.9.3

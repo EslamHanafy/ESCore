@@ -1,5 +1,5 @@
 //
-//  ImageDownloader.swift
+//  ESImageDownloader.swift
 //  EslamCore
 //
 //  Created by Eslam on 11/3/19.
@@ -8,19 +8,17 @@
 
 import Foundation
 import SDWebImage
+import ESCore
 
-open class ImageDownloader {
-    open var url: URL?
+open class ESImageDownloader {
     
-    public init(_ url: URL?) {
-        self.url = url
-    }
-    
-    public func download(showLoader: Bool = false, _ onComplete: @escaping (_ image: UIImage?, _ error: Error?)->()) {
-        if showLoader { LoaderView.show() }
+    open class func download(_ url: URL?, showLoader: Bool = false, _ onComplete: @escaping (_ image: UIImage?, _ error: Error?)->()) {
+        if showLoader { mainQueue { LoaderView.show() } }
         
         let request = SDWebImageManager.shared.loadImage(with: url, progress: { (receivedSize, expectedSize, _) in
-            LoaderView.update(progress: Float(receivedSize / expectedSize))
+            mainQueue {
+                LoaderView.update(progress: Float(receivedSize / expectedSize))
+            }
         }) { (image, data, error, _, _, _) in
             if showLoader { LoaderView.hide() }
             if let image = image {
@@ -30,6 +28,6 @@ open class ImageDownloader {
             }
         }
         
-        if showLoader { LoaderView.shared.imageOperation = request }
+        if showLoader { mainQueue { LoaderView.shared.imageOperation = request } }
     }
 }

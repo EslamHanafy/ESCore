@@ -27,6 +27,7 @@ target 'ESCore' do
     pod "FlagPhoneNumber"
     pod 'NSObject+Rx'
     pod "InitialsImageView"
+    pod 'Agrume'
     
 
   target 'ESCoreTests' do

@@ -197,6 +197,7 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Connectivity/Connectivity.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
@@ -221,6 +222,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Connectivity/Connectivity.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"

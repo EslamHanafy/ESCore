@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Agrume/Agrume.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Connectivity/Connectivity.framework
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework

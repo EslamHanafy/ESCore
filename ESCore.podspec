@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'Core' do |core|
     core.source_files = 'ESCore/Core/**/*.{h,m,swift}'
-    core.resources = 'ESCore/Resources/**/*'
+    core.resources = ['ESCore/Resources/**/*', 'ESCore/Core/**/*.{xib}']
     core.framework = 'UIKit'
     
     core.dependency 'IQKeyboardManagerSwift'
@@ -66,35 +66,35 @@ Pod::Spec.new do |spec|
     core.dependency 'InitialsImageView'
   end
   
-  spec.subspec 'Realm' do |subspec|
-    subspec.source_files = 'ESCore/Realm/**/*.{h,m,swift}'
-    subspec.dependency 'ESCore/Core'
-    subspec.dependency 'RealmSwift'
-    subspec.dependency 'RxRealm'
-  end
+#   spec.subspec 'Realm' do |subspec|
+#    subspec.source_files = 'ESCore/Realm/**/*.{h,m,swift}'
+#    subspec.dependency 'ESCore/Core'
+#    subspec.dependency 'RealmSwift'
+#    subspec.dependency 'RxRealm'
+#  end
   
-  spec.subspec 'XLPagerTabStrip' do |subspec|
-    subspec.source_files = 'ESCore/XLPagerTabStrip/**/*.{h,m,swift}'
-    subspec.dependency 'ESCore/Core'
-    subspec.dependency 'XLPagerTabStrip', '~> 9.0'
-  end
+#  spec.subspec 'XLPagerTabStrip' do |subspec|
+#    subspec.source_files = 'ESCore/XLPagerTabStrip/**/*.{h,m,swift}'
+#    subspec.dependency 'ESCore/Core'
+#    subspec.dependency 'XLPagerTabStrip', '~> 9.0'
+#  end
   
-  spec.subspec 'Audio' do |subspec|
-    subspec.source_files = 'ESCore/Audio/**/*.{h,m,swift}'
-    subspec.dependency 'ESCore/Core'
-  end
+#  spec.subspec 'Audio' do |subspec|
+#    subspec.source_files = 'ESCore/Audio/**/*.{h,m,swift}'
+#    subspec.dependency 'ESCore/Core'
+#  end
   
-  spec.subspec 'UserGuide' do |subspec|
-    subspec.source_files = 'ESCore/UserGuide/**/*.{h,m,swift}'
-    subspec.dependency 'ESCore/Core'
-  end
+#  spec.subspec 'UserGuide' do |subspec|
+#    subspec.source_files = 'ESCore/UserGuide/**/*.{h,m,swift}'
+#    subspec.dependency 'ESCore/Core'
+#  end
   
-  spec.subspec 'Pickers' do |subspec|
-    subspec.source_files = 'ESCore/Pickers/**/*.{h,m,swift}'
-    subspec.resources = 'ESCore/Pickers/Resources/**/*'
-    subspec.dependency 'ESCore/Core'
-    subspec.dependency 'CountryPickerView'
-  end
+#  spec.subspec 'Pickers' do |subspec|
+#    subspec.source_files = 'ESCore/Pickers/**/*.{h,m,swift}'
+#    subspec.resources = 'ESCore/Pickers/Resources/**/*'
+#    subspec.dependency 'ESCore/Core'
+#    subspec.dependency 'CountryPickerView'
+#  end
   
   
   
