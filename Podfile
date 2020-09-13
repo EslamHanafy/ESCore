@@ -26,7 +26,6 @@ target 'ESCore' do
     pod 'SwiftyGif'
     pod "FlagPhoneNumber"
     pod 'NSObject+Rx'
-    pod "InitialsImageView"
     pod 'Agrume'
     
 

@@ -20,6 +20,7 @@ public extension URL {
         return "application/octet-stream"
     }
     
+    /// Downloading the image content from the url, don't use it with remote images because it will block the main threed, use it only with local images
     var image: UIImage? {
         if let data = try? Data(contentsOf: self) {
             return UIImage(data: data)
@@ -27,8 +28,9 @@ public extension URL {
         return nil
     }
     
-    func showImage(from view: UIImageView? = nil) {
-        ImageViewer.show(self)
+    /// Preview the images using the `ESImageViewer` class
+    func showImage() {
+        ESImageViewer.shared.show(self)
     }
     
     @discardableResult
@@ -68,13 +70,18 @@ public extension URL {
 }
 
 public extension Sequence where Iterator.Element == URL? {
-    func showImages(from view: UIImageView?, startingAt index: Int = 0) {
-        ImageViewer.show(Array(self), startingAt: index)
+    /// Preview the images using the `ESImageViewer` class
+    /// - Parameters:
+    ///   - index: the start index
+    func showImages(startingAt index: Int = 0) {
+        ESImageViewer.shared.show(Array(self), startingAt: index)
     }
 }
 
 public extension Sequence where Iterator.Element == URL {
-    func showImages(from view: UIImageView?, startingAt index: Int = 0) {
-        ImageViewer.show(Array(self), startingAt: index)
+    /// Preview the images using the `ESImageViewer` class
+    /// - Parameter index: the start index
+    func showImages(startingAt index: Int = 0) {
+        ESImageViewer.shared.show(Array(self), startingAt: index)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5CDE9E250E41490037FDCB /* InitialsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */; };
 		0C8CFE4D23B8A62E001DA888 /* ESCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8CFE4323B8A62E001DA888 /* ESCore.framework */; };
 		0C8CFE5223B8A62E001DA888 /* ESCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CFE5123B8A62E001DA888 /* ESCoreTests.swift */; };
 		0C8CFE5423B8A62E001DA888 /* ESCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8CFE4623B8A62E001DA888 /* ESCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,8 +93,6 @@
 		0CE4D0DC24F7FB2A005F9E63 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0D224F7FB2A005F9E63 /* ProgressView.swift */; };
 		0CE4D0DF24F7FB44005F9E63 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0DE24F7FB44005F9E63 /* DatePickerView.swift */; };
 		0CE4D0E224F7FB6A005F9E63 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0E424F7FB6A005F9E63 /* DatePickerView.xib */; };
-		0CE4D0E924F7FBE4005F9E63 /* ImageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0E724F7FBE2005F9E63 /* ImageBox.swift */; };
-		0CE4D0EA24F7FBE4005F9E63 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0E824F7FBE4005F9E63 /* ImageViewer.swift */; };
 		0CE4D0ED24F7FBFC005F9E63 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */; };
 		0CE4D0F024F7FC17005F9E63 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F224F7FC17005F9E63 /* LoaderView.xib */; };
 		0CE4D0FD24F7FCA7005F9E63 /* visibility_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F724F7FCA1005F9E63 /* visibility_on@3x.png */; };
@@ -264,6 +263,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialsImageView.swift; sourceTree = "<group>"; };
 		0C8CFE4323B8A62E001DA888 /* ESCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ESCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8CFE4623B8A62E001DA888 /* ESCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESCore.h; sourceTree = "<group>"; };
 		0C8CFE4723B8A62E001DA888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -353,8 +353,6 @@
 		0CE4D0DE24F7FB44005F9E63 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		0CE4D0E324F7FB6A005F9E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DatePickerView.xib; sourceTree = "<group>"; };
 		0CE4D0E524F7FB81005F9E63 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/DatePickerView.strings; sourceTree = "<group>"; };
-		0CE4D0E724F7FBE2005F9E63 /* ImageBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBox.swift; sourceTree = "<group>"; };
-		0CE4D0E824F7FBE4005F9E63 /* ImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 		0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		0CE4D0F124F7FC17005F9E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoaderView.xib; sourceTree = "<group>"; };
 		0CE4D0F424F7FC28005F9E63 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoaderView.strings; sourceTree = "<group>"; };
@@ -541,6 +539,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5CDE9C250E411B0037FDCB /* InitialsImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */,
+			);
+			path = InitialsImageView;
+			sourceTree = "<group>";
+		};
 		0C8CFE3923B8A62E001DA888 = {
 			isa = PBXGroup;
 			children = (
@@ -806,15 +812,6 @@
 				0CE4D0DE24F7FB44005F9E63 /* DatePickerView.swift */,
 			);
 			path = "Date Picker";
-			sourceTree = "<group>";
-		};
-		0CE4D0E624F7FBD6005F9E63 /* Image Viewer */ = {
-			isa = PBXGroup;
-			children = (
-				0CE4D0E724F7FBE2005F9E63 /* ImageBox.swift */,
-				0CE4D0E824F7FBE4005F9E63 /* ImageViewer.swift */,
-			);
-			path = "Image Viewer";
 			sourceTree = "<group>";
 		};
 		0CE4D0EB24F7FBF1005F9E63 /* Loader View */ = {
@@ -1186,7 +1183,6 @@
 				0CE4D03224F7F428005F9E63 /* Rx */,
 				0CE4D02824F7F390005F9E63 /* Connectivity */,
 				0CE4D08024F7F510005F9E63 /* Validators */,
-				0CE4D0E624F7FBD6005F9E63 /* Image Viewer */,
 				0CE4D0B424F7FA7C005F9E63 /* Views */,
 			);
 			path = Core;
@@ -1244,6 +1240,7 @@
 		0CF1C62825012E6700C31BEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C5CDE9C250E411B0037FDCB /* InitialsImageView */,
 				0CF1C62A25012E8300C31BEC /* Downloader */,
 				0CF1C62925012E7900C31BEC /* Viewer */,
 			);
@@ -1492,7 +1489,6 @@
 				0CE4D15024F8009C005F9E63 /* AVAsset+Metadata.swift in Sources */,
 				0CE4D21724F99264005F9E63 /* UIStackViewExtensions.swift in Sources */,
 				0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */,
-				0CE4D0EA24F7FBE4005F9E63 /* ImageViewer.swift in Sources */,
 				0CE4D0A724F7F5F4005F9E63 /* AyahPicker.swift in Sources */,
 				0CE4D05E24F7F4C7005F9E63 /* Sequence+Helpers.swift in Sources */,
 				0CE4D22D24F99264005F9E63 /* UITableViewExtensions.swift in Sources */,
@@ -1601,6 +1597,7 @@
 				0CE4D07B24F7F4C7005F9E63 /* UIImage+Helpers.swift in Sources */,
 				0CE4D1DD24F99204005F9E63 /* SignedIntegerExtensions.swift in Sources */,
 				0CE4D22F24F99264005F9E63 /* UITabBarExtensions.swift in Sources */,
+				0C5CDE9E250E41490037FDCB /* InitialsImageView.swift in Sources */,
 				0CE4D07424F7F4C7005F9E63 /* UIAlert+Helpers.swift in Sources */,
 				0CE4D16424F98FDB005F9E63 /* NSImageExtensions.swift in Sources */,
 				0CE4D06424F7F4C7005F9E63 /* String+Helpers.swift in Sources */,
@@ -1634,7 +1631,6 @@
 				0CE4D09324F7F5B2005F9E63 /* LanguagePicker.swift in Sources */,
 				0CE4D22424F99264005F9E63 /* UIImageViewExtensions.swift in Sources */,
 				0CE4D0B224F7F930005F9E63 /* Mapable.swift in Sources */,
-				0CE4D0E924F7FBE4005F9E63 /* ImageBox.swift in Sources */,
 				0CE4D06B24F7F4C7005F9E63 /* ESImageDownloader.swift in Sources */,
 				0CE4D13524F7FFF4005F9E63 /* MaterialShowcaseController.swift in Sources */,
 				0CE4D23B24F99E8B005F9E63 /* ESRealm.swift in Sources */,

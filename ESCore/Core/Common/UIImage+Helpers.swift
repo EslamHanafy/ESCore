@@ -27,7 +27,7 @@ public extension UIImage {
     }
     
     func show(from: UIImageView? = nil) {
-        ImageViewer.show(self)
+        ESImageViewer.shared.show(self)
     }
 }
 
@@ -35,5 +35,22 @@ public extension UIImage {
 public extension UIImage {
     convenience init?(coreNamed: String) {
         self.init(named: coreNamed, in: currentBundle, compatibleWith: nil)
+    }
+}
+
+public extension Sequence where Iterator.Element == UIImage? {
+    /// Preview the images using the `ESImageViewer` class
+    /// - Parameters:
+    ///   - index: the start index
+    func showImages(startingAt index: Int = 0) {
+        ESImageViewer.shared.show(Array(self), startingAt: index)
+    }
+}
+
+public extension Sequence where Iterator.Element == UIImage {
+    /// Preview the images using the `ESImageViewer` class
+    /// - Parameter index: the start index
+    func showImages(startingAt index: Int = 0) {
+        ESImageViewer.shared.show(Array(self), startingAt: index)
     }
 }

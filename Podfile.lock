@@ -13,7 +13,6 @@ PODS:
   - ImageSlideshow/SDWebImage (1.9.1):
     - ImageSlideshow/Core
     - SDWebImage (>= 3.7)
-  - InitialsImageView (0.7.0)
   - IQKeyboardManagerSwift (6.5.6)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
@@ -55,7 +54,6 @@ DEPENDENCIES:
   - FontBlaster
   - IBAnimatable
   - ImageSlideshow/SDWebImage
-  - InitialsImageView
   - IQKeyboardManagerSwift
   - "NSObject+Rx"
   - NVActivityIndicatorView
@@ -81,7 +79,6 @@ SPEC REPOS:
     - FontBlaster
     - IBAnimatable
     - ImageSlideshow
-    - InitialsImageView
     - IQKeyboardManagerSwift
     - "NSObject+Rx"
     - NVActivityIndicatorView
@@ -106,7 +103,6 @@ SPEC CHECKSUMS:
   FontBlaster: 8897ebdbb4b6ace3ab78c92b665d88c954f19e4a
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
-  InitialsImageView: 7a416d36fc6df5434198664db28a3ffb0228426d
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
@@ -122,6 +118,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TTGSnackbar: 97c033600de8a9c8f4a093f25a08543a03946bcc
 
-PODFILE CHECKSUM: 1f3f9ec4d42785ac9351093644658b77d7762f9f
+PODFILE CHECKSUM: 3ca2132db9812ee8024b197dcc67acf3ce76eea0
 
 COCOAPODS: 1.9.3
