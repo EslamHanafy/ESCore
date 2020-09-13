@@ -33,7 +33,7 @@ open class ESSurahPicker {
     
     
     
-    public init(style: ESDataPickerStyle = ESDataPickerStyle(), sortedAlphabetically: Bool = false) {
+    public init(style: ESDataPickerStyle = ESDataPickerStyle()) {
         var grouped: Dictionary<String, [ESSurah]>
         if style.sortedAlphabetically {
             grouped = Dictionary<String, [ESSurah]>(grouping: ESSurahPicker.allSurah) { (surah) -> String in
