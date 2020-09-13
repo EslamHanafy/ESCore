@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ESCore"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "ESCore is a collection of the most important and common helpers needed in every iOS project."
 
   # spec.description  = <<-DESC
