@@ -10,10 +10,11 @@
 import Foundation
 import CountryPickerView
 
+public typealias ESCountrySelection = (_ country: Country) -> Void
+
 open class ESCountryPicker: NSObject {
     private let picker = CountryPickerView(frame: UIScreen.main.bounds)
     
-    private weak var controller: UIViewController?
     private weak var countryLabel: UILabel?
     
     
@@ -21,14 +22,14 @@ open class ESCountryPicker: NSObject {
         return picker.selectedCountry
     }
     
-    public var onSelectContry: ((_ country: Country) -> Void)?
+    public var onSelectCountry: ESCountrySelection?
     
-    public init(_ controller: UIViewController?, _ label: UILabel? = nil, onSelectContry: ((_ country: Country) -> Void)? = nil) {
+    
+    
+    public init(label: UILabel? = nil) {
         super.init()
         
-        self.controller = controller
         self.countryLabel = label
-        self.onSelectContry = onSelectContry
         
         picker.delegate = self
         picker.dataSource = self
@@ -37,9 +38,10 @@ open class ESCountryPicker: NSObject {
     }
     
     
-    public func show() {
-        guard let controller = self.controller else { return }
+    public func show(from controller: UIViewController? = currentController, onSelectCountry: ESCountrySelection? = nil) {
+        guard let controller = controller else { return }
         picker.showCountriesList(from: controller)
+        self.onSelectCountry = onSelectCountry
     }
     
     public func set(_ code: String) {
@@ -57,7 +59,7 @@ open class ESCountryPicker: NSObject {
 extension ESCountryPicker: CountryPickerViewDelegate, CountryPickerViewDataSource {
     public func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
         countryLabel?.text = country.localizedName()
-        onSelectContry?(country)
+        onSelectCountry?(country)
     }
     
     public func preferredCountries(in countryPickerView: CountryPickerView) -> [Country] {

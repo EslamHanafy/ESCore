@@ -8,10 +8,12 @@
 
 import UIKit
 
+public typealias ESLanguageSelection = (_ language: DPLanguage) -> Void
+
 open class ESLanguagePicker {
     private var picker: ESDataPickerViewController!
     
-    public var onSelectLanguage: ((_ language: DPLanguage) -> Void)?
+    public var onSelectLanguage: ESLanguageSelection?
     
     public static let languages: [DPLanguage] = Locale.availableIdentifiers
         .map { Locale(identifier:$0) }
@@ -20,7 +22,7 @@ open class ESLanguagePicker {
     
     
     
-    public init(style: ESDataPickerStyle) {
+    public init(style: ESDataPickerStyle = ESDataPickerStyle()) {
         var grouped = Dictionary<String, [DPLanguage]>(grouping: ESLanguagePicker.languages) { (lang) -> String in
             return String(lang.name.capitalized[lang.name.startIndex])
         }
@@ -41,8 +43,9 @@ open class ESLanguagePicker {
         }
     }
     
-    public func show(from controller: UIViewController? = currentController) {
+    public func show(from controller: UIViewController? = currentController, onSelectLanguage: ESLanguageSelection? = nil) {
         picker.show(from: controller)
+        self.onSelectLanguage = onSelectLanguage
     }
     
 //    static func languages() -> [String] {

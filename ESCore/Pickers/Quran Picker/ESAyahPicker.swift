@@ -17,7 +17,7 @@ open class ESAyahPicker {
     
     
     
-    public init(_ surah: ESSurah, style: ESDataPickerStyle) {
+    public init(_ surah: ESSurah, style: ESDataPickerStyle = ESDataPickerStyle()) {
         self.surah = surah
         
         style.showSectionIndexTitles = false

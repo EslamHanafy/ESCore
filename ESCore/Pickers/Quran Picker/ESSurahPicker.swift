@@ -12,10 +12,6 @@ import SwiftyJSON
 open class ESSurahPicker {
     private var picker: ESDataPickerViewController!
     
-    public static let shared: ESSurahPicker = {
-        let style = ESDataPickerStyle()
-        return ESSurahPicker(style: style)
-    }()
     
     public var onSelectSurah: ((_ surah: ESSurah) -> Void)?
     
@@ -37,7 +33,7 @@ open class ESSurahPicker {
     
     
     
-    public init(style: ESDataPickerStyle, sortedAlphabetically: Bool = false) {
+    public init(style: ESDataPickerStyle = ESDataPickerStyle(), sortedAlphabetically: Bool = false) {
         var grouped: Dictionary<String, [ESSurah]>
         if style.sortedAlphabetically {
             grouped = Dictionary<String, [ESSurah]>(grouping: ESSurahPicker.allSurah) { (surah) -> String in
