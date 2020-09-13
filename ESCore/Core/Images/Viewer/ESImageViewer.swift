@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ESCore
 import Agrume
 
 open class ESImageViewer {

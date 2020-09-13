@@ -8,7 +8,6 @@
 
 import Foundation
 import SDWebImage
-import ESCore
 
 open class ESImageDownloader {
     

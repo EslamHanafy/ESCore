@@ -36,7 +36,8 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.swift_versions = ['4.2', '5', '5.1', '5.2']
 
-  spec.source       = { :git => "https://github.com/EslamHanafy/ESCore.git", :tag => "#{spec.version}" }
+#  spec.source       = { :git => "https://github.com/EslamHanafy/ESCore.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/EslamHanafy/ESCore.git", :branch => "master" }
   
   spec.subspec 'Core' do |core|
     core.source_files = 'ESCore/Core/**/*.{h,m,swift}'
