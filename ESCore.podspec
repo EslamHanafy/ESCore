@@ -65,6 +65,7 @@ Pod::Spec.new do |spec|
     core.dependency 'FlagPhoneNumber'
     core.dependency 'NSObject+Rx'
     core.dependency 'InitialsImageView'
+    core.dependency 'Agrume'
   end
   
 #   spec.subspec 'Realm' do |subspec|
