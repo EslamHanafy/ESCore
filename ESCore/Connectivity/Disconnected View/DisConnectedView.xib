@@ -21,10 +21,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="cryImage.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-YF-H3v">
-                    <rect key="frame" x="20" y="105" width="374" height="697"/>
+                    <rect key="frame" x="20" y="125" width="374" height="657"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-RG-mwH" customClass="AnimatableButton" customModule="IBAnimatable">
-                    <rect key="frame" x="20" y="822" width="374" height="40"/>
+                    <rect key="frame" x="20" y="802" width="374" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="KWe-ah-8E0"/>
@@ -48,9 +48,9 @@
                 <constraint firstItem="Xkf-RG-mwH" firstAttribute="top" secondItem="Dxf-YF-H3v" secondAttribute="bottom" constant="20" id="4u4-Co-cJ4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dxf-YF-H3v" secondAttribute="trailing" constant="20" id="AcY-cv-Pjc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SrX-Dg-pfb" secondAttribute="trailing" constant="20" id="HDE-6y-enD"/>
-                <constraint firstItem="Xkf-RG-mwH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="LLF-Ij-Ujk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xkf-RG-mwH" secondAttribute="bottom" constant="20" id="LLF-Ij-Ujk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xkf-RG-mwH" secondAttribute="trailing" constant="20" id="RDk-RE-ftU"/>
-                <constraint firstItem="Dxf-YF-H3v" firstAttribute="top" secondItem="SrX-Dg-pfb" secondAttribute="bottom" id="TgF-7J-56u"/>
+                <constraint firstItem="Dxf-YF-H3v" firstAttribute="top" secondItem="SrX-Dg-pfb" secondAttribute="bottom" constant="20" id="TgF-7J-56u"/>
                 <constraint firstItem="Dxf-YF-H3v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aQi-i1-BBS"/>
                 <constraint firstItem="SrX-Dg-pfb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="haj-eH-92f"/>
                 <constraint firstItem="Xkf-RG-mwH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="q67-Lr-8r3"/>
