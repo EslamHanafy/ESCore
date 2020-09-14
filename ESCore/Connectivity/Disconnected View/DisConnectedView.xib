@@ -1,43 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisConnectedView" customModule="Modaker" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DisConnectedView" customModule="ESCore" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no internet connection, please check your internet connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrX-Dg-pfb">
-                    <rect key="frame" x="20" y="64" width="374" height="151"/>
+                    <rect key="frame" x="20" y="64" width="374" height="111"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="cryImage.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-YF-H3v">
-                    <rect key="frame" x="20" y="215" width="374" height="627"/>
+                    <rect key="frame" x="20" y="175" width="374" height="627"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkf-RG-mwH" customClass="AnimatableButton" customModule="IBAnimatable">
+                    <rect key="frame" x="20" y="822" width="374" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KWe-ah-8E0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Retry">
+                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="retryAction" destination="iN0-l3-epB" eventType="touchUpInside" id="CQt-e0-d4w"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="Xkf-RG-mwH" firstAttribute="top" secondItem="Dxf-YF-H3v" secondAttribute="bottom" constant="20" id="4u4-Co-cJ4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dxf-YF-H3v" secondAttribute="trailing" constant="20" id="AcY-cv-Pjc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SrX-Dg-pfb" secondAttribute="trailing" constant="20" id="HDE-6y-enD"/>
+                <constraint firstItem="Xkf-RG-mwH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="LLF-Ij-Ujk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xkf-RG-mwH" secondAttribute="trailing" constant="20" id="RDk-RE-ftU"/>
                 <constraint firstItem="Dxf-YF-H3v" firstAttribute="top" secondItem="SrX-Dg-pfb" secondAttribute="bottom" id="TgF-7J-56u"/>
                 <constraint firstItem="Dxf-YF-H3v" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="ZdH-MS-k0a"/>
                 <constraint firstItem="Dxf-YF-H3v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aQi-i1-BBS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dxf-YF-H3v" secondAttribute="bottom" constant="20" id="gfu-nP-n3e"/>
                 <constraint firstItem="SrX-Dg-pfb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="haj-eH-92f"/>
+                <constraint firstItem="Xkf-RG-mwH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="q67-Lr-8r3"/>
                 <constraint firstItem="SrX-Dg-pfb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rv9-Uc-mre"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="imageView" destination="Dxf-YF-H3v" id="JGh-a2-gfA"/>
+                <outlet property="retryButton" destination="Xkf-RG-mwH" id="Ldn-UA-RIR"/>
+                <outlet property="titleLabel" destination="SrX-Dg-pfb" id="pft-m7-1Yj"/>
             </connections>
             <point key="canvasLocation" x="141" y="114"/>
         </view>

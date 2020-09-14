@@ -42,7 +42,6 @@
 "loggingoutMessage" = "Are you sure you want to logout from your account?";
 "openSettings" = "Open Settings";
 
-
 //MARK: - Image Picker
 "selectImageTile" = "Choose the image source";
 "fromGallery" = "From The Gallery";
@@ -96,3 +95,8 @@
 "ESLanguage_ChangeLanguageBody" = "Are you sure you want to change the app language to Arabic?";
 "ESLanguage_ChangeLanguageConfirmButtonTitle" = "Yes";
 "ESLanguage_ChangeLanguageDeclineButtonTitle" = "No";
+
+//MARK: - Disconnected View
+"DisconnectedView_Title" = "Sorry no internet connection, please check your internet connection and try again.";
+"DisconnectedView_Retry" = "Recheck the connection";
+"DisconnectedView_CheckingConnection" = "Checking the connection...";

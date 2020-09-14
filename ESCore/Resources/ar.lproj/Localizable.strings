@@ -95,3 +95,8 @@
 "ESLanguage_ChangeLanguageBody" = "هل أنت متأكد أنك تريد تغيير لغة التطبيق إلى العربية؟";
 "ESLanguage_ChangeLanguageConfirmButtonTitle" = "نعم";
 "ESLanguage_ChangeLanguageDeclineButtonTitle" = "لا";
+
+//MARK: - Disconnected View
+"DisconnectedView_Title" = "عذرا لا يوجد اتصال بالإنترنت ، يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.";
+"DisconnectedView_Retry" = "أعد فحص الاتصال";
+"DisconnectedView_CheckingConnection" = "جار التحقق من الاتصال ...";

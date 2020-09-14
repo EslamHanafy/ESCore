@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0C5CDE9E250E41490037FDCB /* InitialsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */; };
+		0C89FADB250F9BC6000152B9 /* ESConnectivitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89FADA250F9BC6000152B9 /* ESConnectivitySettings.swift */; };
 		0C8CFE4D23B8A62E001DA888 /* ESCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8CFE4323B8A62E001DA888 /* ESCore.framework */; };
 		0C8CFE5223B8A62E001DA888 /* ESCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CFE5123B8A62E001DA888 /* ESCoreTests.swift */; };
 		0C8CFE5423B8A62E001DA888 /* ESCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8CFE4623B8A62E001DA888 /* ESCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CC7DC6B2501312800128011 /* ESImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7DC6A2501312800128011 /* ESImageViewer.swift */; };
-		0CE4D02B24F7F3A7005F9E63 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02924F7F3A5005F9E63 /* ConnectivityManager.swift */; };
+		0CE4D02B24F7F3A7005F9E63 /* ESConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02924F7F3A5005F9E63 /* ESConnectivityManager.swift */; };
 		0CE4D02C24F7F3A7005F9E63 /* Connectivity+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02A24F7F3A7005F9E63 /* Connectivity+Rx.swift */; };
 		0CE4D03024F7F3C6005F9E63 /* DisConnectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D02E24F7F3C3005F9E63 /* DisConnectedView.xib */; };
 		0CE4D03124F7F3C6005F9E63 /* DisConnectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02F24F7F3C6005F9E63 /* DisConnectedView.swift */; };
@@ -264,6 +265,7 @@
 
 /* Begin PBXFileReference section */
 		0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialsImageView.swift; sourceTree = "<group>"; };
+		0C89FADA250F9BC6000152B9 /* ESConnectivitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESConnectivitySettings.swift; sourceTree = "<group>"; };
 		0C8CFE4323B8A62E001DA888 /* ESCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ESCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8CFE4623B8A62E001DA888 /* ESCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESCore.h; sourceTree = "<group>"; };
 		0C8CFE4723B8A62E001DA888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -271,7 +273,7 @@
 		0C8CFE5123B8A62E001DA888 /* ESCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESCoreTests.swift; sourceTree = "<group>"; };
 		0C8CFE5323B8A62E001DA888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CC7DC6A2501312800128011 /* ESImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESImageViewer.swift; sourceTree = "<group>"; };
-		0CE4D02924F7F3A5005F9E63 /* ConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		0CE4D02924F7F3A5005F9E63 /* ESConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESConnectivityManager.swift; sourceTree = "<group>"; };
 		0CE4D02A24F7F3A7005F9E63 /* Connectivity+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Connectivity+Rx.swift"; sourceTree = "<group>"; };
 		0CE4D02E24F7F3C3005F9E63 /* DisConnectedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisConnectedView.xib; sourceTree = "<group>"; };
 		0CE4D02F24F7F3C6005F9E63 /* DisConnectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisConnectedView.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				0CE4D13624F8003B005F9E63 /* Audio */,
 				0CE4D12524F7FFC6005F9E63 /* UserGuide */,
 				0CE4D08924F7F54E005F9E63 /* Pickers */,
+				0CE4D02824F7F390005F9E63 /* Connectivity */,
 				0C8CFE4623B8A62E001DA888 /* ESCore.h */,
 				0C8CFE4723B8A62E001DA888 /* Info.plist */,
 				0CE4D15B24F987F8005F9E63 /* Podfile */,
@@ -597,9 +600,11 @@
 		0CE4D02824F7F390005F9E63 /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				0CE4D11924F7FE5B005F9E63 /* cryImage.gif */,
 				0CE4D02D24F7F3B0005F9E63 /* Disconnected View */,
 				0CE4D02A24F7F3A7005F9E63 /* Connectivity+Rx.swift */,
-				0CE4D02924F7F3A5005F9E63 /* ConnectivityManager.swift */,
+				0CE4D02924F7F3A5005F9E63 /* ESConnectivityManager.swift */,
+				0C89FADA250F9BC6000152B9 /* ESConnectivitySettings.swift */,
 			);
 			path = Connectivity;
 			sourceTree = "<group>";
@@ -860,7 +865,6 @@
 			isa = PBXGroup;
 			children = (
 				0CE4D12124F7FE8D005F9E63 /* Localizable.strings */,
-				0CE4D11924F7FE5B005F9E63 /* cryImage.gif */,
 				0CE4D12324F7FF75005F9E63 /* Media.xcassets */,
 			);
 			path = Resources;
@@ -1181,7 +1185,6 @@
 				0CE4D0AB24F7F90A005F9E63 /* APIs */,
 				0CE4D0A824F7F63A005F9E63 /* File Uploaders */,
 				0CE4D03224F7F428005F9E63 /* Rx */,
-				0CE4D02824F7F390005F9E63 /* Connectivity */,
 				0CE4D08024F7F510005F9E63 /* Validators */,
 				0CE4D0B424F7FA7C005F9E63 /* Views */,
 			);
@@ -1555,7 +1558,7 @@
 				0CE4D06924F7F4C7005F9E63 /* ESError.swift in Sources */,
 				0CE4D22324F99264005F9E63 /* UISearchBarExtensions.swift in Sources */,
 				0CE4D0D524F7FB2A005F9E63 /* FloatingLabelTextField.swift in Sources */,
-				0CE4D02B24F7F3A7005F9E63 /* ConnectivityManager.swift in Sources */,
+				0CE4D02B24F7F3A7005F9E63 /* ESConnectivityManager.swift in Sources */,
 				0CE4D16824F98FF4005F9E63 /* CAGradientLayerExtensions.swift in Sources */,
 				0CE4D15224F8009C005F9E63 /* AudioURLTrack.swift in Sources */,
 				0CE4D19124F990A8005F9E63 /* NSAttributedStringExtensions.swift in Sources */,
@@ -1681,6 +1684,7 @@
 				0CE4D21C24F99264005F9E63 /* UIFontExtensions.swift in Sources */,
 				0CE4D0B124F7F930005F9E63 /* NetworkError.swift in Sources */,
 				0CE4D0DC24F7FB2A005F9E63 /* ProgressView.swift in Sources */,
+				0C89FADB250F9BC6000152B9 /* ESConnectivitySettings.swift in Sources */,
 				0CE4D23A24F99E8B005F9E63 /* ESRealm+RxSwift.swift in Sources */,
 				0CE4D28C24FEA040005F9E63 /* Benchmarker.swift in Sources */,
 				0CE4D19224F990A8005F9E63 /* URLExtensions.swift in Sources */,

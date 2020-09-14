@@ -61,7 +61,6 @@ Pod::Spec.new do |spec|
     core.dependency 'RxRelay'
     core.dependency 'RxDataSources'
     core.dependency 'RxSwiftExt'
-    core.dependency 'SwiftyGif'
     core.dependency 'FlagPhoneNumber'
     core.dependency 'NSObject+Rx'
     core.dependency 'Agrume'
@@ -97,6 +96,12 @@ Pod::Spec.new do |spec|
     subspec.dependency 'CountryPickerView'
   end
   
+  spec.subspec 'Connectivity' do |subspec|
+    subspec.resources = 'ESCore/Connectivity/**/*.{xib,gif}'
+    subspec.source_files = 'ESCore/Connectivity/**/*.{h,m,swift}'
+    subspec.dependency 'ESCore/Core'
+    subspec.dependency 'SwiftyGif'
+  end
   
   
   spec.default_subspec = 'Core'

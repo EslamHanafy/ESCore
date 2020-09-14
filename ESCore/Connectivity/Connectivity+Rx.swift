@@ -11,7 +11,7 @@ import Connectivity
 import RxSwift
 
 //MARK: - static methods
-extension Reactive where Base: Connectivity {
+public extension Reactive where Base: Connectivity {
     static var connectivityChanges: Observable<Connectivity> {
         return NotificationCenter.default.rx
             .notification(Notification.Name.ConnectivityDidChange).flatMap {
@@ -42,7 +42,7 @@ extension Reactive where Base: Connectivity {
 }
 
 //MARK: -  instanse methods
-extension Reactive where Base: Connectivity {
+public extension Reactive where Base: Connectivity {
     var connectivityChanges: Observable<Connectivity> {
         return NotificationCenter.default.rx
             .notification(Notification.Name.ConnectivityDidChange, object: base)
