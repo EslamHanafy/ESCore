@@ -8,30 +8,32 @@
 
 import UIKit
 
+public typealias ESFonts = ESCore.Fonts
+
 typealias Fonts = ESCore.Fonts
 
 public extension ESCore {
     struct Fonts {
-        public static var languages: [ESFontType] = [ESFont()]
+        public static var availableFonts: [String: ESFontType] = ["en": ESFont()]
         
         public static var main: UIFont {
-            return (languages.first(where: { $0.language == language }) ?? ESFont()).main
+            return (availableFonts[safe: language] ?? ESFont()).main
         }
         
         public static var regular: UIFont {
-            return (languages.first(where: { $0.language == language }) ?? ESFont()).regular
+            return (availableFonts[safe: language] ?? ESFont()).regular
         }
         
         public static var bold: UIFont {
-            return (languages.first(where: { $0.language == language }) ?? ESFont()).bold
+            return (availableFonts[safe: language] ?? ESFont()).bold
         }
         
         public static var light: UIFont {
-            return (languages.first(where: { $0.language == language }) ?? ESFont()).light
+            return (availableFonts[safe: language] ?? ESFont()).light
         }
         
         public static var mainSize: CGFloat {
-            return (languages.first(where: { $0.language == language }) ?? ESFont()).mainSize
+            return (availableFonts[safe: language] ?? ESFont()).mainSize
         }
         
         
@@ -52,7 +54,7 @@ public extension ESCore {
         }
         
         public static func otherWeight(withName name: String, andSize size: CGFloat? = nil) -> UIFont? {
-            let font: ESFontType = (languages.first(where: { $0.language == language }) ?? ESFont())
+            let font: ESFontType = (availableFonts[safe: language] ?? ESFont())
             return font.otherWeights[safe: name]?.withSize(size ?? mainSize)
         }
         
@@ -79,6 +81,10 @@ public extension ESCore {
                 }
                 return main
             }
+        }
+        
+        public static func accept(_ font: ESFontType, forLanguage language: String) {
+            availableFonts[language] = font
         }
         
         

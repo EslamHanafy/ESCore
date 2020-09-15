@@ -19,5 +19,4 @@ public protocol ESFontType {
     var otherWeights: ESFontWeights { get set }
     
     var mainSize: CGFloat { get set }
-    var language: String { get set }
 }

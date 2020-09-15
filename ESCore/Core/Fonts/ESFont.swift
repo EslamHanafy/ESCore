@@ -20,7 +20,6 @@ public struct ESFont: ESFontType {
     public var otherWeights: ESFontWeights = [:]
     
     public var mainSize: CGFloat = 17
-    public var language: String = "en"
     
     
     public init (main: UIFont, regular: UIFont, bold: UIFont, light: UIFont, others: ESFontWeights) {
@@ -32,10 +31,4 @@ public struct ESFont: ESFontType {
     }
     
     public init() {}
-}
-
-extension ESFont: Equatable {
-    public static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.language == rhs.language
-    }
 }
