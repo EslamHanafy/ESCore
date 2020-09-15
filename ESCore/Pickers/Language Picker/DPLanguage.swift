@@ -8,10 +8,10 @@
 
 import Foundation
 
-open class DPLanguage: ChipItemType {
+open class DPLanguage: ESChipItemType {
     open var name: String
     open var code: String
-    open var status: ChipItemStatus = .none
+    open var status: ESChipItemStatus = .none
     
     
     public init (name: String, code: String) {

@@ -1,5 +1,5 @@
 //
-//  FloatingLabelTextField.swift
+//  ESFloatingLabelTextField.swift
 //  ESCore
 //
 //  Created by Eslam on 12/21/19.
@@ -9,28 +9,25 @@
 import Foundation
 import SkyFloatingLabelTextField
 
-open class FloatingLabelTextField: SkyFloatingLabelTextField {
+open class ESFloatingLabelTextField: SkyFloatingLabelTextField {
     @IBInspectable open var alwaysDisplayTitle: Bool = false {
         didSet {
             self.setTitleVisible(alwaysDisplayTitle)
         }
     }
     
-    @IBInspectable open var _titleFont: String? = nil {
+    @IBInspectable open var customFont: String = "main" {
         didSet {
-            if let fon = _titleFont {
-                self.titleFont = UIFont(name: fon, size: _titleFontSize) ?? UIFont.systemFont(ofSize: _titleFontSize)
-            }
+            self.font = Fonts.font(for: customFont)
         }
     }
     
-    @IBInspectable open var _titleFontSize: CGFloat = 15 {
+    @IBInspectable open var customTitleFont: String = "main" {
         didSet {
-            if let fon = _titleFont {
-                self.titleFont = UIFont(name: fon, size: _titleFontSize) ?? UIFont.systemFont(ofSize: _titleFontSize)
-            }
+            self.titleFont = Fonts.font(for: customFont)
         }
     }
+    
     
     override open var titleFormatter: ((String) -> String) {
         get {

@@ -1,5 +1,5 @@
 //
-//  ChipView.swift
+//  ESChipView.swift
 //  EslamCore
 //
 //  Created by Eslam on 3/24/19.
@@ -8,22 +8,16 @@
 
 import UIKit
 
-open class ChipView: UICollectionView {
+open class ESChipView: UICollectionView {
     @IBOutlet public var chipHeightConstraint: NSLayoutConstraint!
     
-    @IBInspectable open var normalFont: String = "System" {
+    @IBInspectable open var normalFont: String = "main" {
         didSet {
-            style.normalFont = UIFont(name: normalFont, size: normalFontSize) ?? .systemFont(ofSize: normalFontSize)
+            style.normalFont = Fonts.font(for: normalFont)
             self.reloadData()
         }
     }
     
-    @IBInspectable open var normalFontSize: CGFloat = 14.0 {
-        didSet {
-            style.normalFont = UIFont(name: normalFont, size: normalFontSize) ?? .systemFont(ofSize: normalFontSize)
-            self.reloadData()
-        }
-    }
     
     @IBInspectable open var normalColor: UIColor = .clear {
         didSet {
@@ -47,16 +41,9 @@ open class ChipView: UICollectionView {
     }
     
     
-    @IBInspectable open var selectedFont: String = "System" {
+    @IBInspectable open var selectedFont: String = "main" {
         didSet {
-            style.selectedFont = UIFont(name: selectedFont, size: selectedFontSize) ?? .systemFont(ofSize: selectedFontSize)
-            self.reloadData()
-        }
-    }
-    
-    @IBInspectable open var selectedFontSize: CGFloat = 14.0 {
-        didSet {
-            style.selectedFont = UIFont(name: selectedFont, size: selectedFontSize) ?? .systemFont(ofSize: selectedFontSize)
+            style.selectedFont = Fonts.font(for: selectedFont)
             self.reloadData()
         }
     }
@@ -82,17 +69,9 @@ open class ChipView: UICollectionView {
         }
     }
     
-    
-    @IBInspectable open var disabledFont: String = "System" {
+    @IBInspectable open var disabledFont: String = "main" {
         didSet {
-            style.disableFont = UIFont(name: disabledFont, size: disabledFontSize) ?? .systemFont(ofSize: disabledFontSize)
-            self.reloadData()
-        }
-    }
-    
-    @IBInspectable open var disabledFontSize: CGFloat = 14.0 {
-        didSet {
-            style.disableFont = UIFont(name: disabledFont, size: disabledFontSize) ?? .systemFont(ofSize: disabledFontSize)
+            style.disableFont = Fonts.font(for: disabledFont)
             self.reloadData()
         }
     }
@@ -118,16 +97,16 @@ open class ChipView: UICollectionView {
         }
     }
     
-    @IBInspectable open var itemHeight: CGFloat = ChipView.itemHeight {
+    @IBInspectable open var itemHeight: CGFloat = ESChipView.itemHeight {
         didSet {
-            ChipView.itemHeight = itemHeight; self.reloadData()
+            ESChipView.itemHeight = itemHeight; self.reloadData()
             self.reloadData()
         }
     }
     
-    @IBInspectable open var padding: CGFloat = ChipView.padding {
+    @IBInspectable open var padding: CGFloat = ESChipView.padding {
         didSet {
-            ChipView.padding = padding
+            ESChipView.padding = padding
             self.reloadData()
         }
     }
@@ -151,7 +130,7 @@ open class ChipView: UICollectionView {
 
     private var lastSelection: Int?
     
-    open var items: [ChipItemType] = [] {
+    open var items: [ESChipItemType] = [] {
         didSet {
             self.reloadData()
         }
@@ -161,11 +140,11 @@ open class ChipView: UICollectionView {
         return items.map({ $0.title })
     }
     
-    open var disabledItems: [ChipItemType] {
+    open var disabledItems: [ESChipItemType] {
         return items.filter({ $0.status == .disabled })
     }
     
-    open var selectedItems: [ChipItemType] {
+    open var selectedItems: [ESChipItemType] {
         return items.filter({ $0.status == .selected })
     }
     
@@ -177,8 +156,8 @@ open class ChipView: UICollectionView {
         return disabledItems.map({ $0.title })
     }
     
-    private var onSelectItem: ((_ item: ChipItemType, _ index: Int)->())?
-    private var onDeselectItem: ((_ item: ChipItemType, _ index: Int)->())?
+    private var onSelectItem: ((_ item: ESChipItemType, _ index: Int)->())?
+    private var onDeselectItem: ((_ item: ESChipItemType, _ index: Int)->())?
     
     
     open var style: Style = Style() {
@@ -205,7 +184,7 @@ open class ChipView: UICollectionView {
 }
 
 //MARK: - Public Helpers
-public extension ChipView {
+public extension ESChipView {
     func select(_ item: String?) {
         if let index = items.firstIndex(where: { $0.title == item }) {
             self.lastSelection = index
@@ -222,24 +201,24 @@ public extension ChipView {
         }
     }
     
-    func select(_ item: ChipItemType) {
+    func select(_ item: ESChipItemType) {
         select(item.title)
     }
     
-    func selectedItem<T: ChipItemType>(type: T.Type, _ handler: @escaping (_ item: T, _ index: Int) -> Void) {
+    func selectedItem<T: ESChipItemType>(type: T.Type, _ handler: @escaping (_ item: T, _ index: Int) -> Void) {
         self.onSelectItem = { item, index in
             handler(item as! T, index)
         }
     }
     
-    func unselectedItem<T: ChipItemType>(type: T.Type, _ handler: @escaping (_ item: T, _ index: Int) -> Void) {
+    func unselectedItem<T: ESChipItemType>(type: T.Type, _ handler: @escaping (_ item: T, _ index: Int) -> Void) {
         self.onDeselectItem = { item, index in
             handler(item as! T, index)
         }
     }
     
     func clearSelections() {
-        var newItems: [ChipItemType] = []
+        var newItems: [ESChipItemType] = []
         
         for item in items {
             var item = item
@@ -252,7 +231,7 @@ public extension ChipView {
 }
 
 //MARK: - Helpers
-private extension ChipView {
+private extension ESChipView {
     func commonInit() {
         self.delegate = self
         self.dataSource = self
@@ -265,7 +244,7 @@ private extension ChipView {
             layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
             layout.itemSize = UICollectionViewFlowLayout.automaticSize
         } else {
-            layout.estimatedItemSize = CGSize(width: ChipView.itemHeight, height: ChipView.itemHeight)
+            layout.estimatedItemSize = CGSize(width: ESChipView.itemHeight, height: ESChipView.itemHeight)
         }
         
         
@@ -296,7 +275,7 @@ private extension ChipView {
 }
 
 //MARK: - Delegate And Datasource
-extension ChipView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ESChipView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

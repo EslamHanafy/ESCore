@@ -18,12 +18,24 @@ open class ESLanguage {
     /// The settings object that controls all displayed texts in all alerts in this class
     public static var settings: Settings = Settings()
     
+    private static let RTLLanguages = ["ar", "fa", "he", "ckb-IQ","ckb-IR", "ur", "ckb"]
+    
+    private static var preferredLanguage: [String] {
+        let userDefaults = UserDefaults.standard
+        let langArray = userDefaults.object(forKey: APPLE_LANGUAGE_KEY)
+        return langArray as? [String] ?? []
+    }
     
     
     /// get current app language
-    /// - Returns: The current app language `ar` for Arabic and `en` for english
+    /// - Returns: The current app language e.g `ar` for Arabic or `en` for english
     public class func currentAppleLanguage() -> String{
-        return isRTL ? "ar" : "en"
+        let current = preferredLanguage.first!
+        if let hyphenIndex = current.firstIndex(of: "-") {
+            return String(current[..<hyphenIndex])
+        } else {
+            return current
+        }
     }
     
     /// Get current app language in full format
@@ -33,6 +45,35 @@ open class ESLanguage {
         let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
         let current = langArray.firstObject as! String
         return current
+    }
+    
+    /**
+     Check if the current language is a right to left language
+     
+     @return true if its a right to left language
+     */
+    public static func isRTLLanguage() -> Bool {
+        return !RTLLanguages.filter{$0 == currentLocaleIdentifier() || $0 == currentAppleLanguage()}.isEmpty
+    }
+    
+    /**
+     Get the current language with locae e.g. ar-KW
+     @return language identifier string
+     */
+    public class func currentLocaleIdentifier() -> String {
+        let current = preferredLanguage.first!
+        return current
+    }
+    
+    
+    /**
+     Check if the current language is a right to left language
+     
+     @param language to be tested
+     @return true if its a right to left language
+     */
+    public static func isRTLLanguage(language: String) -> Bool {
+        return !RTLLanguages.filter{language == $0}.isEmpty
     }
     
     

@@ -13,7 +13,7 @@ public struct ESConnectivitySettings {
     
     public var titleTextColor: UIColor = .white
     public var titleText: String = "DisconnectedView_Title".selfLocalized
-    public var titleFont: UIFont = .boldSystemFont(ofSize: 17)
+    public var titleFont: UIFont = Fonts.bold
     
     public var hideRetryButton: Bool = false
     public var retryButtonTextColor: UIColor = .red

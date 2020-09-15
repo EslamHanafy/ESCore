@@ -1,5 +1,5 @@
 //
-//  PhoneTextField.swift
+//  ESPhoneTextField.swift
 //  ESCore
 //
 //  Created by Eslam on 12/19/19.
@@ -8,8 +8,15 @@
 
 import FlagPhoneNumber
 
-open class PhoneTextField: FPNTextField {
+open class ESPhoneTextField: FPNTextField {
     @IBOutlet public var controller: UIViewController?
+    
+    @IBInspectable open var customFont: String = "main" {
+        didSet {
+            self.font = Fonts.font(for: customFont)
+        }
+    }
+    
     
     public var isValidNumber: Bool = false
     
@@ -33,7 +40,7 @@ open class PhoneTextField: FPNTextField {
 }
 
 //MARK: - text field Delegate
-extension PhoneTextField : FPNTextFieldDelegate {
+extension ESPhoneTextField : FPNTextFieldDelegate {
     public func fpnDisplayCountryList() {
         let navigationViewController = UINavigationController(rootViewController: listController)
 

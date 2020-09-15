@@ -8,19 +8,19 @@
 
 import Foundation
 
-open class ChipItem: ChipItemType {
+open class ESChipItem: ESChipItemType {
     open var title: String = ""
-    open var status: ChipItemStatus = .none
+    open var status: ESChipItemStatus = .none
     
-    public init(title: String, status: ChipItemStatus = .none) {
+    public init(title: String, status: ESChipItemStatus = .none) {
         self.title = title
         self.status = status
     }
 }
 
 //MARK: - Equatable
-extension ChipItem: Equatable {
-    public static func == (lhs: ChipItem, rhs: ChipItem) -> Bool {
+extension ESChipItem: Equatable {
+    public static func == (lhs: ESChipItem, rhs: ESChipItem) -> Bool {
         return lhs.title == rhs.title
     }
 }

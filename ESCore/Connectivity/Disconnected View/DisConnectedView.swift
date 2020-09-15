@@ -11,9 +11,9 @@ import SwiftyGif
 import IBAnimatable
 
 class DisConnectedView: UIView {
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var titleLabel: ESLabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var retryButton: AnimatableButton!
+    @IBOutlet var retryButton: ESButton!
     
     
     

@@ -12,7 +12,11 @@ import Foundation
 
 // MARK: - Methods
 public extension Dictionary {
-
+    /// Returns the element at the specified key if it is found, otherwise nil.
+    subscript(safe key: Key) -> Value? {
+        return has(key: key) ? self[key] : nil
+    }
+    
     /// SwifterSwift: Creates a Dictionary from a given sequence grouped by a given key path.
     ///
     /// - Parameters:

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ChipItemStatus: String, Codable {
+public enum ESChipItemStatus: String, Codable {
     case none
     case selected
     case disabled

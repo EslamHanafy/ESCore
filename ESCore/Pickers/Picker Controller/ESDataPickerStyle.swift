@@ -10,11 +10,11 @@ import UIKit
 
 open class ESDataPickerStyle {
     open var itemTextColor: UIColor = .black
-    open var itemFont: UIFont = .systemFont(ofSize: 15)
+    open var itemFont: UIFont = Fonts.regular(ofSize: 15)
     open var itemImageSize: CGSize = CGSize(width: 24, height: 24)
     open var itemImageCornerRadius: CGFloat = 0
     open var showCheckMark: Bool = true
-    open var sectionTitleFont: UIFont = .systemFont(ofSize: 17)
+    open var sectionTitleFont: UIFont = Fonts.regular(ofSize: 17)
     open var sectionTitleTextColor: UIColor = .black
     open var showSectionIndexTitles: Bool = false
     open var sortedAlphabetically: Bool = false

@@ -8,19 +8,19 @@
 
 import Foundation
 
-public extension ChipView {
+public extension ESChipView {
     class Style {
-        public var normalFont: UIFont = .systemFont(ofSize: 14)
+        public var normalFont: UIFont = Fonts.regular(ofSize: 14)
         public var normalColor: UIColor = .clear
         public var normalFontColor: UIColor = .black
         public var normalBorderColor: UIColor = .black
         
-        public var selectedFont: UIFont = .systemFont(ofSize: 14)
+        public var selectedFont: UIFont = Fonts.regular(ofSize: 14)
         public var selectedColor: UIColor = .blue
         public var selectedFontColor: UIColor = .white
         public var selectedBorderColor: UIColor = .white
         
-        public var disableFont: UIFont = .systemFont(ofSize: 14)
+        public var disableFont: UIFont = Fonts.regular(ofSize: 14)
         public var disabledColor: UIColor = .clear
         public var disabledBorderColor: UIColor = .lightGray
         public var disabledFontColot: UIColor = .lightGray

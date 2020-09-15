@@ -1,5 +1,5 @@
 //
-//  ButtonView.swift
+//  ESButtonView.swift
 //  EslamCore
 //
 //  Created by Eslam on 4/12/19.
@@ -9,27 +9,39 @@
 import UIKit
 
 @IBDesignable
-open class ButtonView: UIButton {
-    @IBInspectable public var useRenderMode: Bool = false {
+open class ESButtonView: UIButton {
+    @IBInspectable open var customFont: String = "main" {
+        didSet {
+            self.titleLabel?.font = Fonts.font(for: customFont)
+        }
+    }
+    
+    @IBInspectable open var lines: Int = 1 {
+        didSet {
+            self.titleLabel?.numberOfLines = lines
+        }
+    }
+    
+    @IBInspectable open var useRenderMode: Bool = false {
         didSet {
             updateImageView()
         }
     }
     
-    @IBInspectable public var renderColor: UIColor = .white {
+    @IBInspectable open var renderColor: UIColor = .white {
         didSet {
             _imageView.tintColor = renderColor
             updateImageView()
         }
     }
     
-    @IBInspectable public var image: UIImage? = nil {
+    @IBInspectable open var image: UIImage? = nil {
         didSet {
             updateImageView()
         }
     }
     
-     @IBInspectable public var sizeMultiplier: CGFloat = 0.37 {
+     @IBInspectable open var sizeMultiplier: CGFloat = 0.37 {
         didSet {
             if sizeMultiplier == 0 || sizeMultiplier > 1.0 {
                 sizeMultiplier = oldValue
@@ -88,7 +100,7 @@ open class ButtonView: UIButton {
 }
 
 //MARK: - Helpers
-private extension ButtonView {
+private extension ESButtonView {
     func prepareImageView(withRect rect: CGRect) {
         let size = rect.height * sizeMultiplier
         _imageView.frame.size = CGSize(width: size, height: size)

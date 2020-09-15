@@ -109,6 +109,10 @@ public extension String {
         return Locale.current.localizedString(forIdentifier: code)
     }
     
+    var hasEnglishText: Bool {
+        return self.rangeOfCharacter(from: CharacterSet(charactersIn: "1234567890poiuytrewqasdfghjklmnbvcxz")) != nil
+    }
+    
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {

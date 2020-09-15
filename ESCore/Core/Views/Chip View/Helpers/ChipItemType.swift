@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ChipItemType {
+public protocol ESChipItemType {
     var title: String { get }
-    var status: ChipItemStatus { get set }
+    var status: ESChipItemStatus { get set }
 }

@@ -1,5 +1,5 @@
 //
-//  PasswordTextField.swift
+//  ESPasswordTextField.swift
 //  ESCore
 //
 //  Created by Eslam on 12/19/19.
@@ -9,7 +9,7 @@
 import Foundation
 import SkyFloatingLabelTextField
 
-open class PasswordTextField: FloatingLabelTextField {
+open class ESPasswordTextField: ESFloatingLabelTextField {
     //KVO Context
     fileprivate var kvoContext: UInt8 = 0
     

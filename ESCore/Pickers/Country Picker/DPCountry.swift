@@ -10,11 +10,11 @@
 import Foundation
 import CountryPickerView
 
-open class DPCountry: ChipItemType {
+open class DPCountry: ESChipItemType {
     open var name: String
     open var code: String
     open var localizedName: String
-    open var status: ChipItemStatus = .none
+    open var status: ESChipItemStatus = .none
     open var title: String {
         return localizedName
     }

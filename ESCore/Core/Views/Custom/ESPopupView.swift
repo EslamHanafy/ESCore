@@ -1,5 +1,5 @@
 //
-//  PopupView.swift
+//  ESPopupView.swift
 //  EslamCore
 //
 //  Created by Eslam on 12/16/18.
@@ -8,7 +8,7 @@
 
 import IBAnimatable
 
-open class PopupView: UIView {
+open class ESPopupView: UIView {
     @IBOutlet open var container: AnimatableView!
     
     public var animationDuration: TimeInterval = 0.8
@@ -37,7 +37,7 @@ open class PopupView: UIView {
 }
 
 //MARK: - Animations
-public extension PopupView {
+public extension ESPopupView {
     
     /// show the view with animations
     func showAnimation() {

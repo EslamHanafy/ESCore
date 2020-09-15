@@ -1,5 +1,5 @@
 //
-//  Slider.swift
+//  ESSlider.swift
 //  EslamCore
 //
 //  Created by Eslam Hanafy on 1/21/20.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class Slider: UISlider {
+open class ESSlider: UISlider {
     @IBInspectable public var trackHeight: CGFloat = 3
 
     @IBInspectable public var thumbRadius: CGFloat = 20

@@ -1,5 +1,5 @@
 //
-//  BackView.swift
+//  ESBackView.swift
 //  EslamCore
 //
 //  Created by Eslam Hanafy on 11/19/17.
@@ -9,12 +9,12 @@
 import UIKit
 
 @IBDesignable
-class BackView: ButtonView {
+open class ESBackView: ESButtonView {
     private var isRotated:Bool = false
     
     
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         
         self.flip()

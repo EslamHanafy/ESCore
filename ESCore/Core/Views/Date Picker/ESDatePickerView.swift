@@ -1,5 +1,5 @@
 //
-//  DatePickerView.swift
+//  ESDatePickerView.swift
 //  ESCore
 //
 //  Created by Eslam Hanafy on 2/6/20.
@@ -11,12 +11,12 @@ import SwiftDate
 import RxCocoa
 import RxSwift
 
-open class DatePickerView: PopupView {
-    @IBOutlet var picker: UIDatePicker!
-    @IBOutlet var label: UILabel!
-    @IBOutlet var cancelButton: UIButton!
-    @IBOutlet var nowButton: UIButton!
-    @IBOutlet var selectButton: UIButton!
+open class ESDatePickerView: ESPopupView {
+    @IBOutlet open var picker: UIDatePicker!
+    @IBOutlet open var label: ESLabel!
+    @IBOutlet open var cancelButton: ESButton!
+    @IBOutlet open var nowButton: ESButton!
+    @IBOutlet open var selectButton: ESButton!
     
     open var mode: UIDatePicker.Mode = .dateAndTime {
         didSet {
@@ -53,8 +53,8 @@ open class DatePickerView: PopupView {
     
     
     
-    public static func getInstance(for controller: UIViewController? = currentController) -> DatePickerView {
-        let view = currentBundle.loadNibNamed("DatePickerView", owner: controller, options: nil)?.last as! DatePickerView
+    public static func getInstance(for controller: UIViewController? = currentController) -> ESDatePickerView {
+        let view = currentBundle.loadNibNamed("DatePickerView", owner: controller, options: nil)?.last as! ESDatePickerView
         view.initFor(controller: controller ?? UIViewController())
         return view
     }
@@ -83,7 +83,7 @@ open class DatePickerView: PopupView {
 }
 
 //MARK: - Helpers
-private extension DatePickerView {
+private extension ESDatePickerView {
     func fixStyle() {
         label.font = Fonts.main
         cancelButton.titleLabel?.font = Fonts.bold

@@ -11,13 +11,13 @@ import IBAnimatable
 
 
 class ChipCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var containerView: CustomView!
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var containerView: ESCustomView!
+    @IBOutlet var titleLabel: ESLabel!
     @IBOutlet var itemHeightConstraint: NSLayoutConstraint!
     
     
-    var style: ChipView.Style!
-    var item: ChipItemType!
+    var style: ESChipView.Style!
+    var item: ESChipItemType!
     
     
     
@@ -25,11 +25,11 @@ class ChipCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        itemHeightConstraint.constant = ChipView.itemHeight
+        itemHeightConstraint.constant = ESChipView.itemHeight
     }
 
     
-    func configure(for item: ChipItemType, with style: ChipView.Style) {
+    func configure(for item: ESChipItemType, with style: ESChipView.Style) {
         self.style = style
         self.item = item
         self.titleLabel.text = item.title
@@ -71,6 +71,6 @@ class ChipCollectionViewCell: UICollectionViewCell {
         label.text = self.titleLabel.text
         let lines = label.maxNumberOfLines
         self.titleLabel.numberOfLines = lines
-        self.itemHeightConstraint.constant = ChipView.itemHeight * lines.cgFloatValue
+        self.itemHeightConstraint.constant = ESChipView.itemHeight * lines.cgFloatValue
     }
 }

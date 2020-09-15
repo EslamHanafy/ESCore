@@ -1,5 +1,5 @@
 //
-//  ShadowView.swift
+//  ESCustomView.swift
 //  EslamCore
 //
 //  Created by Eslam Hanafy on 11/19/17.
@@ -9,25 +9,25 @@
 import UIKit
 
 @IBDesignable
-class CustomView: UIView {
+open class ESCustomView: UIView {
     //shadow
-    @IBInspectable var drawShadow:Bool = false
-    @IBInspectable var shadowColor:UIColor = .black
-    @IBInspectable var shadowOffset:CGSize = CGSize.zero
-    @IBInspectable var shadowRadius:CGFloat = 1.0
-    @IBInspectable var shadowOpacity:CGFloat = 1.0
+    @IBInspectable open var drawShadow:Bool = false
+    @IBInspectable open var shadowColor:UIColor = .black
+    @IBInspectable open var shadowOffset:CGSize = CGSize.zero
+    @IBInspectable open var shadowRadius:CGFloat = 1.0
+    @IBInspectable open var shadowOpacity:CGFloat = 1.0
     //border
-    @IBInspectable var drawBorder:Bool = false
-    @IBInspectable var borderRadius:CGFloat = 0.0
-    @IBInspectable var borderColor:UIColor = .clear
-    @IBInspectable var borderWidth:CGFloat = 0.0
+    @IBInspectable open var drawBorder:Bool = false
+    @IBInspectable open var borderRadius:CGFloat = 0.0
+    @IBInspectable open var borderColor:UIColor = .clear
+    @IBInspectable open var borderWidth:CGFloat = 0.0
     /// determine if should use percentage to calculat the corner radius or not
-    @IBInspectable var usePercentage:Bool = true
-    @IBInspectable var maskToBounds:Bool = false
+    @IBInspectable open var usePercentage:Bool = true
+    @IBInspectable open var maskToBounds:Bool = false
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         if drawBorder {
             drawBorder(forRect: rect)
         }

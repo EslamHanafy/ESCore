@@ -30,7 +30,7 @@ open class SnackBar {
     private func getSnackBar() -> TTGSnackbar {
         let snackbar = TTGSnackbar(message: "", duration: .long)
         snackbar.leftMargin = 0
-        snackbar.messageTextFont = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        snackbar.messageTextFont =  Fonts.main
         snackbar.rightMargin = 0
         snackbar.animationType = .slideFromTopBackToTop
         snackbar.messageTextAlign = .center

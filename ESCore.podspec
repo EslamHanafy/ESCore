@@ -41,7 +41,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'Core' do |core|
     core.source_files = 'ESCore/Core/**/*.{h,m,swift}'
-    core.resources = ['ESCore/Resources/**/*', 'ESCore/Core/**/*.{xib}']
+    core.resources = ['ESCore/Resources/**/*', 'ESCore/Core/**/*.{xib,strings}']
     core.framework = 'UIKit'
     
     core.dependency 'IQKeyboardManagerSwift'
@@ -97,7 +97,7 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'Connectivity' do |subspec|
-    subspec.resources = 'ESCore/Connectivity/**/*.{xib,gif}'
+    subspec.resources = 'ESCore/Connectivity/**/*.{xib,gif,strings}'
     subspec.source_files = 'ESCore/Connectivity/**/*.{h,m,swift}'
     subspec.dependency 'ESCore/Core'
     subspec.dependency 'SwiftyGif'

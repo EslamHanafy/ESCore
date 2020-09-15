@@ -1,5 +1,5 @@
 //
-//  WebViewController.swift
+//  ESWebViewController.swift
 //  ESCore
 //
 //  Created by Eslam Hanafy on 3/15/20.
@@ -11,36 +11,54 @@ import NVActivityIndicatorView
 import WebKit
 import RxSwift
 
-open class WebViewController: UIViewController {
+open class ESWebViewController: UIViewController {
     @IBOutlet open var containerView: UIView!
     @IBOutlet open var loaderView: NVActivityIndicatorView!
-    @IBOutlet open var titleLabel: UILabel!
+    @IBOutlet open var titleLabel: ESLabel!
+    @IBOutlet open var headerView: UIView!
     
     open var url: URL?
     open var screenTitle: String?
     
     open var webView: WKWebView!
     
+    open var settings: Settings = Settings() {
+        didSet {
+            applySettings()
+        }
+    }
+    
+    private var didLoadView: Bool = false
+    
+    
     let refresher = UIRefreshControl()
     
     let bag = DisposeBag()
     
+    
+    public static var defaultSettings: Settings = Settings()
+    
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        didLoadView = true
 
         loaderView.startAnimating()
         initWebView()
         goTo(url)
         
         titleLabel.text = screenTitle
-        titleLabel.font = Fonts.bold(ofSize: 20)
+        
+        applySettings()
     }
 
 
-    public static func show(with url: URL?, andTitle title: String, from controller: UIViewController?) {
-        let screen = WebViewController(nibName: "WebViewController", bundle: currentBundle)
+    public static func show(with url: URL?, andTitle title: String, withSettings settings: Settings = ESWebViewController.defaultSettings, from controller: UIViewController?) {
+        let screen = ESWebViewController(nibName: "WebViewController", bundle: currentBundle)
         screen.url = url
         screen.screenTitle = title
+        screen.settings = settings
         screen.modalPresentationStyle = .fullScreen
         controller?.present(screen, animated: true, completion: nil)
     }
@@ -54,7 +72,7 @@ open class WebViewController: UIViewController {
 }
 
 //MARK: - Helpers
-extension WebViewController {
+extension ESWebViewController {
     @objc func reloadPage() {
         webView.reload()
     }
@@ -74,10 +92,23 @@ extension WebViewController {
         
         self.view.layoutIfNeeded()
     }
+    
+    public func applySettings() {
+        guard didLoadView else {
+            return
+        }
+        
+        self.view.backgroundColor = settings.backgroundColor
+        self.headerView.backgroundColor = settings.headerColor
+        self.containerView.backgroundColor = settings.containerColor
+        self.loaderView.color = settings.loaderColor
+        self.titleLabel.textColor = settings.titleColor
+        self.titleLabel.font = settings.titleFont
+    }
 }
 
 //MARK: - WebView
-extension WebViewController: WKNavigationDelegate {
+extension ESWebViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loaderView.stopAnimating()
         refresher.endRefreshing()
@@ -112,5 +143,17 @@ extension WebViewController: WKNavigationDelegate {
         
         webView.scrollView.refreshControl = refresher
         refresher.addTarget(self, action: #selector(self.reloadPage), for: .valueChanged)
+    }
+}
+
+//MARK: - Settings
+public extension ESWebViewController {
+    struct Settings {
+        public var backgroundColor: UIColor = .black
+        public var headerColor: UIColor = "262626".colorValue
+        public var containerColor: UIColor = .white
+        public var loaderColor: UIColor = .white
+        public var titleColor: UIColor = .white
+        public var titleFont: UIFont = Fonts.bold(ofSize: 20)
     }
 }
