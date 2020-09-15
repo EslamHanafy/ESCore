@@ -8,13 +8,15 @@
 
 import UIKit
 
+public typealias ESFontWeights = [String: UIFont]
+
 public protocol ESFontType {
     var main: UIFont { get set }
     var regular: UIFont { get set }
     var bold: UIFont { get set }
     var light: UIFont { get set }
     
-    var otherWeights: [String: UIFont] { get set }
+    var otherWeights: ESFontWeights { get set }
     
     var mainSize: CGFloat { get set }
     var language: String { get set }

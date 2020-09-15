@@ -17,10 +17,21 @@ public struct ESFont: ESFontType {
     
     public var light: UIFont = .systemFont(ofSize: 17, weight: .light)
     
-    public var otherWeights: [String: UIFont] = [:]
+    public var otherWeights: ESFontWeights = [:]
     
     public var mainSize: CGFloat = 17
     public var language: String = "en"
+    
+    
+    public init (main: UIFont, regular: UIFont, bold: UIFont, light: UIFont, others: ESFontWeights) {
+        self.main = main
+        self.regular = regular
+        self.bold = bold
+        self.light = light
+        self.otherWeights = others
+    }
+    
+    public init() {}
 }
 
 extension ESFont: Equatable {
