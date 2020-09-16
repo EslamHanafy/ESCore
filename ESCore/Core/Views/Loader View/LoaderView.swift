@@ -1,5 +1,5 @@
 //
-//  LoaderView.swift
+//  ESLoaderView.swift
 //  EslamCore
 //
 //  Created by Eslam on 11/14/16.
@@ -11,8 +11,10 @@ import NVActivityIndicatorView
 import Alamofire
 import SDWebImage
 
-open class LoaderView: UIView {
-    public static let shared: LoaderView = LoaderView.getInstance()
+typealias LoaderView = ESLoaderView
+
+open class ESLoaderView: UIView {
+    public static let shared: ESLoaderView = ESLoaderView.getInstance()
     
     @IBOutlet open var loader: NVActivityIndicatorView!
     @IBOutlet open var titleLabel: UILabel!
@@ -49,13 +51,13 @@ open class LoaderView: UIView {
     }
     
     
-    /// get new instance from LoaderView and add it to the main window
+    /// get new instance from ESLoaderView and add it to the main window
     ///
-    /// - Returns: new LoaderView
-    fileprivate static func getInstance() -> LoaderView {
+    /// - Returns: new ESLoaderView
+    fileprivate static func getInstance() -> ESLoaderView {
         let window = (UIApplication.shared.delegate!.window!)!
         
-        let view = currentBundle.loadNibNamed("LoaderView", owner: window, options: nil)?.first as! LoaderView
+        let view = currentBundle.loadNibNamed("LoaderView", owner: window, options: nil)?.first as! ESLoaderView
         view.frame = window.frame
         view.isHidden = true
         view.progressView.isHidden = true
@@ -70,61 +72,105 @@ open class LoaderView: UIView {
     }
 }
 
-//MARK: - Show/Hide Options
-public extension LoaderView {
-    static func show(with request: Request?, andTitle title: String? = nil) {
-        shared.request = request
+//MARK: - ESLoaderType
+extension ESLoaderView: ESLoaderType {
+    public func show() {
+        show(withTitle: nil)
+    }
+    
+    public func show(withTitle title: String?) {
+        mainQueue {
+            [weak self] in
+            guard let self = self else { return }
+            if let title = title {
+                self.titleLabel.text = title
+                self.titleLabel.isHidden = false
+            }else {
+                self.titleLabel.isHidden = true
+            }
+            
+            if self.isHidden {
+                UIApplication.shared.keyWindow?.bringSubviewToFront(self)
+                self.isHidden = false
+                self.loader.startAnimating()
+            }
+        }
+    }
+    
+    public func show(with request: Request? = nil, andTitle title: String? = nil) {
+        self.request = request
         show(withTitle: title)
+    }
+    
+    public func hide() {
+        guard !self.isHidden else { return }
+        mainQueue {
+            [weak self] in
+            guard let self = self else { return }
+            self.cancelRequests()
+            UIApplication.shared.keyWindow?.sendSubviewToBack(self)
+            self.progressView.isHidden = true
+            self.titleLabel.isHidden = true
+            self.titleLabel.text = ""
+            self.isHidden = true
+            self.loader.stopAnimating()
+        }
+    }
+    
+    public func comeToWindowIfNeeded() {
+        mainQueue { [weak self] in
+            guard let self = self else { return }
+            if !self.isHidden {
+                UIApplication.shared.keyWindow?.bringSubviewToFront(self)
+            }
+        }
+    }
+    
+    public func update(progress: Float) {
+        mainQueue { [weak self] in
+            guard let self = self else { return }
+            if self.progressView.isHidden == true {
+                self.progressView.isHidden = false
+            }
+            
+            self.progressView.progress = progress
+        }
+    }
+    
+    public func cancelRequests() {
+        self.request?.cancel()
+        request = nil
+        imageOperation = nil
+        ESLoaderView.onCancel = nil
+    }
+}
+
+//MARK: - Show/Hide Options
+public extension ESLoaderView {
+    static func show(with request: Request?, andTitle title: String? = nil) {
+        shared.show(with: request, andTitle: title)
     }
     
     
     static func show(withTitle title: String? = nil) {
-        mainQueue {
-            if let title = title {
-                shared.titleLabel.text = title
-                shared.titleLabel.isHidden = false
-            }else {
-                shared.titleLabel.isHidden = true
-            }
-            
-            if shared.isHidden {
-                UIApplication.shared.keyWindow?.bringSubviewToFront(shared)
-                shared.isHidden = false
-                shared.loader.startAnimating()
-            }
-        }
+        shared.show(withTitle: title)
     }
     
     
     /// hide the loader view
     static func hide() {
-        guard !shared.isHidden else { return }
-        mainQueue {
-            shared.cancelRequests()
-            UIApplication.shared.keyWindow?.sendSubviewToBack(LoaderView.shared)
-            shared.progressView.isHidden = true
-            shared.titleLabel.isHidden = true
-            shared.titleLabel.text = ""
-            shared.isHidden = true
-            shared.loader.stopAnimating()
-        }
+        shared.hide()
     }
 }
 
 //MARK: - Helpers
-public extension LoaderView {
+public extension ESLoaderView {
     static func comeToWindowIfNeeded() {
-        if !shared.isHidden {
-            UIApplication.shared.keyWindow?.bringSubviewToFront(LoaderView.shared)
-        }
+        shared.comeToWindowIfNeeded()
     }
     
     static func update(progress: Float) {
-        if shared.progressView.isHidden == true {
-            shared.progressView.isHidden = false
-        }
-        
-        shared.progressView.progress = progress
+        shared.update(progress: progress)
     }
     
     /// display cancel request confirmation alert
@@ -132,8 +178,8 @@ public extension LoaderView {
         let alert = UIAlertController(title: "cancel".selfLocalized, message: "cancelRequest".selfLocalized, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "yes".selfLocalized, style: .destructive, handler: { (_) in
-            LoaderView.onCancel?()
-            LoaderView.hide()
+            ESLoaderView.onCancel?()
+            ESLoaderView.hide()
         }))
         
         alert.addAction(UIAlertAction(title: "no".selfLocalized, style: .cancel, handler: { (_) in
@@ -142,12 +188,5 @@ public extension LoaderView {
         
         UIApplication.shared.keyWindow?.sendSubviewToBack(self)
         currentController?.present(alert, animated: true, completion: nil)
-    }
-    
-    func cancelRequests() {
-        self.request?.cancel()
-        request = nil
-        imageOperation = nil
-        LoaderView.onCancel = nil
     }
 }

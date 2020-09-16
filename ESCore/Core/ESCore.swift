@@ -9,5 +9,5 @@
 import Foundation
 
 public final class ESCore {
-    
+    public static var loaderView: ESLoaderType = ESLoaderView.shared
 }

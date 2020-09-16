@@ -21,6 +21,7 @@
 		0C8CFE4D23B8A62E001DA888 /* ESCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8CFE4323B8A62E001DA888 /* ESCore.framework */; };
 		0C8CFE5223B8A62E001DA888 /* ESCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CFE5123B8A62E001DA888 /* ESCoreTests.swift */; };
 		0C8CFE5423B8A62E001DA888 /* ESCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8CFE4623B8A62E001DA888 /* ESCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CBF8B092512120B00A33FE3 /* ESLoaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF8B082512120B00A33FE3 /* ESLoaderType.swift */; };
 		0CC7DC6B2501312800128011 /* ESImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7DC6A2501312800128011 /* ESImageViewer.swift */; };
 		0CE4D02B24F7F3A7005F9E63 /* ESConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02924F7F3A5005F9E63 /* ESConnectivityManager.swift */; };
 		0CE4D02C24F7F3A7005F9E63 /* Connectivity+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D02A24F7F3A7005F9E63 /* Connectivity+Rx.swift */; };
@@ -290,6 +291,7 @@
 		0C8CFE4C23B8A62E001DA888 /* ESCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8CFE5123B8A62E001DA888 /* ESCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESCoreTests.swift; sourceTree = "<group>"; };
 		0C8CFE5323B8A62E001DA888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CBF8B082512120B00A33FE3 /* ESLoaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESLoaderType.swift; sourceTree = "<group>"; };
 		0CC7DC6A2501312800128011 /* ESImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESImageViewer.swift; sourceTree = "<group>"; };
 		0CE4D02924F7F3A5005F9E63 /* ESConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESConnectivityManager.swift; sourceTree = "<group>"; };
 		0CE4D02A24F7F3A7005F9E63 /* Connectivity+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Connectivity+Rx.swift"; sourceTree = "<group>"; };
@@ -858,6 +860,7 @@
 			children = (
 				0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */,
 				0CE4D0F224F7FC17005F9E63 /* LoaderView.xib */,
+				0CBF8B082512120B00A33FE3 /* ESLoaderType.swift */,
 			);
 			path = "Loader View";
 			sourceTree = "<group>";
@@ -1700,6 +1703,7 @@
 				0CE4D1E324F99204005F9E63 /* CollectionExtensions.swift in Sources */,
 				0CE4D1A224F99125005F9E63 /* MKMapViewExtensions.swift in Sources */,
 				0CE4D11424F7FD5C005F9E63 /* WebViewController.swift in Sources */,
+				0CBF8B092512120B00A33FE3 /* ESLoaderType.swift in Sources */,
 				0CE4D0DA24F7FB2A005F9E63 /* ESSlider.swift in Sources */,
 				0CE4D1EA24F99204005F9E63 /* DictionaryExtensions.swift in Sources */,
 				0CE4D1E624F99204005F9E63 /* CharacterExtensions.swift in Sources */,

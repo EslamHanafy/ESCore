@@ -12,14 +12,14 @@ import SDWebImage
 open class ESImageDownloader {
     
     open class func download(_ url: URL?, showLoader: Bool = false, _ onComplete: @escaping (_ image: UIImage?, _ error: Error?)->()) {
-        if showLoader { mainQueue { LoaderView.show() } }
+        if showLoader { mainQueue { ESCore.loaderView.show() } }
         
         let request = SDWebImageManager.shared.loadImage(with: url, progress: { (receivedSize, expectedSize, _) in
             mainQueue {
-                LoaderView.update(progress: Float(receivedSize / expectedSize))
+                ESCore.loaderView.update(progress: Float(receivedSize / expectedSize))
             }
         }) { (image, data, error, _, _, _) in
-            if showLoader { LoaderView.hide() }
+            if showLoader { ESCore.loaderView.hide() }
             if let image = image {
                 onComplete(image, nil)
             }else {
@@ -27,6 +27,6 @@ open class ESImageDownloader {
             }
         }
         
-        if showLoader { mainQueue { LoaderView.shared.imageOperation = request } }
+        if showLoader { mainQueue { ESCore.loaderView.imageOperation = request } }
     }
 }
