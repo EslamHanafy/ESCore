@@ -50,18 +50,18 @@ public extension Reactive where Base: DataRequest {
         }
     }
     
-    func responseValidJson(with loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false) -> Single<JSON> {
+    func responseValidJson(with loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false, acceptedStatusCode: [Int]? = nil) -> Single<JSON> {
         loaderView?.startAnimating()
-        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: "loading".selfLocalized) }
+        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: ESCore.apiManager.settings.loadingMessage) }
         
         return Single<JSON>.create { (single) -> Disposable in
             let disposable = self.responseJSONObject(with: loaderView, usingMainLoader: usingMainLoader).subscribe(onSuccess: { (json) in
                 loaderView?.stopAnimating()
                 if usingMainLoader { ESCore.loaderView.hide() }
-                if json["statusCode"].intValue == 200 || json["statusCode"].intValue == 204 || json["statusCode"].intValue == 201 {
+                if (acceptedStatusCode ?? ESCore.apiManager.acceptedStatusCodes).contains(json[ESCore.apiManager.settings.statusKey].intValue) {
                     single(.success(json))
                 } else {
-                    single(.error(ESError.message(json["message"].stringValue)))
+                    single(.error(ESError.message(json[ESCore.apiManager.settings.messageKey].stringValue)))
                 }
             }) { (error) in
                 if usingMainLoader { ESCore.loaderView.hide() }
@@ -78,71 +78,32 @@ public extension Reactive where Base: DataRequest {
         }
     }
     
-    func responseItems<T: Mapable>(withKey key: String, and loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false) -> Single<[T]> {
-        loaderView?.startAnimating()
-        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: "loading".selfLocalized) }
-        return Single<[T]>.create { (single) -> Disposable in
-            let disposable = self.responseJSONObject(with: loaderView, usingMainLoader: usingMainLoader).subscribe(onSuccess: { (json) in
-                loaderView?.stopAnimating()
-                if usingMainLoader { ESCore.loaderView.hide() }
-                if json["statusCode"].intValue == 200 || json["statusCode"].intValue == 204 {
-                    let items = json[key].arrayValue.map(T.map) as! [T]
-                    single(.success(items))
-                } else {
-                    single(.error(ESError.message(json["message"].stringValue)))
-                }
-            }) { (error) in
-                if usingMainLoader { ESCore.loaderView.hide() }
-                loaderView?.stopAnimating()
-                single(.error(error))
-            }
-            return Disposables.create {
-                loaderView?.stopAnimating()
-                disposable.dispose()
-                self.base.cancel()
-                if usingMainLoader { ESCore.loaderView.hide() }
-            }
+    func responseItems<T: Mapable>(withKey key: String, and loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false, acceptedStatusCode: [Int]? = nil) -> Single<[T]> {
+        return responseValidJson(with: loaderView, usingMainLoader: usingMainLoader, acceptedStatusCode: acceptedStatusCode).map { (json) in
+            let items = json[key].arrayValue.map(T.map) as! [T]
+            return items
         }
     }
     
-    func responseItem<T: Mapable>(withKey key: String, and loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false) -> Single<T> {
-        loaderView?.startAnimating()
-        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: "loading".selfLocalized) }
-        return Single<T>.create { (single) -> Disposable in
-            let disposable = self.responseJSONObject(with: loaderView, usingMainLoader: usingMainLoader).subscribe(onSuccess: { (json) in
-                loaderView?.stopAnimating()
-                if usingMainLoader { ESCore.loaderView.hide() }
-                if json["statusCode"].intValue == 200 || json["statusCode"].intValue == 204 {
-                    let item = T.map(json[key]) as! T
-                    single(.success(item))
-                } else {
-                    single(.error(ESError.message(json["message"].stringValue)))
-                }
-            }) { (error) in
-                if usingMainLoader { ESCore.loaderView.hide() }
-                loaderView?.stopAnimating()
-                single(.error(error))
-            }
-            return Disposables.create {
-                loaderView?.stopAnimating()
-                disposable.dispose()
-                self.base.cancel()
-                if usingMainLoader { ESCore.loaderView.hide() }
-            }
+    func responseItem<T: Mapable>(withKey key: String, and loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false, acceptedStatusCode: [Int]? = nil) -> Single<T> {
+        
+        return responseValidJson(with: loaderView, usingMainLoader: usingMainLoader, acceptedStatusCode: acceptedStatusCode).map { (json) in
+            let item = T.map(json[key]) as! T
+            return item
         }
     }
     
-    func responseCompletable(with loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false) -> Completable {
+    func responseCompletable(with loaderView: NVActivityIndicatorView? = nil, usingMainLoader: Bool = false, acceptedStatusCode: [Int]? = nil) -> Completable {
         loaderView?.startAnimating()
-        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: "loading".selfLocalized) }
+        if usingMainLoader { ESCore.loaderView.show(with: self.base, andTitle: ESCore.apiManager.settings.loadingMessage) }
         return Completable.create { (completable) -> Disposable in
             let disposable = self.responseJSONObject(with: loaderView, usingMainLoader: usingMainLoader).subscribe(onSuccess: { (json) in
                 loaderView?.stopAnimating()
                 if usingMainLoader { ESCore.loaderView.hide() }
-                if json["statusCode"].intValue == 200 {
+                if (acceptedStatusCode ?? ESCore.apiManager.acceptedStatusCodes).contains(json[ESCore.apiManager.settings.statusKey].intValue) {
                     completable(.completed)
                 } else {
-                    completable(.error(ESError.message(json["message"].stringValue)))
+                    completable(.error(ESError.message(json[ESCore.apiManager.settings.messageKey].stringValue)))
                 }
             }) { (error) in
                 if usingMainLoader { ESCore.loaderView.hide() }

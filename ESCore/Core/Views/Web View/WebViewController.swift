@@ -117,7 +117,7 @@ extension ESWebViewController: WKNavigationDelegate {
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         loaderView.stopAnimating()
         refresher.endRefreshing()
-        Log.error("Eslam the webview error is: \(error.localizedDescription)")
+        Log.error("The webview error is: \(error.localizedDescription)")
     }
     
     public func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

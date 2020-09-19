@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C260E9125169D8400479D5F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C260E9025169D8400479D5F /* APIManager.swift */; };
 		0C5CDE9E250E41490037FDCB /* InitialsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */; };
 		0C89FADB250F9BC6000152B9 /* ESConnectivitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89FADA250F9BC6000152B9 /* ESConnectivitySettings.swift */; };
 		0C89FAE225107D9E000152B9 /* ESLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C89FADC25107D9C000152B9 /* ESLabel.swift */; };
@@ -84,7 +85,6 @@
 		0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AC24F7F928005F9E63 /* Alamofire+Helpers.swift */; };
 		0CE4D0B124F7F930005F9E63 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AD24F7F92B005F9E63 /* NetworkError.swift */; };
 		0CE4D0B224F7F930005F9E63 /* Mapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AE24F7F92D005F9E63 /* Mapable.swift */; };
-		0CE4D0B324F7F930005F9E63 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0AF24F7F930005F9E63 /* Requestable.swift */; };
 		0CE4D0B924F7FAC1005F9E63 /* ESChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0B824F7FAC1005F9E63 /* ESChipView.swift */; };
 		0CE4D0BC24F7FACC005F9E63 /* ChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0BA24F7FACB005F9E63 /* ChipCollectionViewCell.swift */; };
 		0CE4D0BD24F7FACC005F9E63 /* ChipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0BB24F7FACC005F9E63 /* ChipCollectionViewCell.xib */; };
@@ -274,6 +274,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C260E9025169D8400479D5F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0C5CDE9D250E41490037FDCB /* InitialsImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialsImageView.swift; sourceTree = "<group>"; };
 		0C89FADA250F9BC6000152B9 /* ESConnectivitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESConnectivitySettings.swift; sourceTree = "<group>"; };
 		0C89FADC25107D9C000152B9 /* ESLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESLabel.swift; sourceTree = "<group>"; };
@@ -354,7 +355,6 @@
 		0CE4D0AC24F7F928005F9E63 /* Alamofire+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D0AD24F7F92B005F9E63 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0CE4D0AE24F7F92D005F9E63 /* Mapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapable.swift; sourceTree = "<group>"; };
-		0CE4D0AF24F7F930005F9E63 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		0CE4D0B824F7FAC1005F9E63 /* ESChipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESChipView.swift; sourceTree = "<group>"; };
 		0CE4D0BA24F7FACB005F9E63 /* ChipCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CE4D0BB24F7FACC005F9E63 /* ChipCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChipCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -776,7 +776,7 @@
 				0CE4D0AC24F7F928005F9E63 /* Alamofire+Helpers.swift */,
 				0CE4D0AE24F7F92D005F9E63 /* Mapable.swift */,
 				0CE4D0AD24F7F92B005F9E63 /* NetworkError.swift */,
-				0CE4D0AF24F7F930005F9E63 /* Requestable.swift */,
+				0C260E9025169D8400479D5F /* APIManager.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -1719,7 +1719,6 @@
 				0CE4D08624F7F52B005F9E63 /* UsernameRule.swift in Sources */,
 				0CE4D07324F7F4C7005F9E63 /* Optional+Helpers.swift in Sources */,
 				0CE4D1B524F99164005F9E63 /* SCNCylinderExtensions.swift in Sources */,
-				0CE4D0B324F7F930005F9E63 /* Requestable.swift in Sources */,
 				0CE4D0A224F7F5CF005F9E63 /* ESDataPickerItemType.swift in Sources */,
 				0CE4D22924F99264005F9E63 /* UIBarButtonItemExtensions.swift in Sources */,
 				0CE4D15124F8009C005F9E63 /* AudioTrack.swift in Sources */,
@@ -1728,6 +1727,7 @@
 				0CE4D16224F98FDB005F9E63 /* NSColorExtensions.swift in Sources */,
 				0CE4D06324F7F4C7005F9E63 /* FileManager+Helpers.swift in Sources */,
 				0CE4D19424F990A8005F9E63 /* FileManagerExtensions.swift in Sources */,
+				0C260E9125169D8400479D5F /* APIManager.swift in Sources */,
 				0CE4D21C24F99264005F9E63 /* UIFontExtensions.swift in Sources */,
 				0CE4D0B124F7F930005F9E63 /* NetworkError.swift in Sources */,
 				0CE4D0DC24F7FB2A005F9E63 /* ESProgressView.swift in Sources */,

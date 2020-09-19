@@ -24,10 +24,10 @@ open class ESSurahPicker {
                 let json = try JSON(data: data)
                 return json
             } catch (let error) {
-                Log.error("Eslam the error in parsing quran data is: \(error.localizedDescription)")
+                Log.error("The error in parsing quran data is: \(error.localizedDescription)")
             }
         }
-        Log.debug("Eslam we couldn't get the quran data")
+        Log.debug("We couldn't get the quran data")
         return JSON()
     }()
     

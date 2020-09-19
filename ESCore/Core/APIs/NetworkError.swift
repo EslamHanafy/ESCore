@@ -36,15 +36,17 @@ public enum NetworkError: String, Error, LocalizedError {
     }
     
     public init?(with code: Int) {
+        if ESCore.apiManager.expirationStatusCodes.contains(code) {
+            ESCore.apiManager.onSessionExpired?()
+        }
+        
         switch code {
         case 200...300:
             return nil
         case 401:
             self = .unauthorized
-            pushToLoginScreen()
         case 403:
             self = .forbidden
-            pushToLoginScreen()
         case 404:
             self = .notFound
         case 405...499:
@@ -52,14 +54,5 @@ public enum NetworkError: String, Error, LocalizedError {
         default:
             self = isConnectedToNetwork ? .unknownError : .noConnection
         }
-    }
-    
-    func pushToLoginScreen() {
-//        AF.cancelAllRequests()
-//        delay(0.5) {
-//            pushToView(withId: "Login") {
-//                "forbidden".selfLocalized.displayLocalized()
-//            }
-//        }
     }
 }

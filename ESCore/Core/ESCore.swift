@@ -7,7 +7,18 @@
 //
 
 import Foundation
+import Alamofire
+
+public let userDefaults_accesstokenKey: String = "ES_Accesstoken_Key"
+public typealias ESAPIManager = ESCore.APIManager
 
 public final class ESCore {
     public static var loaderView: ESLoaderType = ESLoaderView.shared
+    
+    public static var accesstoken: String {
+        get { return UserDefaults.standard.string(forKey: userDefaults_accesstokenKey).safeValue }
+        set { UserDefaults.standard.setValue(newValue, forKey: userDefaults_accesstokenKey) }
+    }
+     
+    public static var apiManager: APIManager = APIManager()
 }
