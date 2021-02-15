@@ -28,19 +28,19 @@ public extension Reactive where Base: DataRequest {
                     if response.error?._code == NSURLErrorCancelled {
                         return
                     } else {
-                        return single(.error(ESError.unknown))
+                        return single(.failure(ESError.unknown))
                     }
                 }
                 
                 if let error = NetworkError(with: code) {
-                    return single(.error(error))
+                    return single(.failure(error))
                 }
                 
                 if let data = response.value {
                     return single(.success(JSON(data)))
                 } else {
                     Log.debug("The cancel goes here eslam")
-                    return single(.error(ESError.unknown))
+                    return single(.failure(ESError.unknown))
                 }
             }
             
@@ -61,13 +61,13 @@ public extension Reactive where Base: DataRequest {
                 if (acceptedStatusCode ?? ESCore.apiManager.acceptedStatusCodes).contains(json[ESCore.apiManager.settings.statusKey].intValue) {
                     single(.success(json))
                 } else {
-                    single(.error(ESError.message(json[ESCore.apiManager.settings.messageKey].stringValue)))
+                    single(.failure(ESError.message(json[ESCore.apiManager.settings.messageKey].stringValue)))
                 }
-            }) { (error) in
+            }, onFailure: { (error) in
                 if usingMainLoader { ESCore.loaderView.hide() }
                 loaderView?.stopAnimating()
-                single(.error(error))
-            }
+                single(.failure(error))
+            })
             
             return Disposables.create {
                 loaderView?.stopAnimating()
@@ -105,11 +105,11 @@ public extension Reactive where Base: DataRequest {
                 } else {
                     completable(.error(ESError.message(json[ESCore.apiManager.settings.messageKey].stringValue)))
                 }
-            }) { (error) in
+            }, onFailure: { (error) in
                 if usingMainLoader { ESCore.loaderView.hide() }
                 loaderView?.stopAnimating()
                 completable(.error(error))
-            }
+            })
             
             return Disposables.create {
                 disposable.dispose()

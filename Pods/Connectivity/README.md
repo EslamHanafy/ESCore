@@ -5,8 +5,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c3041fef8e33cc4d00df/maintainability)](https://codeclimate.com/github/rwbutler/Connectivity/maintainability)
 [![License](https://img.shields.io/cocoapods/l/Connectivity.svg?style=flat)](http://cocoapods.org/pods/Connectivity)
-[![Platform](https://img.shields.io/cocoapods/p/Connectivity.svg?style=flat)](http://cocoapods.org/pods/Connectivity)
-[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Frwbutler%2FConnectivity%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/rwbutler/Connectivity)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Frwbutler%2FConnectivity%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/rwbutler/Connectivity)
 [![Twitter](https://img.shields.io/badge/twitter-@ross_w_butler-blue.svg?style=flat)](https://twitter.com/ross_w_butler)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
@@ -17,6 +17,7 @@ Connectivity's objective is to solve the captive portal problem whereby an iOS d
 To learn more about how to use Connectivity, take a look at the [keynote presentation](https://github.com/rwbutler/Connectivity/blob/master/docs/presentations/connectivity.pdf), check out the [blog post](https://medium.com/@rwbutler/solving-the-captive-portal-problem-on-ios-9a53ba2b381e), or make use of the table of contents below:
 
 - [Features](#features)
+- [What's New in Connectivity 5.0.0?](#whats-new-in-connectivity-500)
 - [What's New in Connectivity 4.0.0?](#whats-new-in-connectivity-400)
 - [Hyperconnectivity](#hyperconnectivity)
 - [Installation](#installation)
@@ -47,6 +48,10 @@ To learn more about how to use Connectivity, take a look at the [keynote present
 - [x] Detect when connected to a router that has no Internet access.
 - [x] Be notified of changes in Internet connectivity.
 - [x] Polling connectivity checks may be performed where a constant network connection is required (optional).
+
+## What's new in Connectivity 5.0.0?
+
+Connectivity 5.0.0 provides support for Xcode 12 and raises the minimum deployment target to iOS 9 (dropping support for iOS 8).
 
 ## What's new in Connectivity 4.0.0?
 

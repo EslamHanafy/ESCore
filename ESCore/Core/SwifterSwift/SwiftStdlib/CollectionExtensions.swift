@@ -1,18 +1,19 @@
-//
-//  CollectionExtensions.swift
-//  SwifterSwift
-//
-//  Created by Sergey Fedortsov on 19.12.16.
-//  Copyright © 2016 SwifterSwift
-//
+// CollectionExtensions.swift - Copyright 2020 SwifterSwift
 
 #if canImport(Dispatch)
 import Dispatch
 #endif
 
-// MARK: - Methods
-public extension Collection {
+// MARK: - Properties
 
+public extension Collection {
+    /// SwifterSwift: The full range of the collection.
+    var fullRange: Range<Index> { startIndex..<endIndex }
+}
+
+// MARK: - Methods
+
+public extension Collection {
     #if canImport(Dispatch)
     /// SwifterSwift: Performs `each` closure for each element of collection in parallel.
     ///
@@ -64,7 +65,7 @@ public extension Collection {
     ///     [1, 7, 1, 2, 4, 1, 8].indices(where: { $0 == 1 }) -> [0, 2, 5]
     ///
     /// - Parameter condition: condition to evaluate each element against.
-    /// - Returns: all indices where the specified condition evaluates to true. (optional)
+    /// - Returns: all indices where the specified condition evaluates to true (optional).
     func indices(where condition: (Element) throws -> Bool) rethrows -> [Index]? {
         let indices = try self.indices.filter { try condition(self[$0]) }
         return indices.isEmpty ? nil : indices
@@ -82,16 +83,15 @@ public extension Collection {
         var start = startIndex
         while case let end = index(start, offsetBy: slice, limitedBy: endIndex) ?? endIndex,
             start != end {
-                try body(Array(self[start..<end]))
-                start = end
+            try body(Array(self[start..<end]))
+            start = end
         }
     }
-
 }
 
 // MARK: - Methods (Equatable)
-public extension Collection where Element: Equatable {
 
+public extension Collection where Element: Equatable {
     /// SwifterSwift: All indices of specified item.
     ///
     ///        [1, 2, 2, 3, 4, 2, 5].indices(of 2) -> [1, 2, 5]
@@ -103,12 +103,11 @@ public extension Collection where Element: Equatable {
     func indices(of item: Element) -> [Index] {
         return indices.filter { self[$0] == item }
     }
-
 }
 
 // MARK: - Methods (BinaryInteger)
-public extension Collection where Element: BinaryInteger {
 
+public extension Collection where Element: BinaryInteger {
     /// SwifterSwift: Average of all elements in array.
     ///
     /// - Returns: the average of the array's elements.
@@ -117,12 +116,11 @@ public extension Collection where Element: BinaryInteger {
         guard !isEmpty else { return .zero }
         return Double(reduce(.zero, +)) / Double(count)
     }
-
 }
 
 // MARK: - Methods (FloatingPoint)
-public extension Collection where Element: FloatingPoint {
 
+public extension Collection where Element: FloatingPoint {
     /// SwifterSwift: Average of all elements in array.
     ///
     ///        [1.2, 2.3, 4.5, 3.4, 4.5].average() = 3.18
@@ -132,5 +130,4 @@ public extension Collection where Element: FloatingPoint {
         guard !isEmpty else { return .zero }
         return reduce(.zero, +) / Element(count)
     }
-
 }

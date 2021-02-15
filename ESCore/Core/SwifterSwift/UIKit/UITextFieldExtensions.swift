@@ -1,17 +1,11 @@
-//
-//  UITextFieldExtensions.swift
-//  SwifterSwift
-//
-//  Created by Omar Albeik on 8/5/16.
-//  Copyright © 2016 SwifterSwift
-//
+// UITextFieldExtensions.swift - Copyright 2020 SwifterSwift
 
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 // MARK: - Enums
-public extension UITextField {
 
+public extension UITextField {
     /// SwifterSwift: UITextField text type.
     ///
     /// - emailAddress: UITextField is used to enter email addresses.
@@ -27,12 +21,11 @@ public extension UITextField {
         /// SwifterSwift: UITextField is used to enter generic text.
         case generic
     }
-
 }
 
 // MARK: - Properties
-public extension UITextField {
 
+public extension UITextField {
     /// SwifterSwift: Set textField for common text types.
     var textType: TextType {
         get {
@@ -110,12 +103,11 @@ public extension UITextField {
             iconView.tintColor = newValue
         }
     }
-
 }
 
 // MARK: - Methods
-public extension UITextField {
 
+public extension UITextField {
     /// SwifterSwift: Clear text.
     func clear() {
         text = ""
@@ -149,8 +141,8 @@ public extension UITextField {
     /// SwifterSwift: Add padding to the left of the textfield rect.
     ///
     /// - Parameters:
-    ///   - image: left image
-    ///   - padding: amount of padding between icon and the left of textfield
+    ///   - image: left image.
+    ///   - padding: amount of padding between icon and the left of textfield.
     func addPaddingLeftIcon(_ image: UIImage, padding: CGFloat) {
         let iconView = UIView(frame: CGRect(x: 0, y: 0, width: image.size.width + padding, height: image.size.height))
         let imageView = UIImageView(image: image)
@@ -164,8 +156,8 @@ public extension UITextField {
     /// SwifterSwift: Add padding to the right of the textfield rect.
     ///
     /// - Parameters:
-    ///   - image: right image
-    ///   - padding: amount of padding between icon and the right of textfield
+    ///   - image: right image.
+    ///   - padding: amount of padding between icon and the right of textfield.
     func addPaddingRightIcon(_ image: UIImage, padding: CGFloat) {
         let iconView = UIView(frame: CGRect(x: 0, y: 0, width: image.size.width + padding, height: image.size.height))
         let imageView = UIImageView(image: image)
@@ -175,7 +167,6 @@ public extension UITextField {
         rightView = iconView
         rightViewMode = .always
     }
-
 }
 
 #endif

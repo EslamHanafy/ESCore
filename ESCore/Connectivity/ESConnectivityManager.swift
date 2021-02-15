@@ -48,7 +48,7 @@ open class ESConnectivityManager: NSObject {
         connectivity.startNotifier()
         self.settings = settings
         
-        connectionDisposable = connectivity.rx.status.distinctUntilChanged().observeOn(MainScheduler.asyncInstance).subscribe(onNext: {
+        connectionDisposable = connectivity.rx.status.distinctUntilChanged().observe(on: MainScheduler.asyncInstance).subscribe(onNext: {
             [weak self] status in
             guard let self = self else { return }
             self.updateConnectionStatus(status)

@@ -208,9 +208,9 @@ public final class Agrume: UIViewController {
     if _spinner == nil {
       let indicatorStyle: UIActivityIndicatorView.Style
       switch background {
-      case .blurred(let style):
+      case let .blurred(style):
         indicatorStyle = style == .dark ? .whiteLarge : .gray
-      case .colored(let color):
+      case let .colored(color):
         indicatorStyle = color.isLight ? .gray : .whiteLarge
       }
       let spinner = UIActivityIndicatorView(style: indicatorStyle)
@@ -272,7 +272,7 @@ public final class Agrume: UIViewController {
 
   @objc
   func didLongPress(_ gesture: UIGestureRecognizer) {
-    guard gesture.state == .began else {
+    guard case .began = gesture.state else {
       return
     }
     fetchImage(forIndex: currentIndex) { [weak self] image in
@@ -300,10 +300,11 @@ public final class Agrume: UIViewController {
       self.blurContainerView.alpha = 1
       self.containerView.alpha = 0
       let scale: CGFloat = .initialScaleToExpandFrom
-      // Transform the container view, not the collection view to prevent an RTL display bug
-      self.containerView.transform = CGAffineTransform(scaleX: scale, y: scale)
 
       viewController.present(self, animated: false) {
+        // Transform the container view, not the collection view to prevent an RTL display bug
+        self.containerView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
         UIView.animate(
           withDuration: .transitionAnimationDuration,
           delay: 0,
@@ -323,7 +324,7 @@ public final class Agrume: UIViewController {
   
   private func addOverlayView() {
     switch (dismissal, overlayView) {
-    case (.withButton(let button), _), (.withPhysicsAndButton(let button), _):
+    case let (.withButton(button), _), let (.withPhysicsAndButton(button), _):
       let overlayView = AgrumeCloseButtonOverlayView(closeButton: button)
       overlayView.delegate = self
       overlayView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -465,7 +466,7 @@ extension Agrume: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
                              insetForSectionAt section: Int) -> UIEdgeInsets {
     // Center cells horizontally
     let cellWidth = view.bounds.width
-    let totalWidth = cellWidth * CGFloat(numberOfImages)
+    let totalWidth = cellWidth * CGFloat(dataSource?.numberOfImages ?? 0)
     let leftRightEdgeInset = max(0, (collectionView.bounds.width - totalWidth) / 2)
     return UIEdgeInsets(top: 0, left: leftRightEdgeInset, bottom: 0, right: leftRightEdgeInset)
   }

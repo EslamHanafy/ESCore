@@ -1,49 +1,49 @@
 PODS:
-  - Agrume (5.6.9):
+  - Agrume (5.6.12):
     - SwiftyGif
-  - Alamofire (5.2.2)
-  - Connectivity (4.2.0)
+  - Alamofire (5.4.1)
+  - Connectivity (5.0.0)
   - CountryPickerView (3.1.3)
-  - Differentiator (4.0.1)
+  - Differentiator (5.0.0)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - FontBlaster (5.1.1)
   - IBAnimatable (6.1.0)
-  - ImageSlideshow/Core (1.9.1)
-  - ImageSlideshow/SDWebImage (1.9.1):
+  - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/SDWebImage (1.9.2):
     - ImageSlideshow/Core
     - SDWebImage (>= 3.7)
   - IQKeyboardManagerSwift (6.5.6)
-  - "NSObject+Rx (5.1.0)":
-    - RxSwift (~> 5.1)
-  - NVActivityIndicatorView (5.0.1):
-    - NVActivityIndicatorView/Base (= 5.0.1)
-  - NVActivityIndicatorView/Base (5.0.1)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - RxSwiftExt (5.2.0):
-    - RxSwiftExt/Core (= 5.2.0)
-    - RxSwiftExt/RxCocoa (= 5.2.0)
-  - RxSwiftExt/Core (5.2.0):
-    - RxSwift (~> 5.0)
-  - RxSwiftExt/RxCocoa (5.2.0):
-    - RxCocoa (~> 5.0)
+  - "NSObject+Rx (5.2.0)":
+    - RxSwift (~> 6.0.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
+  - RxSwiftExt (6.0.0):
+    - RxSwiftExt/Core (= 6.0.0)
+    - RxSwiftExt/RxCocoa (= 6.0.0)
+  - RxSwiftExt/Core (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwiftExt/RxCocoa (6.0.0):
+    - RxCocoa (= 6.0.0)
     - RxSwiftExt/Core
-  - SDWebImage (5.8.4):
-    - SDWebImage/Core (= 5.8.4)
-  - SDWebImage/Core (5.8.4)
-  - SkyFloatingLabelTextField (3.8.0)
-  - SwiftDate (6.1.0)
-  - SwiftyGif (5.3.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SkyFloatingLabelTextField (4.0.0)
+  - SwiftDate (6.3.1)
+  - SwiftyGif (5.4.0)
   - SwiftyJSON (5.0.0)
   - TTGSnackbar (1.10.3)
 
@@ -98,30 +98,30 @@ SPEC REPOS:
     - TTGSnackbar
 
 SPEC CHECKSUMS:
-  Agrume: 4c6fc502f4a4aa8b3dd69c8c2e22bcb282be1032
-  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Connectivity: 2205aaa7d95f8f3c360be639f39ef2c8175a0b5a
+  Agrume: d60f7ead4aad9720564148f7e9cbe0b225b1d814
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Connectivity: e990703fb8d8db54649ea05facac92000cc0f3eb
   CountryPickerView: 383c09949f7455de9892db7ce3400b10da090150
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   FontBlaster: 8897ebdbb4b6ace3ab78c92b665d88c954f19e4a
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
-  ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
-  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
-  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
-  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
-  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
-  SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
+  "NSObject+Rx": 488b91a66043cc47de9cd5de9264f2ae1e2fcb13
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  RxSwiftExt: 6637802b67dd4b60c00c661cc640316b693c0387
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TTGSnackbar: 97c033600de8a9c8f4a093f25a08543a03946bcc
 
 PODFILE CHECKSUM: 56c3916a3341b4cd7d5a6f3e343f39aabe68ce70
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

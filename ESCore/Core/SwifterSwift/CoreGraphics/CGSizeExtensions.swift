@@ -1,17 +1,11 @@
-//
-//  CGSizeExtensions.swift
-//  SwifterSwift
-//
-//  Created by Omar Albeik on 8/22/16.
-//  Copyright © 2016 SwifterSwift
-//
+// CGSizeExtensions.swift - Copyright 2020 SwifterSwift
 
 #if canImport(CoreGraphics)
 import CoreGraphics
 
 // MARK: - Methods
-public extension CGSize {
 
+public extension CGSize {
     /// SwifterSwift: Returns the aspect ratio.
     var aspectRatio: CGFloat {
         guard height != 0 else { return 0 }
@@ -27,12 +21,11 @@ public extension CGSize {
     var minDimension: CGFloat {
         return min(width, height)
     }
-
 }
 
 // MARK: - Methods
-public extension CGSize {
 
+public extension CGSize {
     /// SwifterSwift: Aspect fit CGSize.
     ///
     ///     let rect = CGSize(width: 120, height: 80)
@@ -41,7 +34,7 @@ public extension CGSize {
     ///     // newRect.width = 75 , newRect = 50
     ///
     /// - Parameter boundingSize: bounding size to fit self to.
-    /// - Returns: self fitted into given bounding size
+    /// - Returns: self fitted into given bounding size.
     func aspectFit(to boundingSize: CGSize) -> CGSize {
         let minRatio = min(boundingSize.width / width, boundingSize.height / height)
         return CGSize(width: width * minRatio, height: height * minRatio)
@@ -55,20 +48,19 @@ public extension CGSize {
     ///     // newRect.width = 100 , newRect = 60
     ///
     /// - Parameter boundingSize: bounding size to fill self to.
-    /// - Returns: self filled into given bounding size
+    /// - Returns: self filled into given bounding size.
     func aspectFill(to boundingSize: CGSize) -> CGSize {
         let minRatio = max(boundingSize.width / width, boundingSize.height / height)
         let aWidth = min(width * minRatio, boundingSize.width)
         let aHeight = min(height * minRatio, boundingSize.height)
         return CGSize(width: aWidth, height: aHeight)
     }
-
 }
 
 // MARK: - Operators
-public extension CGSize {
 
-    /// SwifterSwift: Add two CGSize
+public extension CGSize {
+    /// SwifterSwift: Add two CGSize.
     ///
     ///     let sizeA = CGSize(width: 5, height: 10)
     ///     let sizeB = CGSize(width: 3, height: 4)
@@ -105,7 +97,7 @@ public extension CGSize {
     ///     // sizeA = CGPoint(width: 8, height: 14)
     ///
     /// - Parameters:
-    ///   - lhs: self
+    ///   - lhs: `self`.
     ///   - rhs: CGSize to add.
     static func += (lhs: inout CGSize, rhs: CGSize) {
         lhs.width += rhs.width
@@ -119,14 +111,14 @@ public extension CGSize {
     ///     // result = CGSize(width: 8, height: 14)
     ///
     /// - Parameters:
-    ///   - lhs: self.
+    ///   - lhs: `self`.
     ///   - tuple: tuple value.
     static func += (lhs: inout CGSize, tuple: (width: CGFloat, height: CGFloat)) {
         lhs.width += tuple.width
         lhs.height += tuple.height
     }
 
-    /// SwifterSwift: Subtract two CGSize
+    /// SwifterSwift: Subtract two CGSize.
     ///
     ///     let sizeA = CGSize(width: 5, height: 10)
     ///     let sizeB = CGSize(width: 3, height: 4)
@@ -163,7 +155,7 @@ public extension CGSize {
     ///     // sizeA = CGPoint(width: 2, height: 6)
     ///
     /// - Parameters:
-    ///   - lhs: self
+    ///   - lhs: `self`.
     ///   - rhs: CGSize to subtract.
     static func -= (lhs: inout CGSize, rhs: CGSize) {
         lhs.width -= rhs.width
@@ -177,14 +169,14 @@ public extension CGSize {
     ///     // result = CGSize(width: 3, height: 6)
     ///
     /// - Parameters:
-    ///   - lhs: self.
+    ///   - lhs: `self`.
     ///   - tuple: tuple value.
     static func -= (lhs: inout CGSize, tuple: (width: CGFloat, height: CGFloat)) {
         lhs.width -= tuple.width
         lhs.height -= tuple.height
     }
 
-    /// SwifterSwift: Multiply two CGSize
+    /// SwifterSwift: Multiply two CGSize.
     ///
     ///     let sizeA = CGSize(width: 5, height: 10)
     ///     let sizeB = CGSize(width: 3, height: 4)
@@ -235,7 +227,7 @@ public extension CGSize {
     ///     // result = CGSize(width: 15, height: 40)
     ///
     /// - Parameters:
-    ///   - lhs: self.
+    ///   - lhs: `self`.
     ///   - rhs: CGSize to multiply.
     static func *= (lhs: inout CGSize, rhs: CGSize) {
         lhs.width *= rhs.width
@@ -249,13 +241,12 @@ public extension CGSize {
     ///     // result = CGSize(width: 15, height: 30)
     ///
     /// - Parameters:
-    ///   - lhs: self.
+    ///   - lhs: `self`.
     ///   - scalar: scalar value.
     static func *= (lhs: inout CGSize, scalar: CGFloat) {
         lhs.width *= scalar
         lhs.height *= scalar
     }
-
 }
 
 #endif
