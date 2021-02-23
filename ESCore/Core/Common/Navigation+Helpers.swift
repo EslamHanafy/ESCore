@@ -53,7 +53,7 @@ open class ESNavigator {
     ///   - screen: `Screen` object that contains the screen details
     ///   - animated: Determine whether should animate the transition or not
     ///   - completion: A completion closure that fires after finishing the transition
-    public func pushTo(_ screen: Screen, animated: Bool = true, _ completion: (()->Void)? = nil){
+    public static func pushTo(_ screen: Screen, animated: Bool = true, _ completion: (()->Void)? = nil){
         guard let window = UIApplication.shared.keyWindow else {
             return Log.error("Couldn't get the current window")
         }
