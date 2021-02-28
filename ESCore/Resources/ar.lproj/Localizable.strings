@@ -92,7 +92,7 @@
 "ESLanguage_CloseAlertLaterButtonTitle" = "Later";
 
 "ESLanguage_ChangeLanguageTitle" = "تغيير اللغة";
-"ESLanguage_ChangeLanguageBody" = "هل أنت متأكد أنك تريد تغيير لغة التطبيق إلى العربية؟";
+"ESLanguage_ChangeLanguageBody" = "هل أنت متأكد أنك تريد تغيير لغة التطبيق إلى الإنجليزية؟";
 "ESLanguage_ChangeLanguageConfirmButtonTitle" = "نعم";
 "ESLanguage_ChangeLanguageDeclineButtonTitle" = "لا";
 

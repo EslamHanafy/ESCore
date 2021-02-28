@@ -104,8 +104,8 @@
 		0CE4D0DC24F7FB2A005F9E63 /* ESProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0D224F7FB2A005F9E63 /* ESProgressView.swift */; };
 		0CE4D0DF24F7FB44005F9E63 /* ESDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0DE24F7FB44005F9E63 /* ESDatePickerView.swift */; };
 		0CE4D0E224F7FB6A005F9E63 /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0E424F7FB6A005F9E63 /* DatePickerView.xib */; };
-		0CE4D0ED24F7FBFC005F9E63 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */; };
-		0CE4D0F024F7FC17005F9E63 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F224F7FC17005F9E63 /* LoaderView.xib */; };
+		0CE4D0ED24F7FBFC005F9E63 /* ESLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D0EC24F7FBFC005F9E63 /* ESLoaderView.swift */; };
+		0CE4D0F024F7FC17005F9E63 /* ESLoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F224F7FC17005F9E63 /* ESLoaderView.xib */; };
 		0CE4D0FD24F7FCA7005F9E63 /* visibility_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F724F7FCA1005F9E63 /* visibility_on@3x.png */; };
 		0CE4D0FE24F7FCA7005F9E63 /* visibility_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F824F7FCA2005F9E63 /* visibility_on.png */; };
 		0CE4D0FF24F7FCA7005F9E63 /* visibility_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE4D0F924F7FCA3005F9E63 /* visibility_off@3x.png */; };
@@ -379,9 +379,9 @@
 		0CE4D0DE24F7FB44005F9E63 /* ESDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESDatePickerView.swift; sourceTree = "<group>"; };
 		0CE4D0E324F7FB6A005F9E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DatePickerView.xib; sourceTree = "<group>"; };
 		0CE4D0E524F7FB81005F9E63 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/DatePickerView.strings; sourceTree = "<group>"; };
-		0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
-		0CE4D0F124F7FC17005F9E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoaderView.xib; sourceTree = "<group>"; };
-		0CE4D0F424F7FC28005F9E63 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LoaderView.strings; sourceTree = "<group>"; };
+		0CE4D0EC24F7FBFC005F9E63 /* ESLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESLoaderView.swift; sourceTree = "<group>"; };
+		0CE4D0F124F7FC17005F9E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ESLoaderView.xib; sourceTree = "<group>"; };
+		0CE4D0F424F7FC28005F9E63 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ESLoaderView.strings; sourceTree = "<group>"; };
 		0CE4D0F724F7FCA1005F9E63 /* visibility_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_on@3x.png"; sourceTree = "<group>"; };
 		0CE4D0F824F7FCA2005F9E63 /* visibility_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visibility_on.png; sourceTree = "<group>"; };
 		0CE4D0F924F7FCA3005F9E63 /* visibility_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "visibility_off@3x.png"; sourceTree = "<group>"; };
@@ -867,8 +867,8 @@
 		0CE4D0EB24F7FBF1005F9E63 /* Loader View */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D0EC24F7FBFC005F9E63 /* LoaderView.swift */,
-				0CE4D0F224F7FC17005F9E63 /* LoaderView.xib */,
+				0CE4D0EC24F7FBFC005F9E63 /* ESLoaderView.swift */,
+				0CE4D0F224F7FC17005F9E63 /* ESLoaderView.xib */,
 				0CBF8B082512120B00A33FE3 /* ESLoaderType.swift */,
 			);
 			path = "Loader View";
@@ -1449,7 +1449,7 @@
 				0CE4D11524F7FD5C005F9E63 /* WebViewController.xib in Resources */,
 				0CE4D15C24F987F8005F9E63 /* Podfile in Resources */,
 				0CE4D0FE24F7FCA7005F9E63 /* visibility_on.png in Resources */,
-				0CE4D0F024F7FC17005F9E63 /* LoaderView.xib in Resources */,
+				0CE4D0F024F7FC17005F9E63 /* ESLoaderView.xib in Resources */,
 				0CE4D24724FCF9A6005F9E63 /* ESCore.podspec in Resources */,
 				0CE4D0BD24F7FACC005F9E63 /* ChipCollectionViewCell.xib in Resources */,
 				0CE4D11C24F7FE5B005F9E63 /* cryImage.gif in Resources */,
@@ -1590,7 +1590,7 @@
 				0CE4D13424F7FFF4005F9E63 /* MaterialShowcase.swift in Sources */,
 				AACF995925DA806500B7B61F /* CGColorExtensions.swift in Sources */,
 				0CE4D13D24F80065005F9E63 /* MediaLibraryHelper.swift in Sources */,
-				0CE4D0ED24F7FBFC005F9E63 /* LoaderView.swift in Sources */,
+				0CE4D0ED24F7FBFC005F9E63 /* ESLoaderView.swift in Sources */,
 				0CE4D08724F7F52B005F9E63 /* PasswordRule.swift in Sources */,
 				0CE4D06124F7F4C7005F9E63 /* Bundle+Helpers.swift in Sources */,
 				0C89FAE725107D9E000152B9 /* ESButton.swift in Sources */,
@@ -1806,13 +1806,13 @@
 			name = DatePickerView.xib;
 			sourceTree = "<group>";
 		};
-		0CE4D0F224F7FC17005F9E63 /* LoaderView.xib */ = {
+		0CE4D0F224F7FC17005F9E63 /* ESLoaderView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0CE4D0F124F7FC17005F9E63 /* Base */,
 				0CE4D0F424F7FC28005F9E63 /* ar */,
 			);
-			name = LoaderView.xib;
+			name = ESLoaderView.xib;
 			sourceTree = "<group>";
 		};
 		0CE4D12124F7FE8D005F9E63 /* Localizable.strings */ = {

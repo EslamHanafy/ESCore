@@ -57,7 +57,7 @@ open class ESLoaderView: UIView {
     fileprivate static func getInstance() -> ESLoaderView {
         let window = (UIApplication.shared.delegate!.window!)!
         
-        let view = currentBundle.loadNibNamed("LoaderView", owner: window, options: nil)?.first as! ESLoaderView
+        let view = currentBundle.loadNibNamed("ESLoaderView", owner: window, options: nil)?.first as! ESLoaderView
         view.frame = window.frame
         view.isHidden = true
         view.progressView.isHidden = true
