@@ -23,7 +23,7 @@
 
 ## Initialize the Validator by setting a delegate to a View Controller or other object.
 
-```
+```swift
 // ViewController.swift
 let validator = Validator()
 
@@ -31,7 +31,7 @@ let validator = Validator()
 
 ## Register the fields that you want to validate
 
-```
+```swift
 override func viewDidLoad() {
 	super.viewDidLoad()
 
@@ -57,7 +57,7 @@ override func viewDidLoad() {
 
 ## Validate Fields on button tap or however you would like to trigger it.
 
-```
+```swift
 @IBAction func signupTapped(sender: AnyObject) {
 	validator.validate(self)
 }
@@ -66,7 +66,7 @@ override func viewDidLoad() {
 
 ## Implement the Validation Delegate in your View controller
 
-```
+```swift
 // ValidationDelegate methods
 
 func validationSuccessful() {
@@ -91,7 +91,7 @@ func validationFailed(_ errors:[(Validatable ,ValidationError)]) {
 
 ### You may use single field validation in some cases. This could be useful in situations such as controlling responders:
 
-```
+```swift
 // Don't forget to use UITextFieldDelegate
 // and delegate yourTextField to self in viewDidLoad()
 func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -113,7 +113,7 @@ func textFieldShouldReturn(textField: UITextField) -> Bool {
 
 ### Create a class that inherits from RegexRule
 
-```
+```swift
 
 class SSNVRule: RegexRule {
 
@@ -129,7 +129,7 @@ class SSNVRule: RegexRule {
 
 ### You can add a custom message when you use this flag or keep the default  ``` showMessage ```
 
-```
+```swift
  override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
