@@ -18,10 +18,15 @@ public protocol ValidationDelegate {
      - returns: No return value.
      */
     func validationSuccessful()
+ 
+}
+
+extension ValidationDelegate {
     /**
      This method will be called on delegate object when validation fails.
      
      - returns: No return value.
      */
-    func validationFailed(_ errors: [(Validatable, ValidationError)])
+    
+    func validationFailed(_ errors: [(Validatable, ValidationError)]){}
 }
