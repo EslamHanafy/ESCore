@@ -64,10 +64,10 @@
 		0CE4D07D24F7F4C7005F9E63 /* UILabel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05A24F7F4C1005F9E63 /* UILabel+Helpers.swift */; };
 		0CE4D07E24F7F4C7005F9E63 /* AVPlayerItem+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05B24F7F4C4005F9E63 /* AVPlayerItem+Helpers.swift */; };
 		0CE4D07F24F7F4C7005F9E63 /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05C24F7F4C6005F9E63 /* Double+Helpers.swift */; };
-		0CE4D08524F7F52B005F9E63 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08124F7F525005F9E63 /* RegexRule.swift */; };
-		0CE4D08624F7F52B005F9E63 /* UsernameRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08224F7F527005F9E63 /* UsernameRule.swift */; };
-		0CE4D08724F7F52B005F9E63 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08324F7F529005F9E63 /* PasswordRule.swift */; };
-		0CE4D08824F7F52B005F9E63 /* Ruleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08424F7F52A005F9E63 /* Ruleable.swift */; };
+		0CE4D08524F7F52B005F9E63 /* RegexRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */; };
+		0CE4D08624F7F52B005F9E63 /* UsernameRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */; };
+		0CE4D08724F7F52B005F9E63 /* PasswordRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */; };
+		0CE4D08824F7F52B005F9E63 /* Ruleable-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */; };
 		0CE4D08D24F7F586005F9E63 /* DPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08B24F7F585005F9E63 /* DPCountry.swift */; };
 		0CE4D08E24F7F586005F9E63 /* ESCountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */; };
 		0CE4D09224F7F5B2005F9E63 /* DPLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */; };
@@ -264,6 +264,33 @@
 		AACF9A3725DA81C700B7B61F /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF9A1625DA81C700B7B61F /* UIFontExtensions.swift */; };
 		AACF9A3C25DA81D800B7B61F /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF9A3B25DA81D800B7B61F /* WKWebViewExtensions.swift */; };
 		AACF9A9725DA868900B7B61F /* Dictionary+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF9A9625DA868900B7B61F /* Dictionary+Helpers.swift */; };
+		AD746AC7294206E900FAEEBD /* ValidatorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AC2294206E900FAEEBD /* ValidatorDictionary.swift */; };
+		AD746AC8294206E900FAEEBD /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AC3294206E900FAEEBD /* ValidationError.swift */; };
+		AD746AC9294206E900FAEEBD /* ValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AC4294206E900FAEEBD /* ValidationDelegate.swift */; };
+		AD746ACA294206E900FAEEBD /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AC5294206E900FAEEBD /* Validator.swift */; };
+		AD746ACB294206E900FAEEBD /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AC6294206E900FAEEBD /* Validatable.swift */; };
+		AD746AE3294206FF00FAEEBD /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ACD294206FE00FAEEBD /* ValidationRule.swift */; };
+		AD746AE4294206FF00FAEEBD /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ACE294206FE00FAEEBD /* FloatRule.swift */; };
+		AD746AE5294206FF00FAEEBD /* MaxLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ACF294206FE00FAEEBD /* MaxLengthRule.swift */; };
+		AD746AE6294206FF00FAEEBD /* AlphaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD0294206FE00FAEEBD /* AlphaRule.swift */; };
+		AD746AE7294206FF00FAEEBD /* CardExpiryMonthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD1294206FF00FAEEBD /* CardExpiryMonthRule.swift */; };
+		AD746AE8294206FF00FAEEBD /* CardExpiryYearRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD2294206FF00FAEEBD /* CardExpiryYearRule.swift */; };
+		AD746AE9294206FF00FAEEBD /* AlphaNumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD3294206FF00FAEEBD /* AlphaNumericRule.swift */; };
+		AD746AEA294206FF00FAEEBD /* FullNameRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD4294206FF00FAEEBD /* FullNameRule.swift */; };
+		AD746AEB294206FF00FAEEBD /* MinLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD5294206FF00FAEEBD /* MinLengthRule.swift */; };
+		AD746AEC294206FF00FAEEBD /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD6294206FF00FAEEBD /* RegexRule.swift */; };
+		AD746AED294206FF00FAEEBD /* ZipCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD7294206FF00FAEEBD /* ZipCodeRule.swift */; };
+		AD746AEE294206FF00FAEEBD /* ExactLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD8294206FF00FAEEBD /* ExactLengthRule.swift */; };
+		AD746AEF294206FF00FAEEBD /* CharacterSetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AD9294206FF00FAEEBD /* CharacterSetRule.swift */; };
+		AD746AF0294206FF00FAEEBD /* IPV4Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADA294206FF00FAEEBD /* IPV4Rule.swift */; };
+		AD746AF1294206FF00FAEEBD /* PhoneNumberRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADB294206FF00FAEEBD /* PhoneNumberRule.swift */; };
+		AD746AF2294206FF00FAEEBD /* ConfirmRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADC294206FF00FAEEBD /* ConfirmRule.swift */; };
+		AD746AF3294206FF00FAEEBD /* HexColorRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADD294206FF00FAEEBD /* HexColorRule.swift */; };
+		AD746AF4294206FF00FAEEBD /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADE294206FF00FAEEBD /* PasswordRule.swift */; };
+		AD746AF5294206FF00FAEEBD /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746ADF294206FF00FAEEBD /* Rule.swift */; };
+		AD746AF6294206FF00FAEEBD /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AE0294206FF00FAEEBD /* RequiredRule.swift */; };
+		AD746AF7294206FF00FAEEBD /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AE1294206FF00FAEEBD /* EmailRule.swift */; };
+		AD746AF8294206FF00FAEEBD /* ISBNRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD746AE2294206FF00FAEEBD /* ISBNRule.swift */; };
 		D5C584D30029BBD29CE54E70 /* Pods_ESCore_ESCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BB619CEF5AE88DD9470F11 /* Pods_ESCore_ESCoreTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -338,10 +365,10 @@
 		0CE4D05A24F7F4C1005F9E63 /* UILabel+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05B24F7F4C4005F9E63 /* AVPlayerItem+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayerItem+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05C24F7F4C6005F9E63 /* Double+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
-		0CE4D08124F7F525005F9E63 /* RegexRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
-		0CE4D08224F7F527005F9E63 /* UsernameRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsernameRule.swift; sourceTree = "<group>"; };
-		0CE4D08324F7F529005F9E63 /* PasswordRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
-		0CE4D08424F7F52A005F9E63 /* Ruleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ruleable.swift; sourceTree = "<group>"; };
+		0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegexRule-old.swift"; sourceTree = "<group>"; };
+		0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsernameRule-old.swift"; sourceTree = "<group>"; };
+		0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PasswordRule-old.swift"; sourceTree = "<group>"; };
+		0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ruleable-old.swift"; sourceTree = "<group>"; };
 		0CE4D08B24F7F585005F9E63 /* DPCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPCountry.swift; sourceTree = "<group>"; };
 		0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESCountryPicker.swift; sourceTree = "<group>"; };
 		0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLanguage.swift; sourceTree = "<group>"; };
@@ -543,6 +570,33 @@
 		AACF9A3B25DA81D800B7B61F /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		AACF9A9625DA868900B7B61F /* Dictionary+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Helpers.swift"; sourceTree = "<group>"; };
 		AD1A741639C60B827F1B4CE6 /* Pods-ESCore-ESCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore-ESCoreTests.release.xcconfig"; path = "Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		AD746AC2294206E900FAEEBD /* ValidatorDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorDictionary.swift; sourceTree = "<group>"; };
+		AD746AC3294206E900FAEEBD /* ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		AD746AC4294206E900FAEEBD /* ValidationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationDelegate.swift; sourceTree = "<group>"; };
+		AD746AC5294206E900FAEEBD /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		AD746AC6294206E900FAEEBD /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		AD746ACD294206FE00FAEEBD /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		AD746ACE294206FE00FAEEBD /* FloatRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRule.swift; sourceTree = "<group>"; };
+		AD746ACF294206FE00FAEEBD /* MaxLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthRule.swift; sourceTree = "<group>"; };
+		AD746AD0294206FE00FAEEBD /* AlphaRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaRule.swift; sourceTree = "<group>"; };
+		AD746AD1294206FF00FAEEBD /* CardExpiryMonthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpiryMonthRule.swift; sourceTree = "<group>"; };
+		AD746AD2294206FF00FAEEBD /* CardExpiryYearRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpiryYearRule.swift; sourceTree = "<group>"; };
+		AD746AD3294206FF00FAEEBD /* AlphaNumericRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaNumericRule.swift; sourceTree = "<group>"; };
+		AD746AD4294206FF00FAEEBD /* FullNameRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullNameRule.swift; sourceTree = "<group>"; };
+		AD746AD5294206FF00FAEEBD /* MinLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthRule.swift; sourceTree = "<group>"; };
+		AD746AD6294206FF00FAEEBD /* RegexRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
+		AD746AD7294206FF00FAEEBD /* ZipCodeRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeRule.swift; sourceTree = "<group>"; };
+		AD746AD8294206FF00FAEEBD /* ExactLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExactLengthRule.swift; sourceTree = "<group>"; };
+		AD746AD9294206FF00FAEEBD /* CharacterSetRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSetRule.swift; sourceTree = "<group>"; };
+		AD746ADA294206FF00FAEEBD /* IPV4Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPV4Rule.swift; sourceTree = "<group>"; };
+		AD746ADB294206FF00FAEEBD /* PhoneNumberRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberRule.swift; sourceTree = "<group>"; };
+		AD746ADC294206FF00FAEEBD /* ConfirmRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmRule.swift; sourceTree = "<group>"; };
+		AD746ADD294206FF00FAEEBD /* HexColorRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColorRule.swift; sourceTree = "<group>"; };
+		AD746ADE294206FF00FAEEBD /* PasswordRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
+		AD746ADF294206FF00FAEEBD /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		AD746AE0294206FF00FAEEBD /* RequiredRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredRule.swift; sourceTree = "<group>"; };
+		AD746AE1294206FF00FAEEBD /* EmailRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
+		AD746AE2294206FF00FAEEBD /* ISBNRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNRule.swift; sourceTree = "<group>"; };
 		BB0832692EF26C0849C52FF8 /* Pods-ESCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore.debug.xcconfig"; path = "Target Support Files/Pods-ESCore/Pods-ESCore.debug.xcconfig"; sourceTree = "<group>"; };
 		E0BB619CEF5AE88DD9470F11 /* Pods_ESCore_ESCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESCore_ESCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02FEC04B2019B0178E8BA54 /* Pods-ESCore-ESCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESCore-ESCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-ESCore-ESCoreTests/Pods-ESCore-ESCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -709,10 +763,10 @@
 		0CE4D08024F7F510005F9E63 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				0CE4D08324F7F529005F9E63 /* PasswordRule.swift */,
-				0CE4D08124F7F525005F9E63 /* RegexRule.swift */,
-				0CE4D08424F7F52A005F9E63 /* Ruleable.swift */,
-				0CE4D08224F7F527005F9E63 /* UsernameRule.swift */,
+				0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */,
+				0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */,
+				0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */,
+				0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -1017,6 +1071,7 @@
 		0CE4D24324FCF279005F9E63 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AD746AC0294206B800FAEEBD /* Swift Validator */,
 				0CE4D15924F97A0B005F9E63 /* ESCore.swift */,
 				0C89FAE825108FCE000152B9 /* Fonts */,
 				0CF1C62825012E6700C31BEC /* Images */,
@@ -1344,6 +1399,56 @@
 			path = WebKit;
 			sourceTree = "<group>";
 		};
+		AD746AC0294206B800FAEEBD /* Swift Validator */ = {
+			isa = PBXGroup;
+			children = (
+				AD746ACC294206F800FAEEBD /* Rules */,
+				AD746AC1294206E000FAEEBD /* Core */,
+			);
+			path = "Swift Validator";
+			sourceTree = "<group>";
+		};
+		AD746AC1294206E000FAEEBD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AD746AC6294206E900FAEEBD /* Validatable.swift */,
+				AD746AC4294206E900FAEEBD /* ValidationDelegate.swift */,
+				AD746AC3294206E900FAEEBD /* ValidationError.swift */,
+				AD746AC5294206E900FAEEBD /* Validator.swift */,
+				AD746AC2294206E900FAEEBD /* ValidatorDictionary.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AD746ACC294206F800FAEEBD /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				AD746AD3294206FF00FAEEBD /* AlphaNumericRule.swift */,
+				AD746AD0294206FE00FAEEBD /* AlphaRule.swift */,
+				AD746AD1294206FF00FAEEBD /* CardExpiryMonthRule.swift */,
+				AD746AD2294206FF00FAEEBD /* CardExpiryYearRule.swift */,
+				AD746AD9294206FF00FAEEBD /* CharacterSetRule.swift */,
+				AD746ADC294206FF00FAEEBD /* ConfirmRule.swift */,
+				AD746AE1294206FF00FAEEBD /* EmailRule.swift */,
+				AD746AD8294206FF00FAEEBD /* ExactLengthRule.swift */,
+				AD746ACE294206FE00FAEEBD /* FloatRule.swift */,
+				AD746AD4294206FF00FAEEBD /* FullNameRule.swift */,
+				AD746ADD294206FF00FAEEBD /* HexColorRule.swift */,
+				AD746ADA294206FF00FAEEBD /* IPV4Rule.swift */,
+				AD746AE2294206FF00FAEEBD /* ISBNRule.swift */,
+				AD746ACF294206FE00FAEEBD /* MaxLengthRule.swift */,
+				AD746AD5294206FF00FAEEBD /* MinLengthRule.swift */,
+				AD746ADE294206FF00FAEEBD /* PasswordRule.swift */,
+				AD746ADB294206FF00FAEEBD /* PhoneNumberRule.swift */,
+				AD746AD6294206FF00FAEEBD /* RegexRule.swift */,
+				AD746AE0294206FF00FAEEBD /* RequiredRule.swift */,
+				AD746ADF294206FF00FAEEBD /* Rule.swift */,
+				AD746ACD294206FE00FAEEBD /* ValidationRule.swift */,
+				AD746AD7294206FF00FAEEBD /* ZipCodeRule.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1546,6 +1651,7 @@
 				0CE4D28524FEA017005F9E63 /* ESLoggerFileHandler.swift in Sources */,
 				0CE4D07C24F7F4C7005F9E63 /* UIImageView+Helpers.swift in Sources */,
 				0CE4D06524F7F4C7005F9E63 /* UIDevice+Helpers.swift in Sources */,
+				AD746AF6294206FF00FAEEBD /* RequiredRule.swift in Sources */,
 				0CE4D15024F8009C005F9E63 /* AVAsset+Metadata.swift in Sources */,
 				AACF9A1D25DA81C700B7B61F /* UISliderExtensions.swift in Sources */,
 				0CE4D0B024F7F930005F9E63 /* Alamofire+Helpers.swift in Sources */,
@@ -1553,6 +1659,7 @@
 				0CE4D0A724F7F5F4005F9E63 /* ESAyahPicker.swift in Sources */,
 				AACF99DA25DA818800B7B61F /* MutableCollectionExtensions.swift in Sources */,
 				AACF9A2125DA81C700B7B61F /* UIAlertControllerExtensions.swift in Sources */,
+				AD746AEF294206FF00FAEEBD /* CharacterSetRule.swift in Sources */,
 				AACF998325DA80BE00B7B61F /* NSAttributedStringExtensions.swift in Sources */,
 				0CE4D05E24F7F4C7005F9E63 /* Sequence+Helpers.swift in Sources */,
 				AACF9A1A25DA81C700B7B61F /* UIDatePickerExtensions.swift in Sources */,
@@ -1584,14 +1691,15 @@
 				0CE4D28E24FEA040005F9E63 /* Formatter.swift in Sources */,
 				AACF9A3425DA81C700B7B61F /* UIViewControllerExtensions.swift in Sources */,
 				AACF9A1725DA81C700B7B61F /* UITableViewExtensions.swift in Sources */,
-				0CE4D08824F7F52B005F9E63 /* Ruleable.swift in Sources */,
+				0CE4D08824F7F52B005F9E63 /* Ruleable-old.swift in Sources */,
 				0CE4D28424FEA017005F9E63 /* ESLogger.swift in Sources */,
 				AACF998425DA80BE00B7B61F /* NSPredicateExtensions.swift in Sources */,
 				0CE4D13424F7FFF4005F9E63 /* MaterialShowcase.swift in Sources */,
 				AACF995925DA806500B7B61F /* CGColorExtensions.swift in Sources */,
+				AD746AEA294206FF00FAEEBD /* FullNameRule.swift in Sources */,
 				0CE4D13D24F80065005F9E63 /* MediaLibraryHelper.swift in Sources */,
 				0CE4D0ED24F7FBFC005F9E63 /* ESLoaderView.swift in Sources */,
-				0CE4D08724F7F52B005F9E63 /* PasswordRule.swift in Sources */,
+				0CE4D08724F7F52B005F9E63 /* PasswordRule-old.swift in Sources */,
 				0CE4D06124F7F4C7005F9E63 /* Bundle+Helpers.swift in Sources */,
 				0C89FAE725107D9E000152B9 /* ESButton.swift in Sources */,
 				0CE4D15624F80283005F9E63 /* ESSurah.swift in Sources */,
@@ -1620,12 +1728,15 @@
 				0CE4D0D524F7FB2A005F9E63 /* ESFloatingLabelTextField.swift in Sources */,
 				0CE4D02B24F7F3A7005F9E63 /* ESConnectivityManager.swift in Sources */,
 				AACF9A2325DA81C700B7B61F /* UIViewExtensions.swift in Sources */,
+				AD746AE5294206FF00FAEEBD /* MaxLengthRule.swift in Sources */,
 				0CE4D15224F8009C005F9E63 /* AudioURLTrack.swift in Sources */,
-				0CE4D08524F7F52B005F9E63 /* RegexRule.swift in Sources */,
+				0CE4D08524F7F52B005F9E63 /* RegexRule-old.swift in Sources */,
 				0CE4D14A24F8008E005F9E63 /* AudioPlayerManager+URL.swift in Sources */,
 				AACF997C25DA80BE00B7B61F /* NotificationCenterExtensions.swift in Sources */,
 				0CE4D15424F8009C005F9E63 /* MediaPlayerTrack.swift in Sources */,
+				AD746ACB294206E900FAEEBD /* Validatable.swift in Sources */,
 				AACF998025DA80BE00B7B61F /* MeasurementExtensions.swift in Sources */,
+				AD746AF1294206FF00FAEEBD /* PhoneNumberRule.swift in Sources */,
 				AACF99EB25DA818800B7B61F /* BidirectionalCollectionExtensions.swift in Sources */,
 				AACF99DF25DA818800B7B61F /* CollectionExtensions.swift in Sources */,
 				0CE4D13224F7FFF4005F9E63 /* UserGuide.swift in Sources */,
@@ -1653,10 +1764,13 @@
 				0CE4D0C324F7FADF005F9E63 /* ChipItemStatus.swift in Sources */,
 				0C89FAE425107D9E000152B9 /* Fonts.swift in Sources */,
 				AACF999325DA80EA00B7B61F /* MKPolylineExtensions.swift in Sources */,
+				AD746AC8294206E900FAEEBD /* ValidationError.swift in Sources */,
+				AD746AE6294206FF00FAEEBD /* AlphaRule.swift in Sources */,
 				AACF9A1F25DA81C700B7B61F /* UIStackViewExtensions.swift in Sources */,
 				0CE4D0C724F7FADF005F9E63 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				AACF9A2B25DA81C700B7B61F /* UILayoutPriorityExtensions.swift in Sources */,
 				0CE4D29424FEA05B005F9E63 /* Themes.swift in Sources */,
+				AD746AE8294206FF00FAEEBD /* CardExpiryYearRule.swift in Sources */,
 				0CE4D07B24F7F4C7005F9E63 /* UIImage+Helpers.swift in Sources */,
 				AACF99E625DA818800B7B61F /* KeyedDecodingContainerExtensions.swift in Sources */,
 				AACF9A2F25DA81C700B7B61F /* UIImageExtensions.swift in Sources */,
@@ -1664,22 +1778,27 @@
 				0CE4D07424F7F4C7005F9E63 /* UIAlert+Helpers.swift in Sources */,
 				AACF9A1E25DA81C700B7B61F /* UICollectionViewExtensions.swift in Sources */,
 				0CE4D06424F7F4C7005F9E63 /* String+Helpers.swift in Sources */,
+				AD746AE7294206FF00FAEEBD /* CardExpiryMonthRule.swift in Sources */,
 				AACF9A2725DA81C700B7B61F /* UIBezierPathExtensions.swift in Sources */,
 				0CE4D07F24F7F4C7005F9E63 /* Double+Helpers.swift in Sources */,
+				AD746AF3294206FF00FAEEBD /* HexColorRule.swift in Sources */,
 				AACF99E225DA818800B7B61F /* CharacterExtensions.swift in Sources */,
 				0CE4D07824F7F4C7005F9E63 /* SnackBar.swift in Sources */,
 				0CE4D0D624F7FB2A005F9E63 /* ESPhoneTextField.swift in Sources */,
 				AACF9A2525DA81C700B7B61F /* UIWindowExtensions.swift in Sources */,
 				0C89FAE625107D9E000152B9 /* ESTextView.swift in Sources */,
 				0CE4D0A624F7F5F4005F9E63 /* ESSurahPicker.swift in Sources */,
+				AD746AC9294206E900FAEEBD /* ValidationDelegate.swift in Sources */,
 				AACF99E825DA818800B7B61F /* StringExtensions.swift in Sources */,
 				0CE4D06C24F7F4C7005F9E63 /* DispatchQueue+Helpers.swift in Sources */,
 				AACF998525DA80BE00B7B61F /* FileManagerExtensions.swift in Sources */,
 				0CE4D0A024F7F5CF005F9E63 /* ESDataPickerPreferredSection.swift in Sources */,
 				0CE4D14924F8008E005F9E63 /* AudioPlayerManager.swift in Sources */,
 				0CE4D06724F7F4C7005F9E63 /* UIView+Helpers.swift in Sources */,
+				AD746ACA294206E900FAEEBD /* Validator.swift in Sources */,
 				0CE4D0D824F7FB2A005F9E63 /* ButtonBarPagerViewController.swift in Sources */,
 				AACF9A1925DA81C700B7B61F /* UISearchBarExtensions.swift in Sources */,
+				AD746AE4294206FF00FAEEBD /* FloatRule.swift in Sources */,
 				AACF9A2925DA81C700B7B61F /* UILabelExtensions.swift in Sources */,
 				AACF995B25DA806500B7B61F /* CGAffineTransformExtensions.swift in Sources */,
 				0CE4D13C24F80065005F9E63 /* AudioTracksQueue.swift in Sources */,
@@ -1708,22 +1827,27 @@
 				0CE4D13524F7FFF4005F9E63 /* MaterialShowcaseController.swift in Sources */,
 				AACF99A525DA810300B7B61F /* SCNConeExtensions.swift in Sources */,
 				0CE4D23B24F99E8B005F9E63 /* ESRealm.swift in Sources */,
+				AD746AC7294206E900FAEEBD /* ValidatorDictionary.swift in Sources */,
 				0C89FAE225107D9E000152B9 /* ESLabel.swift in Sources */,
 				AACF99BE25DA813B00B7B61F /* SKProductExtensions.swift in Sources */,
 				AACF99A725DA810300B7B61F /* SCNSphereExtensions.swift in Sources */,
 				AACF995C25DA806500B7B61F /* CGFloatExtensions.swift in Sources */,
 				AACF998125DA80BE00B7B61F /* UserDefaultsExtensions.swift in Sources */,
+				AD746AF7294206FF00FAEEBD /* EmailRule.swift in Sources */,
 				0CE4D0A124F7F5CF005F9E63 /* ESDataPickerStyle.swift in Sources */,
+				AD746AF5294206FF00FAEEBD /* Rule.swift in Sources */,
 				0C89FAEE2510F6C1000152B9 /* ESViewController.swift in Sources */,
 				AACF9A3225DA81C700B7B61F /* UIBarButtonItemExtensions.swift in Sources */,
 				AACF9A3C25DA81D800B7B61F /* WKWebViewExtensions.swift in Sources */,
 				0CE4D10824F7FCBA005F9E63 /* ESPasswordTextField.swift in Sources */,
+				AD746AF4294206FF00FAEEBD /* PasswordRule.swift in Sources */,
 				0CE4D0DB24F7FB2A005F9E63 /* ESButtonView.swift in Sources */,
 				0CC7DC6B2501312800128011 /* ESImageViewer.swift in Sources */,
 				0CE4D0BC24F7FACC005F9E63 /* ChipCollectionViewCell.swift in Sources */,
 				AACF995725DA806500B7B61F /* CGRectExtensions.swift in Sources */,
 				AACF9A1C25DA81C700B7B61F /* UIActivityExtensions.swift in Sources */,
 				AACF996B25DA809B00B7B61F /* DispatchQueueExtensions.swift in Sources */,
+				AD746AED294206FF00FAEEBD /* ZipCodeRule.swift in Sources */,
 				AACF9A2C25DA81C700B7B61F /* UITabBarExtensions.swift in Sources */,
 				0CE4D07724F7F4C7005F9E63 /* UITableViewCell+Helpers.swift in Sources */,
 				0CE4D15A24F97A0B005F9E63 /* ESCore.swift in Sources */,
@@ -1731,9 +1855,12 @@
 				AACF995A25DA806500B7B61F /* CGSizeExtensions.swift in Sources */,
 				0CBF8B092512120B00A33FE3 /* ESLoaderType.swift in Sources */,
 				0CE4D0DA24F7FB2A005F9E63 /* ESSlider.swift in Sources */,
+				AD746AEE294206FF00FAEEBD /* ExactLengthRule.swift in Sources */,
 				AACF9A2425DA81C700B7B61F /* UIGestureRecognizerExtensions.swift in Sources */,
 				AACF994B25DA804A00B7B61F /* CAGradientLayerExtensions.swift in Sources */,
 				AACF99E025DA818800B7B61F /* FloatingPointExtensions.swift in Sources */,
+				AD746AF0294206FF00FAEEBD /* IPV4Rule.swift in Sources */,
+				AD746AF2294206FF00FAEEBD /* ConfirmRule.swift in Sources */,
 				0CE4D29524FEA05B005F9E63 /* Formatters.swift in Sources */,
 				AACF99A325DA810300B7B61F /* SCNBoxExtensions.swift in Sources */,
 				0CE4D07D24F7F4C7005F9E63 /* UILabel+Helpers.swift in Sources */,
@@ -1744,7 +1871,7 @@
 				0CE4D03824F7F43B005F9E63 /* String+Rx.swift in Sources */,
 				AACF998825DA80BE00B7B61F /* NSRegularExpressionExtensions.swift in Sources */,
 				0CE4D08D24F7F586005F9E63 /* DPCountry.swift in Sources */,
-				0CE4D08624F7F52B005F9E63 /* UsernameRule.swift in Sources */,
+				0CE4D08624F7F52B005F9E63 /* UsernameRule-old.swift in Sources */,
 				AACF995825DA806500B7B61F /* CGVectorExtensions.swift in Sources */,
 				0CE4D07324F7F4C7005F9E63 /* Optional+Helpers.swift in Sources */,
 				0CE4D0A224F7F5CF005F9E63 /* ESDataPickerItemType.swift in Sources */,
@@ -1761,8 +1888,12 @@
 				0CE4D23A24F99E8B005F9E63 /* ESRealm+RxSwift.swift in Sources */,
 				AACF99F225DA819800B7B61F /* StdlibDeprecated.swift in Sources */,
 				AACF9A3125DA81C700B7B61F /* UISwitchExtensions.swift in Sources */,
+				AD746AF8294206FF00FAEEBD /* ISBNRule.swift in Sources */,
+				AD746AEB294206FF00FAEEBD /* MinLengthRule.swift in Sources */,
 				0CE4D28C24FEA040005F9E63 /* Benchmarker.swift in Sources */,
 				0CE4D28F24FEA040005F9E63 /* Theme.swift in Sources */,
+				AD746AE9294206FF00FAEEBD /* AlphaNumericRule.swift in Sources */,
+				AD746AE3294206FF00FAEEBD /* ValidationRule.swift in Sources */,
 				0CE4D14024F80075005F9E63 /* MPMediaItem+AudioPlayerManager.swift in Sources */,
 				AACF998225DA80BE00B7B61F /* LocaleExtensions.swift in Sources */,
 				0CE4D03124F7F3C6005F9E63 /* DisConnectedView.swift in Sources */,
@@ -1771,6 +1902,7 @@
 				0CE4D13324F7FFF4005F9E63 /* MaterialShowcaseSequence.swift in Sources */,
 				0CE4D13024F7FFF4005F9E63 /* MaterialShowcase+Calculations.swift in Sources */,
 				AACF99D925DA818800B7B61F /* SignedIntegerExtensions.swift in Sources */,
+				AD746AEC294206FF00FAEEBD /* RegexRule.swift in Sources */,
 				AACF99D825DA818800B7B61F /* DoubleExtensions.swift in Sources */,
 				AACF9A3625DA81C700B7B61F /* UIButtonExtensions.swift in Sources */,
 				0C89FAE325107D9E000152B9 /* ESTextField.swift in Sources */,
