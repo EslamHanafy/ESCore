@@ -1,4 +1,4 @@
-// DateExtensions.swift - Copyright 2020 SwifterSwift
+// DateExtensions.swift - Copyright 2022 SwifterSwift
 
 #if canImport(Foundation)
 import Foundation
@@ -49,10 +49,7 @@ public extension Date {
 
 public extension Date {
     /// SwifterSwift: User’s current calendar.
-    var calendar: Calendar {
-        // Workaround to segfault on corelibs foundation https://bugs.swift.org/browse/SR-10147
-        return Calendar(identifier: Calendar.current.identifier)
-    }
+    var calendar: Calendar { Calendar.current }
 
     /// SwifterSwift: Era.
     ///
@@ -404,7 +401,7 @@ public extension Date {
             [.year, .month, .day, .hour, .minute, .second, .nanosecond],
             from: self)
         let min = components.minute!
-        components.minute? = min % 10 < 6 ? min - min % 10 : min + 10 - (min % 10)
+        components.minute? = min % 10 < 5 ? min - min % 10 : min + 10 - (min % 10)
         components.second = 0
         components.nanosecond = 0
         return calendar.date(from: components)!
@@ -536,7 +533,7 @@ public extension Date {
     /// SwifterSwift: Date by changing value of calendar component.
     ///
     ///     let date = Date() // "Jan 12, 2017, 7:07 PM"
-    ///     let date2 = date.changing(.minute, value: 10) // "Jan 12, 2017, 6:10 PM"
+    ///     let date2 = date.changing(.minute, value: 10) // "Jan 12, 2017, 7:10 PM"
     ///     let date3 = date.changing(.day, value: 4) // "Jan 4, 2017, 7:07 PM"
     ///     let date4 = date.changing(.month, value: 2) // "Feb 12, 2017, 7:07 PM"
     ///     let date5 = date.changing(.year, value: 2000) // "Jan 12, 2000, 7:07 PM"

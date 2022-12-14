@@ -1,4 +1,4 @@
-// UIViewExtensions.swift - Copyright 2020 SwifterSwift
+// UIViewExtensions.swift - Copyright 2022 SwifterSwift
 
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
@@ -54,6 +54,44 @@ public extension UIView {
 // MARK: - Properties
 
 public extension UIView {
+    /// SwifterSwift: Border color of view; also inspectable from Storyboard.
+    @IBInspectable var layerBorderColor: UIColor? {
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+        set {
+            guard let color = newValue else {
+                layer.borderColor = nil
+                return
+            }
+            // Fix React-Native conflict issue
+            guard String(describing: type(of: color)) != "__NSCFType" else { return }
+            layer.borderColor = color.cgColor
+        }
+    }
+
+    /// SwifterSwift: Border width of view; also inspectable from Storyboard.
+    @IBInspectable var layerBorderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+
+    /// SwifterSwift: Corner radius of view; also inspectable from Storyboard.
+    @IBInspectable var layerCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.masksToBounds = true
+            layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
+        }
+    }
+
     /// SwifterSwift: Height of view.
     var height: CGFloat {
         get {
@@ -82,6 +120,47 @@ public extension UIView {
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
+    }
+
+    /// SwifterSwift: Shadow color of view; also inspectable from Storyboard.
+    @IBInspectable var layerShadowColor: UIColor? {
+        get {
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+    }
+
+    /// SwifterSwift: Shadow offset of view; also inspectable from Storyboard.
+    @IBInspectable var layerShadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+
+    /// SwifterSwift: Shadow opacity of view; also inspectable from Storyboard.
+    @IBInspectable var layerShadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+
+    /// SwifterSwift: Shadow radius of view; also inspectable from Storyboard.
+    @IBInspectable var layerShadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
     }
 
     /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
@@ -307,7 +386,7 @@ public extension UIView {
         completion: ((Bool) -> Void)? = nil) {
         let angleWithType = (type == .degrees) ? .pi * angle / 180.0 : angle
         let aDuration = animated ? duration : 0
-        UIView.animate(withDuration: aDuration, delay: 0, options: .curveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: aDuration, delay: 0, options: .curveLinear, animations: { () in
             self.transform = self.transform.rotated(by: angleWithType)
         }, completion: completion)
     }
@@ -327,9 +406,10 @@ public extension UIView {
         duration: TimeInterval = 1,
         completion: ((Bool) -> Void)? = nil) {
         let angleWithType = (type == .degrees) ? .pi * angle / 180.0 : angle
+        let currentAngle = atan2(transform.b, transform.a)
         let aDuration = animated ? duration : 0
         UIView.animate(withDuration: aDuration, animations: {
-            self.transform = self.transform.concatenating(CGAffineTransform(rotationAngle: angleWithType))
+            self.transform = self.transform.rotated(by: angleWithType - currentAngle)
         }, completion: completion)
     }
 
@@ -346,7 +426,7 @@ public extension UIView {
         duration: TimeInterval = 1,
         completion: ((Bool) -> Void)? = nil) {
         if animated {
-            UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: { () -> Void in
+            UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: { () in
                 self.transform = self.transform.scaledBy(x: offset.x, y: offset.y)
             }, completion: completion)
         } else {
@@ -529,6 +609,23 @@ public extension UIView {
     /// - Parameter name: class of the view to search.
     func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
         return ancestorView(where: { $0 is T }) as? T
+    }
+
+    /// SwifterSwift: Returns all the subviews of a given type recursively in the
+    /// view hierarchy rooted on the view it its called.
+    ///
+    /// - Parameter ofType: Class of the view to search.
+    /// - Returns: All subviews with a specified type.
+    func subviews<T>(ofType _: T.Type) -> [T] {
+        var views = [T]()
+        for subview in subviews {
+            if let view = subview as? T {
+                views.append(view)
+            } else if !subview.subviews.isEmpty {
+                views.append(contentsOf: subview.subviews(ofType: T.self))
+            }
+        }
+        return views
     }
 }
 

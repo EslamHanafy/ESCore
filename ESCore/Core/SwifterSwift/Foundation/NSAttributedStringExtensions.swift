@@ -20,16 +20,16 @@ public extension NSAttributedString {
         guard !string.isEmpty else { return self }
 
         let pointSize: CGFloat
-        if let font = attribute(.font, at: 0, effectiveRange: nil) as? Font {
+        if let font = attribute(.font, at: 0, effectiveRange: nil) as? SFFont {
             pointSize = font.pointSize
         } else {
             #if os(tvOS) || os(watchOS)
-            pointSize = Font.preferredFont(forTextStyle: .headline).pointSize
+            pointSize = SFFont.preferredFont(forTextStyle: .headline).pointSize
             #else
-            pointSize = Font.systemFontSize
+            pointSize = SFFont.systemFontSize
             #endif
         }
-        return applying(attributes: [.font: Font.boldSystemFont(ofSize: pointSize)])
+        return applying(attributes: [.font: SFFont.boldSystemFont(ofSize: pointSize)])
     }
     #endif
 
@@ -93,7 +93,7 @@ public extension NSAttributedString {
     ///
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString colored with given color.
-    func colored(with color: Color) -> NSAttributedString {
+    func colored(with color: SFColor) -> NSAttributedString {
         return applying(attributes: [.foregroundColor: color])
     }
     #endif
@@ -180,4 +180,27 @@ public extension NSAttributedString {
     }
 }
 
+public extension Array where Element: NSAttributedString {
+    /// SwifterSwift: Returns a new `NSAttributedString` by concatenating the elements of the sequence, adding the given separator between each element.
+    ///
+    /// - Parameter separator: An `NSAttributedString` to add between the elements of the sequence.
+    /// - Returns: NSAttributedString with applied attributes.
+    // https://stackoverflow.com/questions/32830519/is-there-joinwithseparator-for-attributed-strings
+    func joined(separator: NSAttributedString) -> NSAttributedString {
+        guard let firstElement = first else { return NSMutableAttributedString(string: "") }
+        return dropFirst().reduce(into: NSMutableAttributedString(attributedString: firstElement)) { result, element in
+            result.append(separator)
+            result.append(element)
+        }
+    }
+
+    func joined(separator: String) -> NSAttributedString {
+        guard let firstElement = first else { return NSMutableAttributedString(string: "") }
+        let attributedStringSeparator = NSAttributedString(string: separator)
+        return dropFirst().reduce(into: NSMutableAttributedString(attributedString: firstElement)) { result, element in
+            result.append(attributedStringSeparator)
+            result.append(element)
+        }
+    }
+}
 #endif

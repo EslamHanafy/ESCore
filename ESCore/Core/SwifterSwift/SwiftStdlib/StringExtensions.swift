@@ -25,6 +25,11 @@ public extension String {
     ///		"SGVsbG8gV29ybGQh".base64Decoded = Optional("Hello World!")
     ///
     var base64Decoded: String? {
+        if let data = Data(base64Encoded: self,
+                           options: .ignoreUnknownCharacters) {
+            return String(data: data, encoding: .utf8)
+        }
+        
         let remainder = count % 4
 
         var padding = ""
@@ -756,6 +761,21 @@ public extension String {
     }
     #endif
 
+    /// SwifterSwift: Random string of given length.
+    ///
+    ///		String.random(ofLength: 18) -> "u7MMZYvGo9obcOcPj8"
+    ///
+    /// - Parameter length: number of characters in string.
+    /// - Returns: random string of given length.
+    static func random(ofLength length: Int) -> String {
+        guard length > 0 else { return "" }
+        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString = ""
+        for _ in 1...length {
+            randomString.append(base.randomElement()!)
+        }
+        return randomString
+    }
 
     /// SwifterSwift: Reverse string.
     @discardableResult
@@ -1166,7 +1186,7 @@ public extension String {
     var bold: NSAttributedString {
         return NSMutableAttributedString(
             string: self,
-            attributes: [.font: Font.boldSystemFont(ofSize: Font.systemFontSize)])
+            attributes: [.font: SFFont.boldSystemFont(ofSize: SFFont.systemFontSize)])
     }
     #endif
 
@@ -1200,7 +1220,7 @@ public extension String {
     ///
     /// - Parameter color: text color.
     /// - Returns: a NSAttributedString versions of string colored with given color.
-    func colored(with color: Color) -> NSAttributedString {
+    func colored(with color: SFColor) -> NSAttributedString {
         return NSMutableAttributedString(string: self, attributes: [.foregroundColor: color])
     }
     #endif
