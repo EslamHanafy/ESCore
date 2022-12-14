@@ -2,6 +2,9 @@
 
 
 
+# Validation 
+
+
 ![swift-validator-v2](https://user-images.githubusercontent.com/13080678/207071744-021e226b-bc1e-432f-8cfd-be5903f1d838.gif)
 
 
@@ -51,6 +54,10 @@ override func viewDidLoad() {
 
 	// You can unregister a text field if you no longer want to validate it
 	validator.unregisterField(fullNameTextField)
+	
+	//You can add a custom message when you use this flag or keep the default showMessage
+	validator.registerField(nameTextFiled, rules: [RequiredRule(message: "The name field is required", showMessage: true), MaxLengthRule(length: 30)])
+
 }
 
 ```
@@ -126,18 +133,6 @@ class SSNVRule: RegexRule {
 
 ```
 
-
-### You can add a custom message when you use this flag or keep the default  ``` showMessage ```
-
-```swift
- override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        validator.registerField(nameTextFiled, rules:  [RequiredRule(message: "The name field is required", showMessage: true), MaxLengthRule(length: 30)])
-    }
-
-```
 
 ### Note 
 ```validationFailed``` is optinal 
