@@ -64,10 +64,6 @@
 		0CE4D07D24F7F4C7005F9E63 /* UILabel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05A24F7F4C1005F9E63 /* UILabel+Helpers.swift */; };
 		0CE4D07E24F7F4C7005F9E63 /* AVPlayerItem+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05B24F7F4C4005F9E63 /* AVPlayerItem+Helpers.swift */; };
 		0CE4D07F24F7F4C7005F9E63 /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D05C24F7F4C6005F9E63 /* Double+Helpers.swift */; };
-		0CE4D08524F7F52B005F9E63 /* RegexRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */; };
-		0CE4D08624F7F52B005F9E63 /* UsernameRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */; };
-		0CE4D08724F7F52B005F9E63 /* PasswordRule-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */; };
-		0CE4D08824F7F52B005F9E63 /* Ruleable-old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */; };
 		0CE4D08D24F7F586005F9E63 /* DPCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08B24F7F585005F9E63 /* DPCountry.swift */; };
 		0CE4D08E24F7F586005F9E63 /* ESCountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */; };
 		0CE4D09224F7F5B2005F9E63 /* DPLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */; };
@@ -365,10 +361,6 @@
 		0CE4D05A24F7F4C1005F9E63 /* UILabel+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05B24F7F4C4005F9E63 /* AVPlayerItem+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayerItem+Helpers.swift"; sourceTree = "<group>"; };
 		0CE4D05C24F7F4C6005F9E63 /* Double+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
-		0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegexRule-old.swift"; sourceTree = "<group>"; };
-		0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UsernameRule-old.swift"; sourceTree = "<group>"; };
-		0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PasswordRule-old.swift"; sourceTree = "<group>"; };
-		0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ruleable-old.swift"; sourceTree = "<group>"; };
 		0CE4D08B24F7F585005F9E63 /* DPCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPCountry.swift; sourceTree = "<group>"; };
 		0CE4D08C24F7F586005F9E63 /* ESCountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESCountryPicker.swift; sourceTree = "<group>"; };
 		0CE4D09024F7F5B1005F9E63 /* DPLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLanguage.swift; sourceTree = "<group>"; };
@@ -760,17 +752,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		0CE4D08024F7F510005F9E63 /* Validators */ = {
-			isa = PBXGroup;
-			children = (
-				0CE4D08324F7F529005F9E63 /* PasswordRule-old.swift */,
-				0CE4D08124F7F525005F9E63 /* RegexRule-old.swift */,
-				0CE4D08424F7F52A005F9E63 /* Ruleable-old.swift */,
-				0CE4D08224F7F527005F9E63 /* UsernameRule-old.swift */,
-			);
-			path = Validators;
-			sourceTree = "<group>";
-		};
 		0CE4D08924F7F54E005F9E63 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1081,7 +1062,6 @@
 				0CE4D0AB24F7F90A005F9E63 /* APIs */,
 				0CE4D0A824F7F63A005F9E63 /* File Uploaders */,
 				0CE4D03224F7F428005F9E63 /* Rx */,
-				0CE4D08024F7F510005F9E63 /* Validators */,
 				0CE4D0B424F7FA7C005F9E63 /* Views */,
 			);
 			path = Core;
@@ -1691,7 +1671,6 @@
 				0CE4D28E24FEA040005F9E63 /* Formatter.swift in Sources */,
 				AACF9A3425DA81C700B7B61F /* UIViewControllerExtensions.swift in Sources */,
 				AACF9A1725DA81C700B7B61F /* UITableViewExtensions.swift in Sources */,
-				0CE4D08824F7F52B005F9E63 /* Ruleable-old.swift in Sources */,
 				0CE4D28424FEA017005F9E63 /* ESLogger.swift in Sources */,
 				AACF998425DA80BE00B7B61F /* NSPredicateExtensions.swift in Sources */,
 				0CE4D13424F7FFF4005F9E63 /* MaterialShowcase.swift in Sources */,
@@ -1699,7 +1678,6 @@
 				AD746AEA294206FF00FAEEBD /* FullNameRule.swift in Sources */,
 				0CE4D13D24F80065005F9E63 /* MediaLibraryHelper.swift in Sources */,
 				0CE4D0ED24F7FBFC005F9E63 /* ESLoaderView.swift in Sources */,
-				0CE4D08724F7F52B005F9E63 /* PasswordRule-old.swift in Sources */,
 				0CE4D06124F7F4C7005F9E63 /* Bundle+Helpers.swift in Sources */,
 				0C89FAE725107D9E000152B9 /* ESButton.swift in Sources */,
 				0CE4D15624F80283005F9E63 /* ESSurah.swift in Sources */,
@@ -1730,7 +1708,6 @@
 				AACF9A2325DA81C700B7B61F /* UIViewExtensions.swift in Sources */,
 				AD746AE5294206FF00FAEEBD /* MaxLengthRule.swift in Sources */,
 				0CE4D15224F8009C005F9E63 /* AudioURLTrack.swift in Sources */,
-				0CE4D08524F7F52B005F9E63 /* RegexRule-old.swift in Sources */,
 				0CE4D14A24F8008E005F9E63 /* AudioPlayerManager+URL.swift in Sources */,
 				AACF997C25DA80BE00B7B61F /* NotificationCenterExtensions.swift in Sources */,
 				0CE4D15424F8009C005F9E63 /* MediaPlayerTrack.swift in Sources */,
@@ -1871,7 +1848,6 @@
 				0CE4D03824F7F43B005F9E63 /* String+Rx.swift in Sources */,
 				AACF998825DA80BE00B7B61F /* NSRegularExpressionExtensions.swift in Sources */,
 				0CE4D08D24F7F586005F9E63 /* DPCountry.swift in Sources */,
-				0CE4D08624F7F52B005F9E63 /* UsernameRule-old.swift in Sources */,
 				AACF995825DA806500B7B61F /* CGVectorExtensions.swift in Sources */,
 				0CE4D07324F7F4C7005F9E63 /* Optional+Helpers.swift in Sources */,
 				0CE4D0A224F7F5CF005F9E63 /* ESDataPickerItemType.swift in Sources */,
